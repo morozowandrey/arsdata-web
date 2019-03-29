@@ -1,5 +1,8 @@
-# Gulp Starter for CSS Tricks Tutorial  
+# ARS Data build solutions for Machine Generated Data & Industrial IoT.
 
-This repo is a gulp starter for this CSS Tricks tutorial. 
+This repo is a site for ARS Data company.
 
-Remember to do run the `npm install` command after cloning this repo :) 
+To run app:
+`npm i`
+`gulp default`
+`gulp build`
