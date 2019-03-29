@@ -1,0 +1,13 @@
+@import 'var';
+
+// base styles
+@import 'base/base-styles';
+@import 'base/mixins';
+@import 'base/media-mixins';
+@import 'base/fonts';
+@import 'base/reset';
+
+// modules
+@import 'modules/header';
+@import 'modules/footer';
+@import 'modules/buttons';
