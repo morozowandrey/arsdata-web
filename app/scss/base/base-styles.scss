@@ -13,14 +13,22 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  background-color: $mainDark;
 }
 
 img {
   max-width: 100%;
 }
 
-.wrapper{
-    max-width: 1200px;
-    margin: 0 auto;
-    height: 100%;
+a {
+  text-decoration: none;
+  color: black;
+}
+
+section {
+  height: 100vh;
+  h1 {
+    text-align: center;
+    color: #fff;
+  }
 }

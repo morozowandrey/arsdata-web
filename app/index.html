@@ -11,9 +11,61 @@
 </head>
 
 <body>
-  <a class="este" href="services.html">ARS Data 2</a>
-  
+
+  <header class="header">
+    <div class="container flex-between">
+      <a href="index.html" class="header__logo">
+        <img src="images/logos/logo-white.svg" alt="ARS Data logo">
+      </a>
+
+      <nav class="navigation" id="navigation">
+      
+        <a aria-label="mobile menu" class="navigation-mobile">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+        
+        <div class="navigation-desktop">
+          <a class="navigation-desktop__item" href="#about">About us</a>
+          <a class="navigation-desktop__item" href="#solutions">Solutions</a>
+          <a class="navigation-desktop__item" href="#technology">Technology</a>
+          <a class="navigation-desktop__item" href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <div class="container">
+        <h1>About</h1>
+      </div>
+    </section>
+
+    <section id="solutions">
+      <div class="container">
+        <h1>Solutions</h1>
+      </div>
+    </section>
+
+    <section id="technology">
+      <div class="container">
+        <h1>Technology</h1>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h1>Contact</h1>
+      </div>
+    </section>
+  </main>
+
+
   <!--build:js js/main.min.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
+  <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
   <script src="js/lib/a-library.js"></script>
   <script src="js/lib/another-library.js"></script>
   <script src="js/main.js"></script>

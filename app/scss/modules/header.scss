@@ -1,6 +1,183 @@
-.este {
-    color: red;
-    font-size: 25px;
-    font-family: $main-ff;
-    padding: 50px;
+.header {
+  width: 100%;
+  padding: 38px 128px 0;
+
+  will-change: transform;
+  transition: background 0.3s, -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
+  transition: transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1), background 0.3s;
+  transition: transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1), background 0.3s,
+    -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+
+  @include lg {
+    padding: 38px 80px 0;
+  }
+
+  @include md {
+    padding: 38px 40px 0;
+  }
+
+  @include xs {
+    padding: 25px 20px 0;
+  }
+
+  &__logo {
+    line-height: 8px;
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include lg {
+      display: block;
+    }
+
+    &-desktop {
+      min-width: 492px;
+      max-height: none;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      overflow: hidden;
+      // transition: all 0.3s ease-out;
+
+      @include lg {
+        min-width: 400px;
+      }
+
+      @include md {
+        min-width: auto;
+        max-height: 0;
+        display: none;
+      }
+
+      &.collapse {
+        max-height: 15em !important;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        top: 38px;
+        background: $mainBlue;
+        width: 100%;
+
+        @include sm {
+          top: 0px;
+          min-height: 100vh;
+          justify-content: center;
+        }
+      }
+      &.collapse .navigation-desktop__item {
+        color: #fff;
+      }
+
+      &__item {
+        display: inline-block;
+        position: relative;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        color: #909090;
+        font-size: 14px;
+        letter-spacing: 1px;
+        line-height: 21px;
+        text-transform: uppercase;
+        transition: color 0.35s ease;
+
+        &:hover {
+          color: #fff;
+          cursor: pointer;
+        }
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 2px;
+          width: 0;
+          transition: width 0s ease, background 0.35s ease;
+        }
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          height: 2px;
+          width: 0;
+          background: $mainBlue;
+          transition: width 0.35s ease;
+        }
+        &:hover:before {
+          width: 20px;
+          background: $mainBlue;
+          transition: width 0.35s ease;
+        }
+        &:hover:after {
+          width: 100%;
+          background: transparent;
+          transition: all 0s ease;
+        }
+      }
+    }
+
+    &-mobile {
+      display: none;
+      border-radius: 5px;
+      background-color: transparent;
+      float: right;
+      height: 38px;
+      width: 38px;
+      cursor: pointer;
+      padding: 8px 8px;
+
+      &.open span:first-child {
+        transform: rotate(45deg) translate(4.4px, 4.4px);
+      }
+      &.open span:nth-child(2) {
+        width: 0%;
+        opacity: 0;
+      }
+      &.open span:last-child {
+        transform: rotate(-45deg) translate(4.4px, -4.4px);
+      }
+      @include md {
+        position: relative;
+        z-index: 5;
+        display: block;
+      }
+      span {
+        position: relative;
+        display: block;
+        height: 2px;
+        width: 100%;
+        margin-top: 4px;
+        background-color: #fff;
+        transition: all 0.25s;
+      }
+    }
+  }
+}
+
+.signature {
+  position: fixed;
+  font-weight: 100;
+  bottom: 10px;
+  color: #fff;
+  left: 0;
+  letter-spacing: 4px;
+  font-size: 10px;
+  width: 100vw;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.hide-nav {
+  transform: translateY(-120%) !important;
+  -webkit-transform: translateY(-120%) !important;
 }

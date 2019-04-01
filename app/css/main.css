@@ -1,32 +1,3 @@
-* {
-  box-sizing: border-box; }
-
-html {
-  font-family: "Source Sans Pro", "sans pro", "serif";
-  font-size: 16px;
-  line-height: 22px;
-  height: 100%; }
-
-body {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  overflow-x: hidden; }
-
-img {
-  max-width: 100%; }
-
-.wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  height: 100%; }
-
-@font-face {
-  font-family: 'Nexa-Bold';
-  src: url("../src/fonts/Nexa-Bold.otf");
-  font-style: normal;
-  font-weight: normal; }
-
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -394,8 +365,210 @@ textarea {
   font: inherit;
   /* 2 */ }
 
-.este {
-  color: red;
-  font-size: 25px;
-  font-family: "Source Sans Pro", "sans pro", "serif";
-  padding: 50px; }
+.wrapper {
+  max-width: 1366px;
+  margin: 0 auto;
+  height: 100%; }
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.container {
+  max-width: 1366px;
+  margin: 0 auto; }
+
+* {
+  box-sizing: border-box; }
+
+html {
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  height: 100%; }
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background-color: #111111; }
+
+img {
+  max-width: 100%; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+section {
+  height: 100vh; }
+  section h1 {
+    text-align: center;
+    color: #fff; }
+
+@font-face {
+  font-family: 'Poppins-Regular';
+  src: url("../../fonts/Poppins/poppins-regular-webfont.eot");
+  src: url("../../fonts/Poppins/poppins-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/Poppins/poppins-regular-webfont.woff") format("woff"), url("../../fonts/Poppins/poppins-regular-webfont.woff2") format("woff2"), url("../../fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Poppins-Bold';
+  src: url("../../fonts/Poppins/poppins-bold-webfont.eot");
+  src: url("../../fonts/Poppins/poppins-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/Poppins/poppins-bold-webfont.woff2") format("woff2"), url("../../fonts/Poppins/poppins-bold-webfont.woff") format("woff"), url("../../fonts/Poppins/Poppins-Bold.ttf");
+  font-weight: normal;
+  font-style: normal; }
+
+.header {
+  width: 100%;
+  padding: 38px 128px 0;
+  will-change: transform;
+  transition: background 0.3s, -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
+  transition: transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1), background 0.3s;
+  transition: transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1), background 0.3s, -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
+  transform: translateY(0);
+  -webkit-transform: translateY(0); }
+  @media (max-width: 1024px) {
+    .header {
+      padding: 38px 80px 0; } }
+  @media (max-width: 768px) {
+    .header {
+      padding: 38px 40px 0; } }
+  @media (max-width: 360px) {
+    .header {
+      padding: 25px 20px 0; } }
+  .header__logo {
+    line-height: 8px; }
+  .header .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    @media (max-width: 1024px) {
+      .header .navigation {
+        display: block; } }
+    .header .navigation-desktop {
+      min-width: 492px;
+      max-height: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      overflow: hidden; }
+      @media (max-width: 1024px) {
+        .header .navigation-desktop {
+          min-width: 400px; } }
+      @media (max-width: 768px) {
+        .header .navigation-desktop {
+          min-width: auto;
+          max-height: 0;
+          display: none; } }
+      .header .navigation-desktop.collapse {
+        max-height: 15em !important;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        top: 38px;
+        background: #0052FF;
+        width: 100%; }
+        @media (max-width: 576px) {
+          .header .navigation-desktop.collapse {
+            top: 0px;
+            min-height: 100vh;
+            justify-content: center; } }
+      .header .navigation-desktop.collapse .navigation-desktop__item {
+        color: #fff; }
+      .header .navigation-desktop__item {
+        display: inline-block;
+        position: relative;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        color: #909090;
+        font-size: 14px;
+        letter-spacing: 1px;
+        line-height: 21px;
+        text-transform: uppercase;
+        transition: color 0.35s ease; }
+        .header .navigation-desktop__item:hover {
+          color: #fff;
+          cursor: pointer; }
+        .header .navigation-desktop__item:before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 2px;
+          width: 0;
+          transition: width 0s ease, background 0.35s ease; }
+        .header .navigation-desktop__item:after {
+          content: "";
+          display: block;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          height: 2px;
+          width: 0;
+          background: #0052FF;
+          transition: width 0.35s ease; }
+        .header .navigation-desktop__item:hover:before {
+          width: 20px;
+          background: #0052FF;
+          transition: width 0.35s ease; }
+        .header .navigation-desktop__item:hover:after {
+          width: 100%;
+          background: transparent;
+          transition: all 0s ease; }
+    .header .navigation-mobile {
+      display: none;
+      border-radius: 5px;
+      background-color: transparent;
+      float: right;
+      height: 38px;
+      width: 38px;
+      cursor: pointer;
+      padding: 8px 8px; }
+      .header .navigation-mobile.open span:first-child {
+        transform: rotate(45deg) translate(4.4px, 4.4px); }
+      .header .navigation-mobile.open span:nth-child(2) {
+        width: 0%;
+        opacity: 0; }
+      .header .navigation-mobile.open span:last-child {
+        transform: rotate(-45deg) translate(4.4px, -4.4px); }
+      @media (max-width: 768px) {
+        .header .navigation-mobile {
+          position: relative;
+          z-index: 5;
+          display: block; } }
+      .header .navigation-mobile span {
+        position: relative;
+        display: block;
+        height: 2px;
+        width: 100%;
+        margin-top: 4px;
+        background-color: #fff;
+        transition: all 0.25s; }
+
+.signature {
+  position: fixed;
+  font-weight: 100;
+  bottom: 10px;
+  color: #fff;
+  left: 0;
+  letter-spacing: 4px;
+  font-size: 10px;
+  width: 100vw;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none; }
+
+.hide-nav {
+  transform: translateY(-120%) !important;
+  -webkit-transform: translateY(-120%) !important; }
