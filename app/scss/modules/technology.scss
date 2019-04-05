@@ -1,0 +1,123 @@
+.technology {
+  padding-bottom: 145px;
+  padding-top: 130px;
+  background-color: $mainDark;
+
+  &__caption {
+    margin-bottom: 10px;
+    font-family: $main-ff-bold;
+    font-size: 48px;
+    line-height: 72px;
+    color: #fff;
+  }
+
+  &__subcaption {
+    max-width: 460px;
+    margin-bottom: 32px;
+    font-size: 16px;
+    line-height: 24px;
+    color: $secondGray;
+  }
+
+  &-grid {
+    // display: flex;
+    // flex-wrap: wrap;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: $secondDark;
+    border: 1px solid $secondDark;
+    grid-gap: 1px;
+    justify-self: center;
+    max-width: 1131px;
+
+    &-item {
+      height: 238px;
+      width: 225px;
+      padding: 84px 58px 0 40px;
+      background-color: $mainDark;
+
+      // Icons
+      &:nth-child(2) .technology-grid-item__caption::before {
+        background-image: url(../../images/Icon/Database.svg);
+      }
+      &:nth-child(3) .technology-grid-item__caption::before {
+        background-image: url(../../images/Icon/Cube.svg);
+      }
+      &:nth-child(4) .technology-grid-item__caption::before {
+        background-image: url(../../images/Icon/Eye.svg);
+      }
+      &:nth-child(5) .technology-grid-item__caption::before {
+        background-image: url(../../images/technology/Processor.svg);
+      }
+
+      &__caption {
+        position: relative;
+        font-size: 16px;
+        letter-spacing: 1.24px;
+        line-height: 24px;
+        color: #fff;
+        text-transform: uppercase;
+
+        &:before {
+          background-image: url(../../images/Icon/Сircle.svg);
+          background-size: 20px;
+          content: '';
+          height: 20px;
+          width: 20px;
+          display: block;
+          position: absolute;
+          left: 0;
+          top: -41px;
+        }
+
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 0;
+          bottom: -71px;
+          height: 2px;
+          width: 20px;
+          background: $mainBlue;
+          transition: width 0.35s ease;
+        }
+      }
+
+      &__text {
+        font-size: 16px;
+        line-height: 24px;
+        color: $secondGray;
+      }
+
+      &__link {
+        display: none;
+      }
+
+      &:hover {
+        background: linear-gradient(180deg, #1B1B1B 0%, #171717 100%);
+        cursor: pointer;
+      }
+
+      &:hover .technology-grid-item__text {
+        display: none;
+      }
+
+      &:hover .technology-grid-item__caption {
+        margin-bottom: 60px;
+      }
+
+      &:hover .technology-grid-item__link {
+        display: inline;
+      }
+
+      &:hover .technology-grid-item__caption {
+        color: #fff;
+      }
+
+      &:hover .technology-grid-item__text {
+        color: #fff;
+      }
+    }
+  }
+}

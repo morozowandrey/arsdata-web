@@ -1,0 +1,64 @@
+.about {
+  background-color: #fff;
+  background: linear-gradient(180deg, $mainDark 20%, #fff 20%);
+  padding-bottom: 145px;
+
+  &-content {
+    padding: 180px 0 0 165px;
+    background-color: $lightGray;
+
+    &-text {
+      display: inline-block;
+      margin-bottom: 40px;
+
+      font-family: $main-ff-bold;
+      font-size: 36px;
+      line-height: 60px;
+
+      &__link {
+        padding: 0 3px;
+        display: inline-block;
+        height: 50px;
+        color: #fff;
+        background-color: $mainBlue;
+      }
+
+      span {
+        margin-left: -6px;
+        color: #fff;
+      }
+    }
+
+    &__link {
+      padding-bottom: 175px;
+
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+
+        left: 0;
+        top: 10px;
+        height: 2px;
+        width: 20px;
+        background: $mainBlue;
+      }
+    }
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: -99%;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-color: $lightGray;
+    }
+  }
+}

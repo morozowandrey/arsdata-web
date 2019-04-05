@@ -1,0 +1,139 @@
+$gridPadding: 15px;
+$listItemMargin: 10px;
+
+.solutions {
+  padding-bottom: 145px;
+  background-color: #fff;
+
+  &__caption {
+    margin-bottom: 30px;
+    font-family: $main-ff-bold;
+    font-size: 48px;
+    line-height: 72px;
+  }
+
+  &-grid {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-item {
+      height: 279px;
+      width: 308px;
+      padding: 90px 70px 0;
+      margin: 0.5px;
+      background-color: $lightGray;
+
+      // Icons
+      &:nth-child(2) .solutions-grid-item__caption::before{
+        content: url(../../images/solutions/blue/condition-monitoring.svg);
+      }
+      &:nth-child(3) .solutions-grid-item__caption::before{
+        content: url(../../images/solutions/blue/sensor-data-processing.svg);
+      }
+      &:nth-child(4) .solutions-grid-item__caption::before{
+        content: url(../../images/solutions/blue/smart-hvac.svg);
+      }
+      &:nth-child(5) .solutions-grid-item__caption::before{
+        content: url(../../images/solutions/blue/machine-learning.svg);
+      }
+      &:nth-child(6) .solutions-grid-item__caption::before{
+        content: url(../../images/solutions/blue/embedded-development.svg);
+      }
+      &:nth-child(7) .solutions-grid-item__caption::before{
+        content: url(../../images/solutions/blue/data-processing.svg);
+      }
+      &:nth-child(8) .solutions-grid-item__caption::before{
+        content: url(../../images/solutions/blue/visualisations.svg);
+      }
+
+      // Hover
+      &:nth-child(2):hover .solutions-grid-item__caption::before{
+        content: url(../../images/solutions/white/condition-monitoring.svg);
+      }
+      &:nth-child(3):hover .solutions-grid-item__caption::before{
+        content: url(../../images/solutions/white/sensor-data-processing.svg);
+      }
+      &:nth-child(4):hover .solutions-grid-item__caption::before{
+        content: url(../../images/solutions/white/smart-hvac.svg);
+      }
+      &:nth-child(5):hover .solutions-grid-item__caption::before{
+        content: url(../../images/solutions/white/machine-learning.svg);
+      }
+      &:nth-child(6):hover .solutions-grid-item__caption::before{
+        content: url(../../images/solutions/white/embedded-development.svg);
+      }
+      &:nth-child(7):hover .solutions-grid-item__caption::before{
+        content: url(../../images/solutions/white/data-processing.svg);
+      }
+      &:nth-child(8):hover .solutions-grid-item__caption::before{
+        content: url(../../images/solutions/white/visualisations.svg);
+      }
+
+      &__caption {
+        position: relative;
+        margin-bottom: 15px;
+        font-size: 16px;
+        letter-spacing: 1.24px;
+        line-height: 24px;
+        color: $mainBlue;
+        text-transform: uppercase;
+
+        &:before {
+          content: url(../../images/solutions/blue/predictive-maintenance.svg);
+          height: 30px;
+          width: 30px;
+          display: block;
+          position: absolute;
+          left: 0;
+          top: -33px;
+        }
+      }
+
+      &__text {
+        font-size: 16px;
+        line-height: 24px;
+        color: $secondGray;
+      }
+
+      &__link {
+        display: none;
+      }
+
+      &:hover {
+        background-color: $mainBlue;
+        cursor: pointer;
+      }
+      
+      .blue-link {
+        color: #fff;
+        &::before {
+          background: #fff;
+        }
+      }
+
+      &:hover .solutions-grid-item__text {
+        display: none;
+      }
+
+      &:hover .solutions-grid-item__caption {
+        margin-bottom: 60px;
+      }
+
+      &:hover .solutions-grid-item__link {
+        display: block;
+      }
+
+      &:hover .solutions-grid-item__caption {
+        color: #fff;
+
+        &:before {
+          content: url(../../images/solutions/white/predictive-maintenance.svg);
+        }
+      }
+
+      &:hover .solutions-grid-item__text {
+        color: #fff;
+      }
+    }
+  }
+}

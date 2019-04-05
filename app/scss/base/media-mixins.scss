@@ -4,6 +4,7 @@ $sm: 576px;
 $md: 768px;
 $lg: 1024px;
 $xl: 1366px;
+$xxl: 1440px;
 
 // DESKTOP
 
@@ -47,6 +48,12 @@ $big-tablet-width: 900px;
 
 @mixin xl {
   @media (max-width: #{$xl}) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media (max-width: #{$xxl}) {
     @content;
   }
 }

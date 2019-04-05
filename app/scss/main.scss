@@ -2,12 +2,19 @@
 
 // base styles
 @import 'base/reset';
+@import 'base/mixins';
 @import 'base/media-mixins';
 @import 'base/helpers';
 @import 'base/base-styles';
 @import 'base/fonts';
+@import 'modules/buttons';
 
 // modules
 @import 'modules/header';
+@import 'modules/home';
+@import 'modules/about-us';
+@import 'modules/howitworks';
+@import 'modules/solutions';
+@import 'modules/technology';
+@import 'modules/contact';
 @import 'modules/footer';
-@import 'modules/buttons';

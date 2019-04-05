@@ -1,0 +1,22 @@
+.home {
+  padding-bottom: 150px;
+  
+  &__text {
+    display: inline-block;
+    margin-top: 150px;
+    margin-bottom: 60px;
+
+    color: $mainGray;
+    font-family: $main-ff-bold;
+    font-size: 48px;
+    line-height: 64px;
+
+    span {
+      color: #fff;
+    }
+  }
+
+  &__startbtn {
+    
+  }
+}
