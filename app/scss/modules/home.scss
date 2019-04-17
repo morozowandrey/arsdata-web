@@ -1,7 +1,12 @@
 .home {
   padding-bottom: 150px;
-  
-  &__text {
+
+  @include sm {
+    padding-bottom: 0px;
+  }
+
+  &-text {
+    max-width: 570px;
     display: inline-block;
     margin-top: 150px;
     margin-bottom: 60px;
@@ -12,11 +17,37 @@
     line-height: 64px;
 
     span {
+      display: block;
+    }
+
+    @include md {
+      margin-top: 88px;
+      font-size: 36px;
+      line-height: 46px;
+    }
+
+    @include sm {
+      margin-top: 88px;
+      font-size: 26px;
+      line-height: 34px;
+    }
+
+    &__part-1 {
       color: #fff;
+    }
+  }
+  &__mobile-img {
+    display: none;
+
+    @include sm {
+      width: 100%;
+      display: block;
     }
   }
 
   &__startbtn {
-    
+    @include sm {
+      margin-bottom: 57px;
+    }
   }
 }

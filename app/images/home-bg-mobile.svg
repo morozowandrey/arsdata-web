@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="360px" height="181px" viewBox="0 0 360 181" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Graphic element</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="88.8542164%" y1="-290.030421%" x2="-60.5696199%" y2="72.1455267%" id="linearGradient-1">
+            <stop stop-color="#111111" offset="0%"></stop>
+            <stop stop-color="#0052FF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="61.3498837%" y1="553.087725%" x2="31.0501909%" y2="-11.5219738%" id="linearGradient-2">
+            <stop stop-color="#3A3A3A" offset="0%"></stop>
+            <stop stop-color="#171717" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-132.420639%" y1="-349.837747%" x2="3.72215855%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#3A3A3A" offset="0%"></stop>
+            <stop stop-color="#171717" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ARSData_Homepage_360_2x" transform="translate(0.000000, -459.000000)">
+            <g id="First-screen" transform="translate(-1.000000, 0.000000)">
+                <g id="Graphic-element" transform="translate(0.000000, 459.000000)">
+                    <path d="M170,1 L170,41 L169,41 L169,1 L169,2.84217094e-14 L361,2.84217094e-14 L361,1 L299.5,1 L299.5,40.5 L298.5,40.5 L298.5,1 L258.5,1 L258.5,40.5 L257.5,40.5 L257.5,1 L170,1 Z M258,145 L0,145 L0,144 L259,144 L259,145 L259,181 L258,181 L258,145 Z" id="Combined-Shape" fill="url(#linearGradient-1)"></path>
+                    <rect id="Rectangle-Copy-20" fill="#DEDEDE" opacity="0.03" x="125" y="41" width="60" height="68" rx="3"></rect>
+                    <rect id="Rectangle-Copy-21" fill="url(#linearGradient-2)" x="215" y="41" width="100" height="68" rx="3"></rect>
+                    <rect id="Rectangle-Copy-9" fill="url(#linearGradient-3)" x="155" y="41" width="30" height="68" rx="3"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

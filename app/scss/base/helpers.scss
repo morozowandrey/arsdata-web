@@ -50,10 +50,9 @@
     padding-left: 40px;
   }
   @include sm {
-    padding-left: 20px;
+    padding-left: 24px;
   }
   @include xs {
-    padding-left: 128px;
-    max-width: auto;
+    
   }
 }

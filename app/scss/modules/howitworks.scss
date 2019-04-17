@@ -2,20 +2,39 @@
   padding-bottom: 145px;
   background-color: #fff;
 
+  @include md {
+    padding-bottom: 100px;
+  }
+
+  .container {
+    padding-right: 24px;
+  }
+
   &__caption {
     margin-bottom: 53px;
     font-family: $main-ff-bold;
     font-size: 48px;
     line-height: 72px;
+    
+    @include sm {
+      font-size: 30px;
+      line-height: 40px;
+    }
   }
 
   &-options {
     display: flex;
     justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+
     padding-right: 120px;
 
     &-bullet {
+      flex: 0 0 auto;
       max-width: 200px;
+      margin-right: 40px;
+      padding-top: 10px;
 
       &:nth-child(1) .howitworks-options-bullet__caption:after {
         content: "01";
