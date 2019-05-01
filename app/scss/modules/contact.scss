@@ -135,6 +135,10 @@
           width: 100%;
           margin-bottom: 24px;
           color: $mainDark;
+
+          &:focus {
+            border-bottom: 1px solid $mainBlue;
+          }
         }
 
         &-textarea-box {
@@ -149,6 +153,10 @@
             display: block;
             width: 100%;
             color: $mainDark;
+
+            &:focus {
+              border-bottom: 1px solid $mainBlue;
+            }
           }
 
           &__btn {
@@ -254,6 +262,186 @@
 .errorCheckbox {
   [type="checkbox"]:checked + label:before,
   [type="checkbox"]:not(:checked) + label:before {
-    border: 1px solid red;
+    border: 1px solid $mainRed;
+  }
+}
+
+.contact-page {
+  padding-top: 170px;
+  padding-bottom: 63px;
+  height: 100vh;
+
+  .container {
+    align-items: end;
+
+    @include lg {
+      flex-direction: column;
+    }
+  }
+
+  &-content {
+    &-title {
+      @include title;
+      margin-bottom: 8px;
+      min-width: 401px;
+      margin-right: 64px;
+
+      &__part {
+        display: inline-block;
+
+        @include castom-lg {
+          display: block;
+        }
+
+        @include lg {
+          display: inline-block;
+        }
+      }
+      @include castom-lg {
+        min-width: 270px;
+      }
+    }
+
+    &-text {
+      @include text;
+      max-width: 497px;
+      margin-bottom: 24px;
+    }
+
+    &_1 {
+      @include lg {
+        margin-bottom: 64px;
+      }
+    }
+
+    &_2 {
+      padding-right: 128px;
+
+      @include lg {
+        padding-right: 80px;
+      }
+
+      @include md {
+        padding-right: 24px;
+      }
+    }
+  }
+
+  .form {
+    max-width: 498px;
+
+    &__input {
+      @include formelementst-reset;
+      @include formelementst-custom-style;
+
+      display: block;
+      width: 100%;
+      margin-bottom: 24px;
+      color: #fff;
+
+      &:-webkit-autofill {
+        -webkit-text-fill-color: #fff;
+        -webkit-box-shadow: none;
+        transition: background-color 5000s ease-in-out 0s;
+      }
+      &:-webkit-autofill:hover {
+        -webkit-text-fill-color: #fff;
+        -webkit-box-shadow: none;
+        transition: background-color 5000s ease-in-out 0s;
+      }
+      &:-webkit-autofill:focus {
+        -webkit-text-fill-color: #fff;
+        -webkit-box-shadow: none;
+        transition: background-color 5000s ease-in-out 0s;
+      }
+
+      &:focus {
+        border-bottom: 1px solid $mainBlue;
+      }
+    }
+
+    &-textarea-box {
+      position: relative;
+      margin-bottom: 33px;
+
+      textarea {
+        @include formelementst-reset;
+        @include formelementst-custom-style;
+
+        &:-webkit-autofill {
+          -webkit-text-fill-color: #fff;
+          -webkit-box-shadow: none;
+          transition: background-color 5000s ease-in-out 0s;
+        }
+        &:-webkit-autofill:hover {
+          -webkit-text-fill-color: #fff;
+          -webkit-box-shadow: none;
+          transition: background-color 5000s ease-in-out 0s;
+        }
+        &:-webkit-autofill:focus {
+          -webkit-text-fill-color: #fff;
+          -webkit-box-shadow: none;
+          transition: background-color 5000s ease-in-out 0s;
+        }
+
+        margin-bottom: 32px;
+        resize: none;
+        display: block;
+        width: 100%;
+        color: #fff;
+
+        &:focus {
+          border-bottom: 1px solid $mainBlue;
+        }
+      }
+
+      &__btn {
+        @include button-reset;
+        @include caption;
+
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 5;
+        padding: 10px 28px 10px 10px;
+
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+
+          right: 0;
+          top: 19px;
+          height: 2px;
+          width: 20px;
+          background: $mainBlue;
+        }
+      }
+    }
+
+    &-radio-box {
+      &__radio {
+      }
+      &-lable {
+        &__link {
+          text-decoration: underline;
+          color: $secondGray;
+        }
+      }
+    }
+
+    .home__startbtn.blue-link {
+      background: transparent;
+      border: none;
+      outline: none;
+    }
+  }
+}
+
+#contact-page {
+  background-image: url(../../images/illustrations/contact-page-bg-img.svg);
+  background-repeat: no-repeat;
+  @include lg {
+    background-size: contain;
   }
 }

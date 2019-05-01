@@ -1261,11 +1261,13 @@ main {
         font-size: 16px;
         line-height: 25px;
         color: #8B8B8B;
-        border-bottom: 1px solid #0052FF;
+        border-bottom: 1px solid #4E4E4E;
         display: block;
         width: 100%;
         margin-bottom: 24px;
         color: #111111; }
+        .contact-content-form .form__input:focus {
+          border-bottom: 1px solid #0052FF; }
       .contact-content-form .form-textarea-box {
         position: relative;
         margin-bottom: 33px; }
@@ -1280,11 +1282,13 @@ main {
           font-size: 16px;
           line-height: 25px;
           color: #8B8B8B;
-          border-bottom: 1px solid #0052FF;
+          border-bottom: 1px solid #4E4E4E;
           resize: none;
           display: block;
           width: 100%;
           color: #111111; }
+          .contact-content-form .form-textarea-box textarea:focus {
+            border-bottom: 1px solid #0052FF; }
         .contact-content-form .form-textarea-box__btn {
           border: none;
           outline: none;
@@ -1376,7 +1380,161 @@ main {
 
 .errorCheckbox [type="checkbox"]:checked + label:before,
 .errorCheckbox [type="checkbox"]:not(:checked) + label:before {
-  border: 1px solid red; }
+  border: 1px solid #E63A0F; }
+
+.contact-page {
+  padding-top: 170px;
+  padding-bottom: 63px;
+  height: 100vh; }
+  .contact-page .container {
+    align-items: end; }
+    @media (max-width: 1024px) {
+      .contact-page .container {
+        flex-direction: column; } }
+  .contact-page-content-title {
+    margin-bottom: 24px;
+    color: #fff;
+    font-family: "Poppins-Bold", sans-serif;
+    font-size: 48px;
+    line-height: 64px;
+    margin-bottom: 8px;
+    min-width: 401px;
+    margin-right: 64px; }
+    .contact-page-content-title__part {
+      display: inline-block; }
+      @media (max-width: 1200px) {
+        .contact-page-content-title__part {
+          display: block; } }
+      @media (max-width: 1024px) {
+        .contact-page-content-title__part {
+          display: inline-block; } }
+    @media (max-width: 1200px) {
+      .contact-page-content-title {
+        min-width: 270px; } }
+  .contact-page-content-text {
+    font-size: 16px;
+    line-height: 25px;
+    color: #8B8B8B;
+    max-width: 497px;
+    margin-bottom: 24px; }
+  @media (max-width: 1024px) {
+    .contact-page-content_1 {
+      margin-bottom: 64px; } }
+  .contact-page-content_2 {
+    padding-right: 128px; }
+    @media (max-width: 1024px) {
+      .contact-page-content_2 {
+        padding-right: 80px; } }
+    @media (max-width: 768px) {
+      .contact-page-content_2 {
+        padding-right: 24px; } }
+  .contact-page .form {
+    max-width: 498px; }
+    .contact-page .form__input {
+      border: none;
+      background-image: none;
+      background-color: transparent;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      outline: none;
+      font-size: 16px;
+      line-height: 25px;
+      color: #8B8B8B;
+      border-bottom: 1px solid #4E4E4E;
+      display: block;
+      width: 100%;
+      margin-bottom: 24px;
+      color: #fff; }
+      .contact-page .form__input:-webkit-autofill {
+        -webkit-text-fill-color: #fff;
+        -webkit-box-shadow: none;
+        transition: background-color 5000s ease-in-out 0s; }
+      .contact-page .form__input:-webkit-autofill:hover {
+        -webkit-text-fill-color: #fff;
+        -webkit-box-shadow: none;
+        transition: background-color 5000s ease-in-out 0s; }
+      .contact-page .form__input:-webkit-autofill:focus {
+        -webkit-text-fill-color: #fff;
+        -webkit-box-shadow: none;
+        transition: background-color 5000s ease-in-out 0s; }
+      .contact-page .form__input:focus {
+        border-bottom: 1px solid #0052FF; }
+    .contact-page .form-textarea-box {
+      position: relative;
+      margin-bottom: 33px; }
+      .contact-page .form-textarea-box textarea {
+        border: none;
+        background-image: none;
+        background-color: transparent;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        outline: none;
+        font-size: 16px;
+        line-height: 25px;
+        color: #8B8B8B;
+        border-bottom: 1px solid #4E4E4E;
+        margin-bottom: 32px;
+        resize: none;
+        display: block;
+        width: 100%;
+        color: #fff; }
+        .contact-page .form-textarea-box textarea:-webkit-autofill {
+          -webkit-text-fill-color: #fff;
+          -webkit-box-shadow: none;
+          transition: background-color 5000s ease-in-out 0s; }
+        .contact-page .form-textarea-box textarea:-webkit-autofill:hover {
+          -webkit-text-fill-color: #fff;
+          -webkit-box-shadow: none;
+          transition: background-color 5000s ease-in-out 0s; }
+        .contact-page .form-textarea-box textarea:-webkit-autofill:focus {
+          -webkit-text-fill-color: #fff;
+          -webkit-box-shadow: none;
+          transition: background-color 5000s ease-in-out 0s; }
+        .contact-page .form-textarea-box textarea:focus {
+          border-bottom: 1px solid #0052FF; }
+      .contact-page .form-textarea-box__btn {
+        border: none;
+        outline: none;
+        padding: 0;
+        font: inherit;
+        color: inherit;
+        background-color: transparent;
+        cursor: pointer;
+        font-size: 16px;
+        letter-spacing: 1.24px;
+        line-height: 25px;
+        color: #0052FF;
+        text-transform: uppercase;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 5;
+        padding: 10px 28px 10px 10px; }
+        .contact-page .form-textarea-box__btn:after {
+          content: "";
+          display: block;
+          position: absolute;
+          right: 0;
+          top: 19px;
+          height: 2px;
+          width: 20px;
+          background: #0052FF; }
+    .contact-page .form-radio-box-lable__link {
+      text-decoration: underline;
+      color: #8B8B8B; }
+    .contact-page .form .home__startbtn.blue-link {
+      background: transparent;
+      border: none;
+      outline: none; }
+
+#contact-page {
+  background-image: url(../../images/illustrations/contact-page-bg-img.svg);
+  background-repeat: no-repeat; }
+  @media (max-width: 1024px) {
+    #contact-page {
+      background-size: contain; } }
 
 .footer {
   background-color: #fff;

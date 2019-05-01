@@ -43,7 +43,7 @@
 @mixin formelementst-custom-style {
   @include text;
 
-  border-bottom: 1px solid $mainBlue;
+  border-bottom: 1px solid $thirdDark;
 }
 
 @mixin flip {
