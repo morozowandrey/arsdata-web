@@ -6,22 +6,6 @@ $lg: 1024px;
 $xl: 1366px;
 $xxl: 1440px;
 
-// DESKTOP
-
-$desktop-height: 768px;
-
-$small-desktop-width: 1024px;
-$wide-desktop-width: 1366px;
-// EO DESKTOP
-
-// TABLET
-$tablet-width: 768px;
-$big-tablet-width: 900px;
-// EO TABLET
-
-// MOBILE
-// EO MOBILE
-
 @mixin xs {
   @media (max-width: #{$xs}) {
     @content;
@@ -60,6 +44,20 @@ $big-tablet-width: 900px;
 
 
 
+// Castom
+
+$desktop-height: 768px;
+$tablet-width: 768px;
+$big-tablet-width: 900px;
+$small-desktop-width: 1024px;
+$castom-lg: 1200px;
+$wide-desktop-width: 1366px;
+
+@mixin castom-lg {
+  @media (max-width: #{$castom-lg}) {
+    @content;
+  }
+}
 
 @mixin bigTablet {
   @media (max-width: #{$big-tablet-width}) {

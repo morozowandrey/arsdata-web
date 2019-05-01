@@ -25,9 +25,35 @@
     padding: 125px 125px 85px 80px;
     background-color: $lightGray;
 
+    @include lg {
+      padding: 86px 60px 85px 60px;
+    }
+
+    @include md {
+      flex-direction: column;
+    }
+
+    @include sm {
+      padding: 40px;
+    }
+
     // CONTACT INFO
     &-info {
       max-width: 290px;
+      min-width: 256px;
+      margin-right: 100px;
+
+      @include lg {
+        margin-right: 50px;
+      }
+
+      @include md {
+        margin-bottom: 80px;
+      }
+
+      @include xs {
+        min-width: 195px;
+      }
 
       &__caption {
         margin-bottom: 16px;
@@ -79,6 +105,22 @@
 
       &__caption {
         margin-bottom: 16px;
+
+        &_desktop {
+          display: block;
+
+          @include sm {
+            display: none;
+          }
+        }
+
+        &_mobile {
+          display: none;
+
+          @include sm {
+            display: block;
+          }
+        }
       }
       &__text {
         margin-bottom: 33px;
@@ -134,7 +176,8 @@
         }
 
         &-radio-box {
-          &__radio {}
+          &__radio {
+          }
           &-lable {
             &__link {
               text-decoration: underline;

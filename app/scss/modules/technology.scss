@@ -20,22 +20,18 @@
   }
 
   &-grid {
-    // display: flex;
-    // flex-wrap: wrap;
-
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    background-color: $secondDark;
-    border: 1px solid $secondDark;
-    grid-gap: 1px;
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
     justify-self: center;
     max-width: 1131px;
 
     &-item {
       height: 238px;
-      width: 225px;
       padding: 84px 58px 0 40px;
       background-color: $mainDark;
+      border: 1px solid #1e1e1e;
+      margin-left: -1px;
+      margin-bottom: -1px;
 
       // Icons
       &:nth-child(2) .technology-grid-item__caption::before {
@@ -62,7 +58,7 @@
         &:before {
           background-image: url(../../images/Icon/Сircle.svg);
           background-size: 20px;
-          content: '';
+          content: "";
           height: 20px;
           width: 20px;
           display: block;
@@ -95,7 +91,7 @@
       }
 
       &:hover {
-        background: linear-gradient(180deg, #1B1B1B 0%, #171717 100%);
+        background: linear-gradient(180deg, #1b1b1b 0%, #171717 100%);
         cursor: pointer;
       }
 

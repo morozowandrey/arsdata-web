@@ -6,6 +6,14 @@
   text-transform: uppercase;
 }
 
+@mixin title {
+  margin-bottom: 24px;
+  color: #fff;
+  font-family: $main-ff-bold;
+  font-size: 48px;
+  line-height: 64px;
+}
+
 @mixin text {
   font-size: 16px;
   line-height: 25px;
@@ -36,4 +44,13 @@
   @include text;
 
   border-bottom: 1px solid $mainBlue;
+}
+
+@mixin flip {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
 }

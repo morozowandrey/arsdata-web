@@ -1,31 +1,79 @@
-// LINKS TO ANCHORS
-$('a[href^="#"]').on('click', function (event) {
+const ars = (function () {
 
-  const $target = $(this.getAttribute('href'));
+  firstNumNode = $('.glide-slides-numbers__first');
+  lastNumNode = $('.glide-slides-numbers__last');
+  slides = $(".glide__slide:not(.glide__slide--clone)");
+  firstNumValue = '01';
+  lastNumValue = '0'.concat(slides.length.toString());
+  currentSlide = null;
 
-  if ($target.length) {
-    event.preventDefault();
-    $('html, body').stop().animate({
-      scrollTop: $target.offset().top
-    }, 500, 'easeInOutQuad');
+  function privateSetSlidesNumbers(firstNum, lastNum) {
+    firstNumNode.html(firstNum);
+    lastNumNode.html(lastNum);
   }
-});
 
-// TOGGLE HAMBURGER & COLLAPSE NAV
-$('.navigation-mobile').on('click', function () {
-  $(this).toggleClass('open');
-  $('.navigation-desktop').toggleClass('collapse');
-});
+  function privateStartSliderAnimations () {
+    $('.glide-slides-numbers-line__fill').addClass('blast');
+    $('.slide-text').addClass('visio');
+  }
 
-// REMOVE X & COLLAPSE NAV ON ON CLICK
-$('.navigation-desktop a').on('click', function () {
-  $('.navigation-mobile').removeClass('open');
-  $('.navigation-desktop').removeClass('collapse');
-});
+  function privateStopSlidersAnimations () {
+    $('.glide-slides-numbers-line__fill').removeClass('blast');
+    $('.slide-text').removeClass('visio');
+  }
+
+  let publicGlide = new Glide('.glide', {
+    type: 'carousel',
+    startAt: 0,
+    perView: 1,
+    gap: 0,
+    animationDuration: 1000,
+    animationTimingFunc: 'cubic-bezier(0.85, 0.15, 0.15, 0.85)'
+  });
+
+  publicGlide.on('mount.after', function () {
+    privateSetSlidesNumbers(firstNumValue, lastNumValue);
+  });
+
+  publicGlide.on('run', function () {
+    let firstSlideNum = '0'.concat((publicGlide.index + 1).toString());
+    firstNumNode.html(firstSlideNum);
+    privateStartSliderAnimations();
+  });
+
+  publicGlide.on('run.after', function () {
+    privateStopSlidersAnimations();
+  });
+
+  function publicToAnchor(currentNode, event) {
+    const $target = $(currentNode.getAttribute('href'));
+    if ($target.length) {
+      event.preventDefault();
+      $('html, body').stop().animate({
+        scrollTop: $target.offset().top
+      }, 500, 'easeInOutQuad');
+    }
+  }
+
+  function publicToggleNav() {
+    $(this).toggleClass('open');
+    $('.navigation-desktop').toggleClass('collapse');
+  }
+
+  if (window.location.pathname === "/services.html" || window.location.pathname === "/technologies.html") {
+    publicGlide.mount();
+  }
+
+  return {
+    glide: publicGlide,
+    toAnchor: publicToAnchor,
+    toggleNav: publicToggleNav,
+  };
+})();
+
 
 
 // FORM LOGIC
-
 let valideteForm = function (formValue) {
   let namePattern = /^[A-Za-z]+$/;
   let mailPattern = /^[a-z0-9]\w+\.?\w*@[a-z]+\.[a-z]{2,8}$/;
@@ -57,12 +105,32 @@ let valideteForm = function (formValue) {
     $('.form-radio-box').addClass('errorCheckbox');
     return false
   }
-  
+
   return true;
 }.bind(this);
 
-$("#submit-button").click(function (event) {
 
+//----------------EVENTS----------------//
+
+// TOGGLE HAMBURGER & COLLAPSE NAV
+$('.navigation-mobile').click(function () {
+  ars.toggleNav();
+});
+
+// LINKS TO ANCHORS
+$('a[href^="#"]').click(function (event) {
+  let currentNode = this;
+  ars.toAnchor(currentNode, event);
+});
+
+// REMOVE X & COLLAPSE NAV ON ON CLICK
+$('.navigation-desktop a').click(function () {
+  $('.navigation-mobile').removeClass('open');
+  $('.navigation-desktop').removeClass('collapse');
+});
+
+// FORM SUBMIT
+$("#submit-button").click(function (event) {
   let formValue = $(this.form).serializeArray().reduce(function (obj, item) {
     obj[item.name] = item.value;
     return obj;

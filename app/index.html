@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <title></title>
+  <meta name="viewport" content="width=device-width">
+  <title>ARS Data</title>
   <!--build:css css/styles.min.css-->
   <link rel="stylesheet" href="css/main.css">
   <!-- <link rel="stylesheet" href="css/var.css"> -->
@@ -27,7 +28,7 @@
 
         <div class="navigation-desktop">
           <a class="navigation-desktop__item" href="#about">About us</a>
-          <a class="navigation-desktop__item" href="#solutions">Solutions</a>
+          <a class="navigation-desktop__item" href="/services.html">Solutions</a>
           <a class="navigation-desktop__item" href="#technology">Technology</a>
           <a class="navigation-desktop__item" href="#contact">Contact</a>
         </div>
@@ -103,7 +104,7 @@
       <div class="container">
         <h2 class="solutions__caption">Solutions</h2>
         <div class="solutions-grid">
-          <div class="solutions-grid-item">
+          <div class="solutions-grid-item" (click)="goToSolution(0)">
             <p class="solutions-grid-item__caption">Predictive Maintenance</p>
             <p class="solutions-grid-item__text">Predict the future health of equipment or an asset</p>
             <a href="" class="solutions-grid-item__link blue-link">Read more</a>
@@ -196,7 +197,9 @@
           </div>
 
           <div class="contact-content-form">
-            <h2 class="contact-content-form__caption caption">Got questions? — get in touch</h2>
+            <h2 class="contact-content-form__caption contact-content-form__caption_desktop caption">Got questions? — get
+              in touch</h2>
+            <h2 class="contact-content-form__caption contact-content-form__caption_mobile caption">Got questions?</h2>
             <p class="contact-content-form__text text">Send us your questions and we will get back to you as soon as
               possible</p>
 
@@ -243,7 +246,7 @@
   <!--build:js js/main.min.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
   <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
-
+  <script src='js/lib/glide.min.js'></script>
   <script src="js/main.js"></script>
   <!-- endbuild -->
 </body>

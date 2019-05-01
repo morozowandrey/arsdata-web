@@ -105,3 +105,69 @@
     }
   }
 }
+
+.about-page {
+  padding-top: 158px;
+  padding-bottom: 170px;
+  
+  @include md {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+
+  @include sm {
+    padding-bottom: 40px;
+  }
+
+  .container {
+    align-items: end;
+
+    @include md {
+      flex-direction: column;
+    }
+  }
+
+  &-content {
+    &-title {
+      @include title;
+      min-width: 368px;
+      margin-right: 64px;
+
+      &__part {
+        display: inline-block;
+
+        @include castom-lg {
+          display: block;
+        }
+      }
+      @include castom-lg {
+        min-width: 210px;
+      }
+    }
+
+    &__text {
+      @include text;
+      max-width: 497px;
+      margin-bottom: 24px;
+    }
+
+    &__text:last-of-type {
+      margin-bottom: 60px;
+    }
+
+    &_1 {
+    }
+
+    &_2 {
+      padding-right: 128px;
+
+      @include lg {
+        padding-right: 80px;
+      }
+
+      @include md {
+        padding-right: 24px;
+      }
+    }
+  }
+}

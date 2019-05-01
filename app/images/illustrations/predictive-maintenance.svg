@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="498px" height="313px" viewBox="0 0 498 313" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Predictive Maintenance</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="172.481923%" y1="-293.194832%" x2="3.72215855%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#3A3A3A" offset="0%"></stop>
+            <stop stop-color="#393939" offset="0%"></stop>
+            <stop stop-color="#171717" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ARSData_Solutions2@2x" transform="translate(-745.000000, -234.000000)">
+            <g id="Predictive-Maintenance" transform="translate(745.000000, 234.000000)">
+                <rect id="Rectangle" fill="url(#linearGradient-1)" x="0" y="0" width="498" height="313" rx="3"></rect>
+                <rect id="Rectangle" fill="#4E4E4E" x="150" y="263" width="185" height="1"></rect>
+                <path d="M472.292893,235 L462.5,235 C462.223858,235 462,234.776142 462,234.5 C462,234.223858 462.223858,234 462.5,234 L472.292893,234 L469.146447,230.853553 C468.951184,230.658291 468.951184,230.341709 469.146447,230.146447 C469.341709,229.951184 469.658291,229.951184 469.853553,230.146447 L473.853553,234.146447 C474.048815,234.341709 474.048815,234.658291 473.853553,234.853553 L469.853553,238.853553 C469.658291,239.048816 469.341709,239.048816 469.146447,238.853553 C468.951184,238.658291 468.951184,238.341709 469.146447,238.146447 L472.292893,235 Z" id="Path" fill="#DEDEDE"></path>
+                <path d="M92.7344281,29.7341419 L82.9415349,29.7341419 C82.6653925,29.7341419 82.4415349,29.5102843 82.4415349,29.2341419 C82.4415349,28.9579995 82.6653925,28.7341419 82.9415349,28.7341419 L92.7344281,28.7341419 L89.5879815,25.5876953 C89.3927194,25.3924331 89.3927194,25.0758507 89.5879815,24.8805885 C89.7832437,24.6853264 90.0998261,24.6853264 90.2950883,24.8805885 L94.2950883,28.8805885 C94.4903504,29.0758507 94.4903504,29.3924331 94.2950883,29.5876953 L90.2950883,33.5876953 C90.0998261,33.7829574 89.7832437,33.7829574 89.5879815,33.5876953 C89.3927194,33.3924331 89.3927194,33.0758507 89.5879815,32.8805885 L92.7344281,29.7341419 Z" id="Path-Copy-2" fill="#DEDEDE" transform="translate(88.441535, 29.234142) rotate(-90.000000) translate(-88.441535, -29.234142) "></path>
+                <path d="M337.292893,264 L327.5,264 C327.223858,264 327,263.776142 327,263.5 C327,263.223858 327.223858,263 327.5,263 L337.292893,263 L334.146447,259.853553 C333.951184,259.658291 333.951184,259.341709 334.146447,259.146447 C334.341709,258.951184 334.658291,258.951184 334.853553,259.146447 L338.853553,263.146447 C339.048815,263.341709 339.048815,263.658291 338.853553,263.853553 L334.853553,267.853553 C334.658291,268.048816 334.341709,268.048816 334.146447,267.853553 C333.951184,267.658291 333.951184,267.341709 334.146447,267.146447 L337.292893,264 Z" id="Path-Copy" fill="#4E4E4E"></path>
+                <path d="M154.292893,264 L144.5,264 C144.223858,264 144,263.776142 144,263.5 C144,263.223858 144.223858,263 144.5,263 L154.292893,263 L151.146447,259.853553 C150.951184,259.658291 150.951184,259.341709 151.146447,259.146447 C151.341709,258.951184 151.658291,258.951184 151.853553,259.146447 L155.853553,263.146447 C156.048815,263.341709 156.048815,263.658291 155.853553,263.853553 L151.853553,267.853553 C151.658291,268.048816 151.341709,268.048816 151.146447,267.853553 C150.951184,267.658291 150.951184,267.341709 151.146447,267.146447 L154.292893,264 Z" id="Path-Copy" fill="#4E4E4E" transform="translate(150.000000, 263.500000) scale(-1, 1) translate(-150.000000, -263.500000) "></path>
+                <rect id="Rectangle" fill="#4E4E4E" x="142" y="87" width="1" height="189"></rect>
+                <rect id="Rectangle" fill="#4E4E4E" x="340" y="174" width="1" height="102"></rect>
+                <rect id="Rectangle" fill="#DEDEDE" x="88" y="24" width="1" height="210"></rect>
+                <rect id="Rectangle" fill="#DEDEDE" x="88" y="234" width="376" height="1"></rect>
+                <path d="M89,171.5 L472.620635,171.5" id="Line" stroke="#E63A0F" stroke-linecap="square" stroke-dasharray="4,4"></path>
+                <path d="M93.3880677,55.0455808 C86.2848764,51.9004254 95.7643195,55.8712027 111.624777,64 C127.485235,72.1287973 127.802934,75.7324476 138.137678,81.7289678 C148.472422,87.725488 148.814376,86.9601657 162.668331,92.4267704 C176.522287,97.8933752 179.765431,97.541648 191.554682,102.806677 C203.343933,108.071707 198.821252,106.791243 212.196822,114.545984 C225.572392,122.300724 225.545397,123.662661 238.694564,130.13692 C251.843732,136.611179 252.462425,135.927267 267.904079,141.97458 C283.345734,148.021894 288.170751,149.721268 299.247535,153.85088 C310.324318,157.980492 308.110625,156.150333 321.617903,162 C335.125181,167.849667 337.705079,169.631018 346.879189,174.47897 C356.053299,179.326921 357.885452,181.426254 364.240506,184.523418 C370.59556,187.620581 369.286273,187.674953 378.600904,191 C387.915535,194.325047 388.518085,193.671507 397.702094,196.468214 C406.886104,199.264921 408.502004,199.517636 416.814472,201.598453 C425.126939,203.679269 437.07438,207 433.78237,205.5" id="Path-2" stroke="#0052FF" stroke-width="2"></path>
+                <text id="RUL" font-family="Poppins-Regular, Poppins" font-size="12" font-weight="normal" fill="#8B8B8B">
+                    <tspan x="232" y="285">RUL</tspan>
+                </text>
+                <text id="performance" transform="translate(71.000000, 63.500000) rotate(-90.000000) translate(-71.000000, -63.500000) " font-family="Poppins-Regular, Poppins" font-size="12" font-weight="normal" fill="#8B8B8B">
+                    <tspan x="31" y="68">performance</tspan>
+                </text>
+                <text id="threshold" font-family="Poppins-Regular, Poppins" font-size="12" font-weight="normal" fill="#8B8B8B">
+                    <tspan x="23" y="176">threshold</tspan>
+                </text>
+                <text id="current-condition" font-family="Poppins-Regular, Poppins" font-size="12" font-weight="normal" line-spacing="16" fill="#8B8B8B">
+                    <tspan x="152" y="68">current condition</tspan>
+                </text>
+                <text id="t" font-family="Poppins-Regular, Poppins" font-size="14" font-weight="normal" fill="#8B8B8B">
+                    <tspan x="136" y="67">t</tspan>
+                </text>
+                <text id="t-copy" font-family="Poppins-Regular, Poppins" font-size="14" font-weight="normal" fill="#8B8B8B">
+                    <tspan x="337" y="144">t</tspan>
+                </text>
+                <text id="0" font-family="Poppins-Medium, Poppins" font-size="8" font-weight="400" fill="#8B8B8B">
+                    <tspan x="143" y="68">0</tspan>
+                </text>
+                <text id="1" font-family="Poppins-Medium, Poppins" font-size="8" font-weight="400" fill="#8B8B8B">
+                    <tspan x="344" y="146">1</tspan>
+                </text>
+                <text id="time" font-family="Poppins-Regular, Poppins" font-size="12" font-weight="normal" fill="#8B8B8B">
+                    <tspan x="446" y="256">time</tspan>
+                </text>
+                <circle id="Oval" fill="#DEDEDE" cx="142.5" cy="84.5" r="2.5"></circle>
+                <circle id="Oval-Copy" fill="#DEDEDE" cx="340.5" cy="171.5" r="2.5"></circle>
+                <text id="minimal-acceptable-c" font-family="Poppins-Regular, Poppins" font-size="12" font-weight="normal" line-spacing="16" fill="#8B8B8B">
+                    <tspan x="352" y="144">minimal acceptable </tspan>
+                    <tspan x="352" y="160">condition</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
