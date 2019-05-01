@@ -79,14 +79,14 @@ let valideteForm = function (formValue) {
   let mailPattern = /^[a-z0-9]\w+\.?\w*@[a-z]+\.[a-z]{2,8}$/;
 
   if (namePattern.test(formValue.name)) {
-    $('#formname').css('border-bottom', '1px solid #0052FF');
+    $('#formname').css('border-bottom', '1px solid #4E4E4E');
   } else {
     $('#formname').css('border-bottom', '1px solid red');
     return false
   }
 
   if (mailPattern.test(formValue.email)) {
-    $('#formemail').css('border-bottom', '1px solid #0052FF');
+    $('#formemail').css('border-bottom', '1px solid #4E4E4E');
   } else {
     $('#formemail').css('border-bottom', '1px solid red');
     return false
@@ -96,7 +96,7 @@ let valideteForm = function (formValue) {
     $('#formmessage').css('border-bottom', '1px solid red');
     return false
   } else {
-    $('#formmessage').css('border-bottom', '1px solid #0052FF');
+    $('#formmessage').css('border-bottom', '1px solid #4E4E4E');
   }
 
   if (formValue.termsAndConditions) {

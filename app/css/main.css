@@ -508,8 +508,8 @@ main {
     background: #0052FF; }
 
 .slider {
-  padding-top: 165px;
-  padding-bottom: 133px;
+  padding-top: 140px;
+  padding-bottom: 118px;
   /* CUSTOM THEME */
   /* EO CUSTOM THEME */ }
   @media (max-width: 1024px) {
@@ -1204,6 +1204,12 @@ main {
         .contact-content-info {
           min-width: 195px; } }
       .contact-content-info__caption {
+        margin-bottom: 24px;
+        color: #fff;
+        font-family: "Poppins-Bold", sans-serif;
+        font-size: 48px;
+        line-height: 64px;
+        color: #111111;
         margin-bottom: 16px; }
       .contact-content-info__text {
         margin-bottom: 40px;
@@ -1350,12 +1356,11 @@ main {
 
 [type="checkbox"]:checked + label:after,
 [type="checkbox"]:not(:checked) + label:after {
-  content: "";
+  content: url(../../images/Icon/checbox-active.svg);
   width: 8px;
   height: 8px;
-  background: #0052FF;
   position: absolute;
-  top: 6px;
+  top: -1px;
   left: 6px;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
@@ -1378,14 +1383,20 @@ main {
   -ms-transform: scale(1);
   transform: scale(1); }
 
+[type="checkbox"]:checked + label:before {
+  border: 1px solid #0052FF; }
+
 .errorCheckbox [type="checkbox"]:checked + label:before,
 .errorCheckbox [type="checkbox"]:not(:checked) + label:before {
   border: 1px solid #E63A0F; }
 
 .contact-page {
   padding-top: 170px;
-  padding-bottom: 63px;
-  height: 100vh; }
+  padding-bottom: 63px; }
+  .contact-page-bg {
+    position: absolute;
+    z-index: -10;
+    height: 100vh; }
   .contact-page .container {
     align-items: end; }
     @media (max-width: 1024px) {
@@ -1421,6 +1432,7 @@ main {
     .contact-page-content_1 {
       margin-bottom: 64px; } }
   .contact-page-content_2 {
+    position: relative;
     padding-right: 128px; }
     @media (max-width: 1024px) {
       .contact-page-content_2 {
@@ -1528,13 +1540,9 @@ main {
       background: transparent;
       border: none;
       outline: none; }
-
-#contact-page {
-  background-image: url(../../images/illustrations/contact-page-bg-img.svg);
-  background-repeat: no-repeat; }
-  @media (max-width: 1024px) {
-    #contact-page {
-      background-size: contain; } }
+  .contact-page .contact-content-form__text {
+    position: absolute;
+    top: -33px; }
 
 .footer {
   background-color: #fff;

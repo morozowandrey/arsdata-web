@@ -56,6 +56,8 @@
       }
 
       &__caption {
+        @include title;
+        color: $mainDark;
         margin-bottom: 16px;
       }
       &__text {
@@ -230,12 +232,12 @@
 }
 [type="checkbox"]:checked + label:after,
 [type="checkbox"]:not(:checked) + label:after {
-  content: "";
+  content: url(../../images/Icon/checbox-active.svg);
   width: 8px;
   height: 8px;
-  background: $mainBlue;
+  // background: $mainBlue;
   position: absolute;
-  top: 6px;
+  top: -1px;
   left: 6px;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
@@ -258,6 +260,9 @@
   -ms-transform: scale(1);
   transform: scale(1);
 }
+[type="checkbox"]:checked + label:before {
+  border: 1px solid $mainBlue;
+}
 
 .errorCheckbox {
   [type="checkbox"]:checked + label:before,
@@ -269,7 +274,12 @@
 .contact-page {
   padding-top: 170px;
   padding-bottom: 63px;
-  height: 100vh;
+
+  &-bg {
+    position: absolute;
+    z-index: -10;
+    height: 100vh;
+  }
 
   .container {
     align-items: end;
@@ -315,6 +325,7 @@
     }
 
     &_2 {
+      position: relative;
       padding-right: 128px;
 
       @include lg {
@@ -436,12 +447,8 @@
       outline: none;
     }
   }
-}
-
-#contact-page {
-  background-image: url(../../images/illustrations/contact-page-bg-img.svg);
-  background-repeat: no-repeat;
-  @include lg {
-    background-size: contain;
+  .contact-content-form__text {
+    position: absolute;
+    top: -33px;
   }
 }
