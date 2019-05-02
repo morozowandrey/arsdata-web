@@ -44,31 +44,54 @@
       align-items: center;
       overflow: hidden;
       // transition: all 0.3s ease-out;
-      
+
       @include lg {
         min-width: auto;
         max-height: 0;
         display: none;
       }
 
+      &__logo {
+        display: none;
+
+        @include lg {
+          display: block;
+          position: absolute;
+          top: 38px;
+        }
+      }
+
       &.collapse {
-        max-height: 15em !important;
-        display: flex;
-        flex-direction: column;
+        max-height: 100vh;
+        height: 100vh;
+        width: 100%;
+        padding-left: 80px;
+
         position: fixed;
         left: 0;
-        top: 38px;
-        background: $mainBlue;
-        width: 100%;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: center;
+
+        background-color: $mainDark;
 
         @include sm {
           top: 0px;
           min-height: 100vh;
           justify-content: center;
+          padding-left: 24px;
         }
       }
       &.collapse .navigation-desktop__item {
+        @include title;
         color: #fff;
+
+        @include sm {
+          font-size: 30px;
+          line-height: 46px;
+        }
       }
 
       &__item {

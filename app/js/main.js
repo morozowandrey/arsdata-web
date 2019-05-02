@@ -12,12 +12,12 @@ const ars = (function () {
     lastNumNode.html(lastNum);
   }
 
-  function privateStartSliderAnimations () {
+  function privateStartSliderAnimations() {
     $('.glide-slides-numbers-line__fill').addClass('blast');
     $('.slide-text').addClass('visio');
   }
 
-  function privateStopSlidersAnimations () {
+  function privateStopSlidersAnimations() {
     $('.glide-slides-numbers-line__fill').removeClass('blast');
     $('.slide-text').removeClass('visio');
   }
@@ -58,6 +58,8 @@ const ars = (function () {
   function publicToggleNav() {
     $(this).toggleClass('open');
     $('.navigation-desktop').toggleClass('collapse');
+    $('.navigation-mobile').toggleClass('open');
+    $('main').toggleClass('hidden');
   }
 
   if (window.location.pathname === "/services.html" || window.location.pathname === "/technologies.html") {
@@ -117,16 +119,18 @@ $('.navigation-mobile').click(function () {
   ars.toggleNav();
 });
 
+// REMOVE X & COLLAPSE NAV ON ON CLICK
+$('.navigation-desktop__item').click(function () {
+  $(".navigation-desktop").removeClass('open');
+  $('.navigation-desktop').removeClass('collapse');
+  $('.navigation-mobile').removeClass('open');
+  $('main').removeClass('hidden');
+});
+
 // LINKS TO ANCHORS
 $('a[href^="#"]').click(function (event) {
   let currentNode = this;
   ars.toAnchor(currentNode, event);
-});
-
-// REMOVE X & COLLAPSE NAV ON ON CLICK
-$('.navigation-desktop a').click(function () {
-  $('.navigation-mobile').removeClass('open');
-  $('.navigation-desktop').removeClass('collapse');
 });
 
 // FORM SUBMIT

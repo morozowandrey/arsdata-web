@@ -410,6 +410,9 @@ select:-webkit-autofill:focus {
 .success {
   color: green; }
 
+.hidden {
+  display: none; }
+
 .container {
   padding-left: 128px;
   max-width: 1366px;
@@ -652,22 +655,43 @@ main {
           min-width: auto;
           max-height: 0;
           display: none; } }
+      .header .navigation-desktop__logo {
+        display: none; }
+        @media (max-width: 1024px) {
+          .header .navigation-desktop__logo {
+            display: block;
+            position: absolute;
+            top: 38px; } }
       .header .navigation-desktop.collapse {
-        max-height: 15em !important;
-        display: flex;
-        flex-direction: column;
+        max-height: 100vh;
+        height: 100vh;
+        width: 100%;
+        padding-left: 80px;
         position: fixed;
         left: 0;
-        top: 38px;
-        background: #0052FF;
-        width: 100%; }
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: center;
+        background-color: #111111; }
         @media (max-width: 576px) {
           .header .navigation-desktop.collapse {
             top: 0px;
             min-height: 100vh;
-            justify-content: center; } }
+            justify-content: center;
+            padding-left: 24px; } }
       .header .navigation-desktop.collapse .navigation-desktop__item {
+        margin-bottom: 24px;
+        color: #fff;
+        font-family: "Poppins-Bold", sans-serif;
+        font-size: 48px;
+        line-height: 64px;
         color: #fff; }
+        @media (max-width: 576px) {
+          .header .navigation-desktop.collapse .navigation-desktop__item {
+            font-size: 30px;
+            line-height: 46px; } }
       .header .navigation-desktop__item {
         display: inline-block;
         position: relative;
