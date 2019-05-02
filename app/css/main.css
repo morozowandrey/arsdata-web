@@ -645,6 +645,48 @@ main {
     color: #8B8B8B;
     margin-bottom: 60px; }
 
+.cookies-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 36px 124px;
+  background-color: #0052FF; }
+  @media (max-width: 768px) {
+    .cookies-popup {
+      padding: 24px 60px;
+      flex-direction: column; } }
+  @media (max-width: 576px) {
+    .cookies-popup {
+      padding: 24px; } }
+  .cookies-popup-text {
+    font-size: 16px;
+    line-height: 25px;
+    color: #8B8B8B;
+    color: #fff;
+    max-width: 784px;
+    line-height: 24px;
+    margin-right: 24px; }
+    @media (max-width: 768px) {
+      .cookies-popup-text {
+        margin-right: 0px;
+        margin-bottom: 24px; } }
+    .cookies-popup-text__link {
+      color: #fff;
+      text-decoration: underline; }
+  .cookies-popup .blue-link {
+    color: #fff;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none; }
+    @media (max-width: 768px) {
+      .cookies-popup .blue-link {
+        margin-bottom: 0px; } }
+  .cookies-popup .blue-link::before {
+    background: #fff; }
+
 .header {
   width: 100%;
   padding: 38px 0 0;
