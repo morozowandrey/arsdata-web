@@ -1,0 +1,126 @@
+.policy {
+  padding-top: 160px;
+  padding-bottom: 120px;
+
+  @include md {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+
+  .container {
+    padding-right: 128px;
+
+    @include lg {
+      padding-right: 80px;
+    }
+
+    @include md {
+      padding-right: 24px;
+    }
+  }
+
+  &-content {
+    align-items: end;
+
+    @include md {
+      flex-direction: column;
+    }
+
+    &-column-1 {
+      max-width: 480px;
+      margin-right: 60px;
+
+      @include md {
+        max-width: 100%;
+        margin-right: 0px;
+      }
+    }
+
+    &-column-2 {
+      max-width: 492px;
+
+      @include md {
+        max-width: 100%;
+      }
+    }
+
+    &__title {
+      @include title;
+      margin-top: 0;
+      margin-bottom: 8px;
+
+      margin-bottom: 160px;
+
+      @include md {
+        margin-bottom: 80px;
+      }
+    }
+
+    &__text {
+      @include text;
+      margin-bottom: 160px;
+
+      @include md {
+        margin-bottom: 80px;
+      }
+
+      &_small {
+        margin-bottom: 24px;
+      }
+
+      &_xs {
+        margin-bottom: 8px;
+      }
+    }
+
+    &-paragraph {
+      @include paragraphWrapper;
+
+      &__title {
+        @include titleSmall;
+
+        &_medium {
+          margin-bottom: 24px;
+        }
+      }
+
+      &__text {
+        @include text;
+      }
+
+      &-list {
+        padding-left: 7px;
+
+        &_mb {
+          margin-bottom: 24px;
+        }
+
+        &__item {
+          @include text;
+          position: relative;
+
+          &_title {
+            color: #fff;
+
+          }
+
+          &::before {
+            content: "\2022";
+            width: 2px;
+            position: absolute;
+            left: -8px;
+            color: $mainBlue;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    &-email {
+      @include text;
+      &__mail {
+        color: $mainBlue;
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -14,10 +14,39 @@
   line-height: 64px;
 }
 
+@mixin titleSmall {
+  margin-bottom: 8px;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1.24px;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+
 @mixin text {
   font-size: 16px;
   line-height: 25px;
   color: $secondGray;
+}
+
+@mixin paragraphWrapper {
+  margin-bottom: 100px;
+
+  &_small {
+    margin-bottom: 24px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &:last-of-type.policy-content-paragraph_big {
+    margin-bottom: 100px;
+  }
+
+  @include md {
+    margin-bottom: 60px;
+  }
 }
 
 @mixin button-reset {
