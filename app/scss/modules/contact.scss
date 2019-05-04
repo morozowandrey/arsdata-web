@@ -48,6 +48,7 @@
       }
 
       @include md {
+        margin-right: 0px;
         margin-bottom: 80px;
       }
 
@@ -125,21 +126,34 @@
         }
       }
       &__text {
+        @include text;
         margin-bottom: 33px;
       }
 
       .form {
-        &__input {
-          @include formelementst-reset;
-          @include formelementst-custom-style;
+        &-input-box {
+          position: relative;
 
-          display: block;
-          width: 100%;
-          margin-bottom: 24px;
-          color: $mainDark;
+          &__input {
+            @include formelementst-reset;
+            @include formelementst-custom-style;
 
-          &:focus {
-            border-bottom: 1px solid $mainBlue;
+            display: block;
+            width: 100%;
+            margin-bottom: 24px;
+            color: $mainDark;
+
+            &:focus {
+              border-bottom: 1px solid $mainBlue;
+            }
+          }
+
+          &__lable {
+            position: absolute;
+            bottom: -18px;
+            font-size: 10px;
+            line-height: 16px;
+            color: $mainRed;
           }
         }
 
@@ -271,7 +285,29 @@
   }
 }
 
+.form-success-text,
+.form-error-text {
+  @include text;
+  display: none;
+  margin-bottom: 33px;
+  padding: 0;
+  text-transform: uppercase;
+  color: $mainBlue;
 
+  &::before {
+    content: none;
+  }
+
+  &_visible {
+    display: block;
+  }
+}
+
+.form-error-text {
+  color: $mainRed;
+  // display: inline-block;
+  margin-bottom: 0;
+}
 
 // PAGE STILES
 .contact-page {
@@ -344,33 +380,44 @@
   .form {
     max-width: 498px;
 
-    &__input {
-      @include formelementst-reset;
-      @include formelementst-custom-style;
+    &-input-box {
+      position: relative;
+      &__input {
+        @include formelementst-reset;
+        @include formelementst-custom-style;
 
-      display: block;
-      width: 100%;
-      margin-bottom: 24px;
-      color: #fff;
+        display: block;
+        width: 100%;
+        margin-bottom: 24px;
+        color: #fff;
 
-      &:-webkit-autofill {
-        -webkit-text-fill-color: #fff;
-        -webkit-box-shadow: none;
-        transition: background-color 5000s ease-in-out 0s;
-      }
-      &:-webkit-autofill:hover {
-        -webkit-text-fill-color: #fff;
-        -webkit-box-shadow: none;
-        transition: background-color 5000s ease-in-out 0s;
-      }
-      &:-webkit-autofill:focus {
-        -webkit-text-fill-color: #fff;
-        -webkit-box-shadow: none;
-        transition: background-color 5000s ease-in-out 0s;
+        &:-webkit-autofill {
+          -webkit-text-fill-color: #fff;
+          -webkit-box-shadow: none;
+          transition: background-color 5000s ease-in-out 0s;
+        }
+        &:-webkit-autofill:hover {
+          -webkit-text-fill-color: #fff;
+          -webkit-box-shadow: none;
+          transition: background-color 5000s ease-in-out 0s;
+        }
+        &:-webkit-autofill:focus {
+          -webkit-text-fill-color: #fff;
+          -webkit-box-shadow: none;
+          transition: background-color 5000s ease-in-out 0s;
+        }
+
+        &:focus {
+          border-bottom: 1px solid $mainBlue;
+        }
       }
 
-      &:focus {
-        border-bottom: 1px solid $mainBlue;
+      &__lable {
+        position: absolute;
+        bottom: -18px;
+        font-size: 10px;
+        line-height: 16px;
+        color: $mainRed;
       }
     }
 
@@ -449,9 +496,5 @@
       border: none;
       outline: none;
     }
-  }
-  .contact-content-form__text {
-    position: absolute;
-    top: -33px;
   }
 }

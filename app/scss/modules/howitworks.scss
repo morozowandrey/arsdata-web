@@ -59,6 +59,14 @@
         text-transform: uppercase;
         color: $mainBlue;
 
+        &_big {
+          margin-bottom: 22px;
+        }
+
+        span {
+          display: block;
+        }
+
         &:after {
           content: "";
           display: block;

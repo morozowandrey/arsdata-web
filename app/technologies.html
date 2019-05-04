@@ -4,7 +4,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
   <title>ARS Data</title>
+
+  <meta name="keywords" content="ARS Data, Data sience, Big data, Embedded, HVAC, Maintenance">
+  <meta name="author" content="EarlyBird">
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="ARS Data website">
+  <meta name="twitter:description" content="ARS Data website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ARS Data">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="ARS Data">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ARS Data">
+  <meta property="og:description" content="ARS Data website">
+
+  <base href="/">
+  <link rel="manifest" href="manifest.json">
+
   <!--build:css css/styles.min.css-->
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/glide.core.css">
@@ -14,26 +33,29 @@
 </head>
 
 <body>
+  <noscript>
+    Website doesn't work when JavaScript disabled. Please enable JavaScript
+  </noscript>
 
   <header class="header">
     <div class="container flex-between">
       <a href="index.html" class="header__logo">
         <img src="images/logos/logo-white.svg" alt="ARS Data logo">
       </a>
-  
+
       <nav class="navigation" id="navigation">
         <a aria-label="mobile menu" class="navigation-mobile">
           <span></span>
           <span></span>
           <span></span>
         </a>
-  
+
         <div class="navigation-desktop">
           <img src="images/logos/logo-white.svg" alt="ARS Data logo" class="navigation-desktop__logo">
-          <a class="navigation-desktop__item" href="#about">About us</a>
-          <a class="navigation-desktop__item" href="/services.html">Solutions</a>
-          <a class="navigation-desktop__item" href="#technology">Technology</a>
-          <a class="navigation-desktop__item" href="#contact">Contact</a>
+          <a class="navigation-desktop__item" href="./about-us.html">About us</a>
+          <a class="navigation-desktop__item" href="./solutions.html">Solutions</a>
+          <a class="navigation-desktop__item" href="./technologies.html">Technology</a>
+          <a class="navigation-desktop__item" href="./contacts.html">Contact</a>
         </div>
       </nav>
     </div>
@@ -46,9 +68,10 @@
         <div class="glide">
           <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides">
+
               <li class="glide__slide">
                 <div class="slide-content slide-content-1">
-                  <h2 class="slide-content__title">Predictive Maintenance</h2>
+                  <h2 class="slide-content__title">Embedded</h2>
                   <p class="slide-content-text">
                     <span class="slide-content-text__part">Predict the future health of equipment or an asset.</span>
                     <span class="slide-content-text__part">Estimate Remaining Useful Life (RUL).</span>
@@ -60,9 +83,10 @@
                     alt="Predictive Maintenance illustration downgrade graphic with limit line">
                 </div>
               </li>
+
               <li class="glide__slide">
                 <div class="slide-content slide-content-1">
-                  <h2 class="slide-content__title">Predictive Maintenance</h2>
+                  <h2 class="slide-content__title">Storage</h2>
                   <p class="slide-content-text">
                     <span class="slide-content-text__part">Predict the future health of equipment or an asset.</span>
                     <span class="slide-content-text__part">Estimate Remaining Useful Life (RUL).</span>
@@ -74,9 +98,10 @@
                     alt="Predictive Maintenance illustration downgrade graphic with limit line">
                 </div>
               </li>
+
               <li class="glide__slide">
                 <div class="slide-content slide-content-1">
-                  <h2 class="slide-content__title">Predictive Maintenance</h2>
+                  <h2 class="slide-content__title">Modelling</h2>
                   <p class="slide-content-text">
                     <span class="slide-content-text__part">Predict the future health of equipment or an asset.</span>
                     <span class="slide-content-text__part">Estimate Remaining Useful Life (RUL).</span>
@@ -88,9 +113,10 @@
                     alt="Predictive Maintenance illustration downgrade graphic with limit line">
                 </div>
               </li>
+
               <li class="glide__slide">
                 <div class="slide-content slide-content-1">
-                  <h2 class="slide-content__title">Predictive Maintenance</h2>
+                  <h2 class="slide-content__title">Computation</h2>
                   <p class="slide-content-text">
                     <span class="slide-content-text__part">Predict the future health of equipment or an asset.</span>
                     <span class="slide-content-text__part">Estimate Remaining Useful Life (RUL).</span>
@@ -102,6 +128,7 @@
                     alt="Predictive Maintenance illustration downgrade graphic with limit line">
                 </div>
               </li>
+
             </ul>
           </div>
           <div class="glide-navigation">
@@ -124,7 +151,7 @@
     <section id="contact" class="contact">
       <div class="container">
         <div class="contact-content">
-    
+
           <div class="contact-content-info">
             <h2 class="contact-content-info__caption">Let's talk</h2>
             <!-- <p class="contact-content-info__text text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
@@ -137,14 +164,14 @@
               <a href="mailto:hello@arsdata.io" class="text">hello@arsdata.io</a>
             </address>
           </div>
-    
+
           <div class="contact-content-form">
             <h2 class="contact-content-form__caption contact-content-form__caption_desktop caption">Got questions? — get
               in touch</h2>
             <h2 class="contact-content-form__caption contact-content-form__caption_mobile caption">Got questions?</h2>
             <p class="contact-content-form__text text">Send us your questions and we will get back to you as soon as
               possible</p>
-    
+
             <form class="form" id="contact-form">
               <input id="formname" name="name" type="text" class="form__input" type="text" placeholder="Name" required>
               <input id="formemail" name="email" type="email" class="form__input" placeholder="Email" required>
@@ -155,7 +182,8 @@
               </div>
               <div class="form-radio-box">
                 <p>
-                  <input class="form-radio-box__radio" type="checkbox" name="termsAndConditions" id="termsAndConditions">
+                  <input class="form-radio-box__radio" type="checkbox" name="termsAndConditions"
+                    id="termsAndConditions">
                   <label class="form-radio-box-lable" for="termsAndConditions">By clicking the button above, I agree
                     with
                     <a href="" target="_blanc" class="form-radio-box-lable__link">Terms of Service</a> and
@@ -164,11 +192,11 @@
                 </label>
               </div>
             </form>
-            <div id="formsubmit"></div>
-    
+
+
           </div>
-    
-    
+
+
         </div>
       </div>
     </section>

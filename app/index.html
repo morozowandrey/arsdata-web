@@ -4,15 +4,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
   <title>ARS Data</title>
-  <!--build:css css/styles.min.css-->
-  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="keywords" content="ARS Data, Data sience, Big data, Embedded, HVAC, Maintenance">
+  <meta name="author" content="EarlyBird">
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="ARS Data website">
+  <meta name="twitter:description" content="ARS Data website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ARS Data">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="ARS Data">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ARS Data">
+  <meta property="og:description" content="ARS Data website">
+
+  <base href="/">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- build:css css/styles.min.css -->
+  <link rel=" stylesheet" href="css/main.css">
   <!-- <link rel="stylesheet" href="css/var.css"> -->
   <!--endbuild-->
   <link rel="shortcut icon" type="image/png" href="./images/Icon/favicon-16x16.png" />
 </head>
 
 <body>
+  <noscript>
+    Website doesn't work when JavaScript disabled. Please enable JavaScript
+  </noscript>
 
   <header class="header">
     <div class="container flex-between">
@@ -30,7 +52,7 @@
         <div class="navigation-desktop">
           <img src="images/logos/logo-white.svg" alt="ARS Data logo" class="navigation-desktop__logo">
           <a class="navigation-desktop__item" href="#about">About us</a>
-          <a class="navigation-desktop__item" href="/services.html">Solutions</a>
+          <a class="navigation-desktop__item" href="#solutions">Solutions</a>
           <a class="navigation-desktop__item" href="#technology">Technology</a>
           <a class="navigation-desktop__item" href="#contact">Contact</a>
         </div>
@@ -46,7 +68,7 @@
           <span class="home-text__part-2">for Machine Generated </span>
           <span class="home-text__part-3">Data & Industrial IoT</span>
         </p>
-        <a href="#contact" class="home__startbtn blue-link">Start the project</a>
+        <a href="./contacts.html" class="home__startbtn blue-link">Start the project</a>
         <img class="home__mobile-img" src="images/home-bg-mobile.svg" alt="home mobile tech graphics">
       </div>
     </section>
@@ -64,7 +86,7 @@
             data:
             OPEX improvement, uptime, decisions quality.
           </p>
-          <a href="#about" class="about-content__link blue-link">Read more about us</a>
+          <a href="./about-us.html" class="about-content__link blue-link">Read more about us</a>
         </div>
       </div>
     </section>
@@ -76,18 +98,20 @@
           <div class="howitworks-options-bullet">
             <p class="howitworks-options-bullet__caption">talk</p>
             <p class="howitworks-options-bullet__item">Discuss your ideas or problems</p>
-            <p class="howitworks-options-bullet__item">We are open to grab
-              a cup of coffee and think through the new case</p>
           </div>
           <div class="howitworks-options-bullet">
-            <p class="howitworks-options-bullet__caption">Propose Roadmap</p>
+            <p class="howitworks-options-bullet__caption howitworks-options-bullet__caption_big">
+              <span>Propose</span>
+              <span>Roadmap</span>
+            </p>
             <p class="howitworks-options-bullet__item">Conduct Requirements and Data analysis</p>
             <p class="howitworks-options-bullet__item">Articulate tradeoffs</p>
             <p class="howitworks-options-bullet__item">Set the expectation baselines</p>
             <p class="howitworks-options-bullet__item">Prepare project plan</p>
           </div>
           <div class="howitworks-options-bullet">
-            <p class="howitworks-options-bullet__caption">Deliver Pilot Product</p>
+            <p class="howitworks-options-bullet__caption howitworks-options-bullet__caption_big">Deliver Pilot Product
+            </p>
             <p class="howitworks-options-bullet__item">Stay lean</p>
             <p class="howitworks-options-bullet__item">Validate hypothesises and concepts with minimal investments</p>
             <p class="howitworks-options-bullet__item">Analyse the feedback</p>
@@ -106,48 +130,48 @@
       <div class="container">
         <h2 class="solutions__caption">Solutions</h2>
         <div class="solutions-grid">
-          <div class="solutions-grid-item" (click)="goToSolution(0)">
+          <a href="./solutions.html#0" class="solutions-grid-item" (click)="goToSolution(0)">
             <p class="solutions-grid-item__caption">Predictive Maintenance</p>
             <p class="solutions-grid-item__text">Predict the future health of equipment or an asset</p>
-            <a href="" class="solutions-grid-item__link blue-link">Read more</a>
-          </div>
-          <div class="solutions-grid-item">
+            <p class="solutions-grid-item__link blue-link">Read more</p>
+          </a>
+          <a href="./solutions.html#1" class="solutions-grid-item">
             <p class="solutions-grid-item__caption">Condition Monitoring</p>
             <p class="solutions-grid-item__text">Get current equipment health</p>
-            <a href="" class="solutions-grid-item__link blue-link">Read more</a>
-          </div>
-          <div class="solutions-grid-item">
+            <p class="solutions-grid-item__link blue-link">Read more</p>
+          </a>
+          <a href="./solutions.html#2" class="solutions-grid-item">
             <p class="solutions-grid-item__caption">Sensor data processing</p>
             <p class="solutions-grid-item__text">Process different types of sensor data</p>
-            <a href="" class="solutions-grid-item__link blue-link">Read more</a>
-          </div>
-          <div class="solutions-grid-item">
+            <p class="solutions-grid-item__link blue-link">Read more</p>
+          </a>
+          <a href="./solutions.html#3" class="solutions-grid-item">
             <p class="solutions-grid-item__caption">Smart HVAC</p>
             <p class="solutions-grid-item__text">Minimize energy footprint of the building</p>
-            <a href="" class="solutions-grid-item__link blue-link">Read more</a>
-          </div>
-          <div class="solutions-grid-item">
+            <p class="solutions-grid-item__link blue-link">Read more</p>
+          </a>
+          <a href="./solutions.html#4" class="solutions-grid-item">
             <p class="solutions-grid-item__caption">Machine learning</p>
             <p class="solutions-grid-item__text">Detect anomalies and patterns in the raw data</p>
-            <a href="" class="solutions-grid-item__link blue-link">Read more</a>
-          </div>
-          <div class="solutions-grid-item">
+            <p class="solutions-grid-item__link blue-link">Read more</p>
+          </a>
+          <a href="./solutions.html#5" class="solutions-grid-item">
             <p class="solutions-grid-item__caption">Embedded Development</p>
             <p class="solutions-grid-item__text">Low-level programming for Sensors, PLCs, Gateways, and other IoT
               devices</p>
-            <a href="" class="solutions-grid-item__link blue-link">Read more</a>
-          </div>
-          <div class="solutions-grid-item">
+            <p class="solutions-grid-item__link blue-link">Read more</p>
+          </a>
+          <a href="./solutions.html#6" class="solutions-grid-item">
             <p class="solutions-grid-item__caption">DATA PROCESSING</p>
             <p class="solutions-grid-item__text">Scalable solutions to establish data flow from field to the cloud
             </p>
-            <a href="" class="solutions-grid-item__link blue-link">Read more</a>
-          </div>
-          <div class="solutions-grid-item">
+            <p class="solutions-grid-item__link blue-link">Read more</p>
+          </a>
+          <a href="./solutions.html#7" class="solutions-grid-item">
             <p class="solutions-grid-item__caption">Visualisations and Dashboards</p>
             <p class="solutions-grid-item__text">Custom reporting and data exploration tools</p>
-            <a href="" class="solutions-grid-item__link blue-link">Read more</a>
-          </div>
+            <p class="solutions-grid-item__link blue-link">Read more</p>
+          </a>
         </div>
       </div>
     </section>
@@ -157,26 +181,26 @@
         <h2 class="technology__caption">Technology stacks</h2>
         <p class="technology__subcaption">We use proven tools and frameworks to build and run data infrastructure</p>
         <div class="technology-grid">
-          <div class="technology-grid-item">
+          <a href="./technologies.html#0" class="technology-grid-item">
             <p class="technology-grid-item__caption">Embedded</p>
-            <a href="" class="technology-grid-item__link blue-link">Read more</a>
-          </div>
-          <div class="technology-grid-item">
+            <p class="technology-grid-item__link blue-link">Read more</p>
+          </a>
+          <a href="./technologies.html#1" class="technology-grid-item">
             <p class="technology-grid-item__caption">Computation</p>
-            <a href="" class="technology-grid-item__link blue-link">Read more</a>
-          </div>
-          <div class="technology-grid-item">
+            <p class="technology-grid-item__link blue-link">Read more</p>
+          </a>
+          <a href="./technologies.html#2" class="technology-grid-item">
             <p class="technology-grid-item__caption">Storage</p>
-            <a href="" class="technology-grid-item__link blue-link">Read more</a>
-          </div>
-          <div class="technology-grid-item">
+            <p class="technology-grid-item__link blue-link">Read more</p>
+          </a>
+          <a href="./technologies.html#3" class="technology-grid-item">
             <p class="technology-grid-item__caption">Modelling</p>
-            <a href="" class="technology-grid-item__link blue-link">Read more</a>
-          </div>
-          <div class="technology-grid-item">
+            <p class="technology-grid-item__link blue-link">Read more</p>
+          </a>
+          <a href="./technologies.html#4" class="technology-grid-item">
             <p class="technology-grid-item__caption">Visualisation</p>
-            <a href="" class="technology-grid-item__link blue-link">Read more</a>
-          </div>
+            <p class="technology-grid-item__link blue-link">Read more</p>
+          </a>
         </div>
       </div>
     </section>
@@ -199,33 +223,47 @@
           </div>
 
           <div class="contact-content-form">
-            <h2 class="contact-content-form__caption contact-content-form__caption_desktop caption">Got questions? — get
+            <h2 class="contact-content-form__caption caption">Got questions? — get
               in touch</h2>
-            <h2 class="contact-content-form__caption contact-content-form__caption_mobile caption">Got questions?</h2>
-            <p class="contact-content-form__text text">Send us your questions and we will get back to you as soon as
-              possible</p>
+            <!-- <h2 class="contact-content-form__caption contact-content-form__caption_mobile caption">Got questions?</h2> -->
+            <p class="contact-content-form__text">Send us your questions and we will get back to you as soon as possible
+            </p>
 
             <form class="form" id="contact-form">
-              <input id="formname" name="name" type="text" class="form__input" type="text" placeholder="Name" required>
-              <input id="formemail" name="email" type="email" class="form__input" placeholder="Email" required>
-              <div class="form-textarea-box">
-                <textarea id="formmessage" name="message" id="message-textarea" cols="30" rows="3" placeholder="Message"
-                  required></textarea>
-                <button class="form-textarea-box__btn" id="submit-button">Send</button>
+              <div class="form-input-box">
+                <input id="formname" name="name" type="text" class="form-input-box__input" type="text"
+                  placeholder="Name" required>
+                <label for="name" id="formNameLable" class="form-input-box__lable"></label>
               </div>
+
+              <div class="form-input-box">
+                <input id="formemail" name="email" type="email" class="form-input-box__input" placeholder="Email"
+                  required>
+                <label for="email" id="formEmailLable" class="form-input-box__lable"></label>
+              </div>
+
+              <div class="form-textarea-box">
+                <textarea id="formmessage" name="message" id="message-textarea" cols="30" rows="3"
+                  placeholder="Message"></textarea>
+                <button type="submit" class="form-textarea-box__btn" id="submit-button" soul="index-form">Send</button>
+              </div>
+
               <div class="form-radio-box">
                 <p>
                   <input class="form-radio-box__radio" type="checkbox" name="termsAndConditions"
                     id="termsAndConditions">
                   <label class="form-radio-box-lable" for="termsAndConditions">By clicking the button above, I agree
                     with
-                    <a href="" target="_blanc" class="form-radio-box-lable__link">Terms of Service</a> and
-                    <a href="" target="_blanc" class="form-radio-box-lable__link">Privacy Policy</a>
+                    <a href="./terms-and-conditions.html" target="_blanc" class="form-radio-box-lable__link">Terms of
+                      Service</a> and
+                    <a href="./privacy-policy.html" target="_blanc" class="form-radio-box-lable__link">Privacy
+                      Policy</a>
                 </p>
                 </label>
               </div>
+
             </form>
-            <div id="formsubmit"></div>
+
 
           </div>
 
@@ -247,10 +285,10 @@
   <div id="cookies-popup" class="cookies-popup flex-between">
     <p class="cookies-popup-text">
       We use cookies to improve your experience with our site, including analytics and personalisation.
-      By continuing to use the service, you agree to our use of cookies as described in the 
-      <a href="" target="_blanc" class="cookies-popup-text__link">Cookie Policy</a>.
-    </p>
-    <button type="button" class="home__startbtn blue-link">accept</button>
+      By continuing to use the service, you agree to our use of cookies as described in the
+      <p target="_blanc" class="cookies-popup-text__link">Cookie Policy</a>.
+      </p>
+      <button type="button" class="home__startbtn blue-link">accept</button>
   </div>
 
 

@@ -32,6 +32,11 @@ const ars = (function () {
   });
 
   publicGlide.on('mount.after', function () {
+    let slideIndex = window.location.href.split('#')[1];
+    let firstNumValue = '0'.concat(parseInt(slideIndex) + 1);
+    if (slideIndex) {
+      publicGlide.go(`=${slideIndex}`);
+    }
     privateSetSlidesNumbers(firstNumValue, lastNumValue);
   });
 
@@ -62,7 +67,7 @@ const ars = (function () {
     $('main').toggleClass('hidden');
   }
 
-  if (window.location.pathname === "/services.html" || window.location.pathname === "/technologies.html") {
+  if (window.location.pathname === "/solutions.html" || window.location.pathname === "/technologies.html") {
     publicGlide.mount();
   }
 
@@ -82,24 +87,30 @@ let valideteForm = function (formValue) {
 
   if (namePattern.test(formValue.name)) {
     $('#formname').css('border-bottom', '1px solid #4E4E4E');
+    $('#formNameLable').hide();
   } else {
-    $('#formname').css('border-bottom', '1px solid red');
+    $('#formname').css('border-bottom', '1px solid #E63A0F');
+    $('#formNameLable').show();
+    $('#formNameLable').text("please enter a valid name");
     return false
   }
 
   if (mailPattern.test(formValue.email)) {
     $('#formemail').css('border-bottom', '1px solid #4E4E4E');
+    $('#formEmailLable').hide();
   } else {
-    $('#formemail').css('border-bottom', '1px solid red');
+    $('#formemail').css('border-bottom', '1px solid #E63A0F');
+    $('#formEmailLable').show();
+    $('#formEmailLable').text("please enter a valid email address");
     return false
   }
 
-  if (formValue.message == '') {
-    $('#formmessage').css('border-bottom', '1px solid red');
-    return false
-  } else {
-    $('#formmessage').css('border-bottom', '1px solid #4E4E4E');
-  }
+  // if (formValue.message == '') {
+  //   $('#formmessage').css('border-bottom', '1px solid #E63A0F');
+  //   return false
+  // } else {
+  //   $('#formmessage').css('border-bottom', '1px solid #4E4E4E');
+  // }
 
   if (formValue.termsAndConditions) {
     $('.form-radio-box').removeClass('errorCheckbox');
@@ -135,23 +146,86 @@ $('a[href^="#"]').click(function (event) {
 
 // FORM SUBMIT
 $("#submit-button").click(function (event) {
+  $('.form-error-text').hide();
+  $(".contact-content-form__caption").text("Got questions? — get in touch");
+  $(".contact-content-form__caption").removeClass("error");
+
   let formValue = $(this.form).serializeArray().reduce(function (obj, item) {
     obj[item.name] = item.value;
     return obj;
   }, {});
 
   if (valideteForm(formValue)) {
-    $(".contact-content-form__text").text("Thank you! We will we will get back to you as soon as possible ⚡️");
-    $(".contact-content-form__text").addClass('success');
-    // $.ajax({
-    //   url: "",
-    //   method: "POST",
-    //   data: formValue,
-    //   success: function (data) {
-    //     $("#formsubmit").text("Thank you!");
-    //   }
-    // });
+    console.log("valid data");
+    console.log(formValue);
+
+    let that = this;
+    // let submitBtn = $(this.form).find("#submit-button");
+    // if (submitBtn.attr("soul") === "contacts-form") {
+    //   $("#submit-button").hide();
+    //   $(".form-success-text").text("Your message was sent");
+    //   $(".form-success-text").addClass('form-success-text_visible');
+    // } else {
+    //   $(".contact-content-form__caption").text("Your message was sent");
+    //   $(".contact-content-form__text").text("We will get back to you as soon as possible");
+    // }
+
+    $.ajax({
+      url: "",
+      method: "POST",
+      data: formValue,
+      success: function (response) {
+        successFormSubmit(response).bind(this);
+      },
+      error: function (jqXHR, exception) {
+        getErrorMessage(that, jqXHR, exception);
+      },
+    });
   };
+
+  function successFormSubmit(response) {
+    console.log(response, response.responseText);
+
+    let submitBtn = $(this.form).find("#submit-button");
+    if (submitBtn.attr("soul") === "contacts-form") {
+      $("#submit-button").hide();
+      $(".form-success-text").text("Your message was sent");
+      $(".form-success-text").addClass('form-success-text_visible');
+    } else {
+      $(".contact-content-form__caption").text("Your message was sent");
+      $(".contact-content-form__text").text("We will get back to you as soon as possible");
+    }
+  }
+
+  function getErrorMessage(that, jqXHR, exception) {
+    var msg = '';
+    if (jqXHR.status === 0) {
+      msg = 'Not connect.\n Verify Network.';
+    } else if (jqXHR.status == 404) {
+      msg = 'Requested page not found. [404]';
+    } else if (jqXHR.status == 500) {
+      msg = 'Internal Server Error [500].';
+    } else if (exception === 'parsererror') {
+      msg = 'Requested JSON parse failed.';
+    } else if (exception === 'timeout') {
+      msg = 'Time out error.';
+    } else if (exception === 'abort') {
+      msg = 'Ajax request aborted.';
+    } else {
+      msg = 'Uncaught Error.\n' + jqXHR.responseText;
+    }
+
+    let submitBtn = $(that.form).find("#submit-button");
+    if (submitBtn.attr("soul") === "contacts-form") {
+      $('.form-error-text').show();
+      $('.form-error-text').text("Your message wasn’t sent");
+    } else {
+      $(".contact-content-form__caption").addClass("error");
+      $(".contact-content-form__caption").text("Your message wasn’t sent");
+    }
+
+    console.log(jqXHR, msg);
+  }
 
   event.preventDefault();
 });

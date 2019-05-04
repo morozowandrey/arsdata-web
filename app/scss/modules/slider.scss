@@ -20,6 +20,7 @@
 
     &-text {
       @include text;
+      max-width: 498px;
 
       &__part {
         display: block;
@@ -27,6 +28,10 @@
     }
     &__img {
       border-radius: 3px;
+
+      &_small {
+        margin-bottom: 40px;
+      }
     }
 
     &-1 {
