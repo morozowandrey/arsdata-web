@@ -10,6 +10,10 @@
   transform: translateY(0);
   -webkit-transform: translateY(0);
 
+  .container {
+    align-items: end;
+  }
+
   @include md {
     padding-top: 30px;
   }
@@ -116,7 +120,7 @@
           position: absolute;
           left: 0;
           bottom: 0;
-          height: 2px;
+          height: 1px;
           width: 0;
           transition: width 0s ease, background 0.35s ease;
         }
@@ -126,7 +130,7 @@
           position: absolute;
           right: 0;
           bottom: 0;
-          height: 2px;
+          height: 1px;
           width: 0;
           background: $mainBlue;
           transition: width 0.35s ease;

@@ -52,11 +52,20 @@ const ars = (function () {
 
   function publicToAnchor(currentNode, event) {
     const $target = $(currentNode.getAttribute('href'));
+    
+    const $targetSoutions = currentNode.getAttribute('href').split('#')[1]
+    console.log($targetSoutions);
     if ($target.length) {
       event.preventDefault();
-      $('html, body').stop().animate({
-        scrollTop: $target.offset().top
-      }, 500, 'easeInOutQuad');
+      if ($targetSoutions == "solutions") {
+        $('html, body').stop().animate({
+          scrollTop: $target.offset().top - 20
+        }, 500, 'easeInOutQuad');
+      } else {
+        $('html, body').stop().animate({
+          scrollTop: $target.offset().top - 50
+        }, 500, 'easeInOutQuad');
+      }
     }
   }
 
@@ -86,7 +95,7 @@ let valideteForm = function (formValue) {
   let mailPattern = /^[a-z0-9]\w+\.?\w*@[a-z]+\.[a-z]{2,8}$/;
 
   if (namePattern.test(formValue.name)) {
-    $('#formname').css('border-bottom', '1px solid #4E4E4E');
+    $('#formname').css('border-bottom', '1px solid #BFBFBF');
     $('#formNameLable').hide();
   } else {
     $('#formname').css('border-bottom', '1px solid #E63A0F');
@@ -96,7 +105,7 @@ let valideteForm = function (formValue) {
   }
 
   if (mailPattern.test(formValue.email)) {
-    $('#formemail').css('border-bottom', '1px solid #4E4E4E');
+    $('#formemail').css('border-bottom', '1px solid #BFBFBF');
     $('#formEmailLable').hide();
   } else {
     $('#formemail').css('border-bottom', '1px solid #E63A0F');
@@ -109,7 +118,7 @@ let valideteForm = function (formValue) {
   //   $('#formmessage').css('border-bottom', '1px solid #E63A0F');
   //   return false
   // } else {
-  //   $('#formmessage').css('border-bottom', '1px solid #4E4E4E');
+  //   $('#formmessage').css('border-bottom', '1px solid #BFBFBF');
   // }
 
   if (formValue.termsAndConditions) {

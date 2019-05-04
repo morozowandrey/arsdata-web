@@ -45,8 +45,9 @@
 // CONTAINER
 
 .container {
-  padding-left: 128px;
-  max-width: 1366px;
+  padding-left: 119px;
+  // max-width: 1366px;
+  max-width: 1440px;
   margin: 0 auto;
 
   @include xl {

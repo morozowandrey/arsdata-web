@@ -353,8 +353,8 @@ textarea {
  * Correct the text style of placeholders in Chrome, Edge, and Safari.
  */
 ::-webkit-input-placeholder {
-  color: inherit;
-  opacity: 0.54; }
+  color: #8B8B8B;
+  opacity: 1; }
 
 /**
  * 1. Correct the inability to style clickable types in iOS and Safari.
@@ -417,8 +417,8 @@ select:-webkit-autofill:focus {
   display: none; }
 
 .container {
-  padding-left: 128px;
-  max-width: 1366px;
+  padding-left: 119px;
+  max-width: 1440px;
   margin: 0 auto; }
   @media (max-width: 1024px) {
     .container {
@@ -467,8 +467,7 @@ main {
 
 @font-face {
   font-family: 'Poppins-Regular';
-  src: url("../../fonts/Poppins/poppins-regular-webfont.eot");
-  src: url("../../fonts/Poppins/poppins-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/Poppins/poppins-regular-webfont.woff") format("woff"), url("../../fonts/Poppins/poppins-regular-webfont.woff2") format("woff2"), url("../../fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  src: url("../../fonts/Poppins/Poppins-Light.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -513,8 +512,8 @@ main {
     display: block;
     position: absolute;
     left: 0;
-    top: 10px;
-    height: 2px;
+    top: 12px;
+    height: 1px;
     width: 20px;
     background: #0052FF; }
 
@@ -813,6 +812,8 @@ main {
   transition: transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1), background 0.3s, -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
   transform: translateY(0);
   -webkit-transform: translateY(0); }
+  .header .container {
+    align-items: end; }
   @media (max-width: 768px) {
     .header {
       padding-top: 30px; } }
@@ -902,7 +903,7 @@ main {
           position: absolute;
           left: 0;
           bottom: 0;
-          height: 2px;
+          height: 1px;
           width: 0;
           transition: width 0s ease, background 0.35s ease; }
         .header .navigation-desktop__item:after {
@@ -911,7 +912,7 @@ main {
           position: absolute;
           right: 0;
           bottom: 0;
-          height: 2px;
+          height: 1px;
           width: 0;
           background: #0052FF;
           transition: width 0.35s ease; }
@@ -1059,8 +1060,8 @@ main {
       display: block;
       position: absolute;
       left: 0;
-      top: 10px;
-      height: 2px;
+      top: 12px;
+      height: 1px;
       width: 20px;
       background: #0052FF; }
   .about .container {
@@ -1131,11 +1132,11 @@ main {
         padding-right: 24px; } }
 
 .howitworks {
-  padding-bottom: 115px;
+  padding-bottom: 145px;
   background-color: #fff; }
   @media (max-width: 768px) {
     .howitworks {
-      padding-bottom: 70px; } }
+      padding-bottom: 100px; } }
   .howitworks .container {
     padding-right: 24px; }
   .howitworks__caption {
@@ -1211,14 +1212,13 @@ main {
     margin-bottom: 30px;
     font-family: "Poppins-Bold", sans-serif;
     font-size: 48px;
-    line-height: 72px;
-    padding-top: 30px; }
+    line-height: 72px; }
   .solutions-grid {
     display: flex;
     flex-wrap: wrap; }
     .solutions-grid-item {
-      height: 279px;
-      width: 308px;
+      height: 295px;
+      width: 329px;
       padding: 90px 70px 0;
       margin: 0.5px;
       background-color: #DEDEDE; }
@@ -1258,6 +1258,8 @@ main {
         line-height: 24px;
         color: #0052FF;
         text-transform: uppercase; }
+        .solutions-grid-item__caption span {
+          display: block; }
         .solutions-grid-item__caption:before {
           content: url(../../images/solutions/blue/predictive-maintenance.svg);
           height: 30px;
@@ -1270,6 +1272,8 @@ main {
         font-size: 16px;
         line-height: 24px;
         color: #8B8B8B; }
+        .solutions-grid-item__text span {
+          display: block; }
       .solutions-grid-item__link {
         display: none; }
       .solutions-grid-item:hover {
@@ -1350,8 +1354,8 @@ main {
           display: block;
           position: absolute;
           left: 0;
-          bottom: -71px;
-          height: 2px;
+          bottom: -74px;
+          height: 1px;
           width: 20px;
           background: #0052FF;
           transition: width 0.35s ease; }
@@ -1443,7 +1447,7 @@ main {
           display: block;
           position: absolute;
           left: 0;
-          top: 1px; }
+          top: 4px; }
       .contact-content-info__email {
         margin-bottom: 0; }
         .contact-content-info__email a {
@@ -1454,7 +1458,7 @@ main {
           content: "";
           background-size: 18px;
           background-image: url(../../images/Icon/Mail.svg);
-          top: 1px; }
+          top: 4px; }
     .contact-content-form {
       max-width: 563px; }
       .contact-content-form__caption {
@@ -1487,7 +1491,7 @@ main {
           font-size: 16px;
           line-height: 25px;
           color: #8B8B8B;
-          border-bottom: 1px solid #4E4E4E;
+          border-bottom: 1px solid #BFBFBF;
           display: block;
           width: 100%;
           margin-bottom: 24px;
@@ -1514,7 +1518,7 @@ main {
           font-size: 16px;
           line-height: 25px;
           color: #8B8B8B;
-          border-bottom: 1px solid #4E4E4E;
+          border-bottom: 1px solid #BFBFBF;
           resize: none;
           display: block;
           width: 100%;
@@ -1544,8 +1548,8 @@ main {
             display: block;
             position: absolute;
             right: 0;
-            top: 19px;
-            height: 2px;
+            top: 22px;
+            height: 1px;
             width: 20px;
             background: #0052FF; }
       .contact-content-form .form-radio-box-lable__link {
@@ -1702,7 +1706,7 @@ main {
         font-size: 16px;
         line-height: 25px;
         color: #8B8B8B;
-        border-bottom: 1px solid #4E4E4E;
+        border-bottom: 1px solid #BFBFBF;
         display: block;
         width: 100%;
         margin-bottom: 24px;
@@ -1741,7 +1745,7 @@ main {
         font-size: 16px;
         line-height: 25px;
         color: #8B8B8B;
-        border-bottom: 1px solid #4E4E4E;
+        border-bottom: 1px solid #BFBFBF;
         margin-bottom: 32px;
         resize: none;
         display: block;
@@ -1784,8 +1788,8 @@ main {
           display: block;
           position: absolute;
           right: 0;
-          top: 19px;
-          height: 2px;
+          top: 22px;
+          height: 1px;
           width: 20px;
           background: #0052FF; }
     .contact-page .form-radio-box-lable__link {
