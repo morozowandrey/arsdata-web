@@ -1131,11 +1131,11 @@ main {
         padding-right: 24px; } }
 
 .howitworks {
-  padding-bottom: 145px;
+  padding-bottom: 115px;
   background-color: #fff; }
   @media (max-width: 768px) {
     .howitworks {
-      padding-bottom: 100px; } }
+      padding-bottom: 70px; } }
   .howitworks .container {
     padding-right: 24px; }
   .howitworks__caption {
@@ -1211,7 +1211,8 @@ main {
     margin-bottom: 30px;
     font-family: "Poppins-Bold", sans-serif;
     font-size: 48px;
-    line-height: 72px; }
+    line-height: 72px;
+    padding-top: 30px; }
   .solutions-grid {
     display: flex;
     flex-wrap: wrap; }
