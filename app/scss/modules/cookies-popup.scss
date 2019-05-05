@@ -1,5 +1,4 @@
 .cookies-popup {
-  display: none;
   position: fixed;
   bottom: 0;
   z-index: 100;
@@ -22,7 +21,7 @@
     max-width: 784px;
     line-height: 24px;
     margin-right: 24px;
-    
+
     @include md {
       margin-right: 0px;
       margin-bottom: 24px;

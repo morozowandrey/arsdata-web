@@ -144,7 +144,8 @@
         <div class="solutions-grid">
 
           <div class="solutions-grid-box solutions-grid-box-1">
-            <a id="predictive_maintenance_button" href="./solutions.html#0" class="solutions-grid-item" (click)="goToSolution(0)">
+            <a id="predictive_maintenance_button" href="./solutions.html#0" class="solutions-grid-item"
+              (click)="goToSolution(0)">
               <p class="solutions-grid-item__caption">Predictive Maintenance</p>
               <p class="solutions-grid-item__text">
                 <span>Predict the future</span>
@@ -298,7 +299,8 @@
               <div class="form-textarea-box">
                 <textarea id="formmessage" name="message" id="message-textarea" cols="30" rows="3"
                   placeholder="Message"></textarea>
-                <button type="submit" class="form-textarea-box__btn send_button" id="submit-button" soul="index-form">Send</button>
+                <button type="submit" class="form-textarea-box__btn send_button" id="submit-button"
+                  soul="index-form">Send</button>
               </div>
 
               <div class="form-radio-box">
@@ -335,13 +337,13 @@
     </footer>
   </main>
 
-  <div id="cookies-popup" class="cookies-popup flex-between">
+  <div id="cookies-popup" style='display:none' class="cookies-popup flex-between">
     <p class="cookies-popup-text">
       We use cookies to improve your experience with our site, including analytics and personalisation.
       By continuing to use the service, you agree to our use of cookies as described in the
-      <p target="_blanc" class="cookies-popup-text__link">Cookie Policy</a>.
-      </p>
-      <button type="button" class="home__startbtn blue-link">accept</button>
+      <a target="_blanc" class="cookies-popup-text__link">Cookie Policy</a>.
+    </p>
+    <button type="button" class="home__startbtn blue-link" onClick="PopUp('hide')">accept</button>
   </div>
 
 

@@ -519,3 +519,25 @@ $(".send_message_button").click(function (e) {
     eventAction: 'send_message_button'
   });
 });
+
+
+function PopUp(hideOrshow) {
+  if (hideOrshow == 'hide') {
+    document.getElementById('cookies-popup').style.display = "none";
+  }
+  else if (localStorage.getItem("popupWasShown") == null) {
+    localStorage.setItem("popupWasShown", true);
+    document.getElementById('cookies-popup').removeAttribute('style');
+  }
+}
+window.onload = function () {
+  // localStorage.removeItem("popupWasShown")‰
+  setTimeout(function () {
+    PopUp('show');
+  }, 0);
+}
+
+
+function hideNow(e) {
+  if (e.target.id == 'cookies-popup') document.getElementById('cookies-popup').style.display = 'none';
+}

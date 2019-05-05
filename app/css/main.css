@@ -669,7 +669,6 @@ main {
     margin-bottom: 60px; }
 
 .cookies-popup {
-  display: none;
   position: fixed;
   bottom: 0;
   z-index: 100;
