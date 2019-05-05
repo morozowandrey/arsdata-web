@@ -34,7 +34,7 @@ const ars = (function () {
   publicGlide.on('mount.after', function () {
     let slideIndex = window.location.href.split('#')[1];
     let firstNumValue = '0'.concat(parseInt(slideIndex) + 1);
-    
+
     firstNumValue === NaN ? privateSetSlidesNumbers(firstNumValue, lastNumValue) : privateSetSlidesNumbers('01', lastNumValue);
     if (slideIndex) {
       publicGlide.go(`=${slideIndex}`);
@@ -47,13 +47,103 @@ const ars = (function () {
     privateStartSliderAnimations();
   });
 
-  publicGlide.on('run.after', function () {
+  publicGlide.on('run.after', function (event) {
     privateStopSlidersAnimations();
+
+    if (window.location.pathname === "/solutions.html") {
+      if (publicGlide.index == 0) {
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'solutions_category',
+          eventAction: 'predictive_maintenance_slider'
+        });
+      } else if (publicGlide.index == 1) {
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'solutions_category',
+          eventAction: 'condition_monitoring_slider'
+        });
+      } else if (publicGlide.index == 2) {
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'solutions_category',
+          eventAction: 'sensor_data_slider'
+        });
+      } else if (publicGlide.index == 3) {
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'solutions_category',
+          eventAction: 'hvac_slider'
+        });
+      } else if (publicGlide.index == 4) {
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'solutions_category',
+          eventAction: 'machine_learning_slider'
+        });
+      } else if (publicGlide.index == 5) {
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'solutions_category',
+          eventAction: 'embedded_development_slider'
+        });
+      } else if (publicGlide.index == 6) {
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'solutions_category',
+          eventAction: 'data_processing_slider'
+        });
+      } else if (publicGlide.index == 7) {
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'solutions_category',
+          eventAction: 'visualization_slider'
+        });
+      }
+    }
+
+    if (window.location.pathname === "/technologies.html") {
+      if (publicGlide.index == 0) {
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'technologies_category',
+          eventAction: 'embedded_slider'
+        });
+      } else if (publicGlide.index == 1) {
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'technologies_category',
+          eventAction: 'computation_slider'
+        });
+      } else if (publicGlide.index == 2) {
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'technologies_category',
+          eventAction: 'storage_slider'
+        });
+
+      } else if (publicGlide.index == 3) {
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'technologies_category',
+          eventAction: 'modeling_slider'
+        });
+
+      } else if (publicGlide.index == 4) {
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'technologies_category',
+          eventAction: 'visualization_slider'
+        });
+
+      }
+    }
+
   });
 
   function publicToAnchor(currentNode, event) {
     const $target = $(currentNode.getAttribute('href'));
-    
+
     const $targetSoutions = currentNode.getAttribute('href').split('#')[1]
     console.log($targetSoutions);
     if ($target.length) {
@@ -77,7 +167,21 @@ const ars = (function () {
     $('main').toggleClass('hidden');
   }
 
-  if (window.location.pathname === "/solutions.html" || window.location.pathname === "/technologies.html") {
+  if (window.location.pathname === "/solutions.html") {
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'solutions_category',
+      eventAction: 'predictive_maintenance_slider'
+    });
+    publicGlide.mount();
+  }
+
+  if (window.location.pathname === "/technologies.html") {
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'technologies_category',
+      eventAction: 'embedded_slider'
+    });
     publicGlide.mount();
   }
 
@@ -238,4 +342,180 @@ $("#submit-button").click(function (event) {
   }
 
   event.preventDefault();
+});
+
+
+
+
+// GOOGLE ANALITICS
+
+// NAVIGATION
+$(".nav-about_button").click(function (e) {
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'main_page_category',
+    eventAction: 'about_button'
+  });
+});
+$(".nav-solutions_button").click(function (e) {
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'main_page_category',
+    eventAction: 'solutions_button'
+  });
+});
+$(".nav-technology_button").click(function (e) {
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'main_page_category',
+    eventAction: 'technology_button'
+  });
+});
+$(".nav- contact_button").click(function (e) {
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'main_page_category',
+    eventAction: 'contact_button'
+  });
+});
+
+
+// CALL TO ACTION
+$(".start_project_button").click(function (e) {
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'main_page_category',
+    eventAction: 'start_project_button'
+  });
+});
+$(".read_more_button").click(function (e) {
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'main_page_category',
+    eventAction: 'read_more_button'
+  });
+});
+
+
+// HOW IT WORKS
+$(".howitworks-options-bullet__caption").click(function (e) {
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'main_page_category',
+    eventAction: 'how_it_works_button'
+  });
+});
+
+
+//SOLUTIONS
+$("#predictive_maintenance_button").click(function (e) {
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'main_page_category',
+    eventAction: 'predictive_maintenance_button'
+  });
+});
+$("#condition_monitoring_button").click(function (e) {
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'main_page_category',
+    eventAction: 'condition_monitoring_button'
+  });
+});
+$("#sensor_data_button").click(function (e) {
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'main_page_category',
+    eventAction: 'sensor_data_button'
+  });
+});
+$("#hvac_button").click(function (e) {
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'main_page_category',
+    eventAction: 'hvac_button'
+  });
+});
+$("#machine_learning_button").click(function (e) {
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'main_page_category',
+    eventAction: 'machine_learning_button'
+  });
+});
+$("#embedded_development_button").click(function (e) {
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'main_page_category',
+    eventAction: 'embedded_development_button'
+  });
+});
+$("#data_processing_button").click(function (e) {
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'main_page_category',
+    eventAction: 'data_processing_button'
+  });
+});
+$("#visualization_button").click(function (e) {
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'main_page_category',
+    eventAction: 'visualization_button'
+  });
+});
+
+
+// TECHNOLOGIES
+$("#embedded_button").click(function (e) {
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'main_page_category',
+    eventAction: 'embedded_button'
+  });
+});
+$("#computation_button").click(function (e) {
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'main_page_category',
+    eventAction: 'computation_button'
+  });
+});
+$("#storage_button").click(function (e) {
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'main_page_category',
+    eventAction: 'storage_button'
+  });
+});
+$("#modeling_button").click(function (e) {
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'main_page_category',
+    eventAction: 'modeling_button'
+  });
+});
+$("#visualization_technologies_button").click(function (e) {
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'main_page_category',
+    eventAction: 'visualization_technologies_button'
+  });
+});
+
+
+// CONTACT FORM
+$(".send_button").click(function (e) {
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'main_page_category',
+    eventAction: 'send_button'
+  });
+});
+$(".send_message_button").click(function (e) {
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'main_page_category',
+    eventAction: 'send_message_button'
+  });
 });

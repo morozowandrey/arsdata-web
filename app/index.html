@@ -21,6 +21,15 @@
   <meta property="og:title" content="ARS Data">
   <meta property="og:description" content="ARS Data website">
 
+  <!-- Google Analytics -->
+  <script>
+    window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+    ga('create', 'UA-116482002-1', 'auto');
+    ga("send", "pageview");
+  </script>
+  <script async src='https://www.google-analytics.com/analytics.js'></script>
+  <!-- End Google Analytics -->
+
   <base href="/">
   <link rel="manifest" href="manifest.json">
 
@@ -53,10 +62,10 @@
 
         <div class="navigation-desktop">
           <img src="images/logos/logo-white.svg" alt="ARS Data logo" class="navigation-desktop__logo">
-          <a class="navigation-desktop__item" href="#about">About us</a>
-          <a class="navigation-desktop__item" href="#solutions">Solutions</a>
-          <a class="navigation-desktop__item" href="#technology">Technology</a>
-          <a class="navigation-desktop__item" href="#contact">Contact</a>
+          <a class="navigation-desktop__item nav-about_button" href="#about">About us</a>
+          <a class="navigation-desktop__item nav-solutions_button" href="#solutions">Solutions</a>
+          <a class="navigation-desktop__item nav-technology_button" href="#technology">Technology</a>
+          <a class="navigation-desktop__item nav-contact_button" href="#contact">Contact</a>
         </div>
       </nav>
     </div>
@@ -70,7 +79,7 @@
           <span class="home-text__part-2">for Machine Generated </span>
           <span class="home-text__part-3">Data & Industrial IoT</span>
         </p>
-        <a href="./contacts.html" class="home__startbtn blue-link">Start the project</a>
+        <a href="./contacts.html" class="home__startbtn blue-link start_project_button">Start the project</a>
         <img class="home__mobile-img" src="images/home-bg-mobile.svg" alt="home mobile tech graphics">
       </div>
     </section>
@@ -80,7 +89,7 @@
         <div class="about-content">
           <img class="about__mobile-img" src="images/aboutus-bg-mobile.svg" alt="about-us mobile tech graphics">
           <p class="about-content-text">
-            Focus on one domain — Machine Generated Data.
+            Focus on one domain — Machine Generated Data
             We provide <a href="#technology" class="about-content-text__link">Data Science</a>
             <span>,</span>
             <a href="#technology" class="about-content-text__link">Data Engineering</a>and
@@ -88,7 +97,7 @@
             data:
             OPEX improvement, uptime, decisions quality.
           </p>
-          <a href="./about-us.html" class="about-content__link blue-link">Read more about us</a>
+          <a href="./about-us.html" class="about-content__link blue-link read_more_button">Read more about us</a>
         </div>
       </div>
     </section>
@@ -135,7 +144,7 @@
         <div class="solutions-grid">
 
           <div class="solutions-grid-box solutions-grid-box-1">
-            <a href="./solutions.html#0" class="solutions-grid-item" (click)="goToSolution(0)">
+            <a id="predictive_maintenance_button" href="./solutions.html#0" class="solutions-grid-item" (click)="goToSolution(0)">
               <p class="solutions-grid-item__caption">Predictive Maintenance</p>
               <p class="solutions-grid-item__text">
                 <span>Predict the future</span>
@@ -144,7 +153,7 @@
               </p>
               <p class="solutions-grid-item__link blue-link">Read more</p>
             </a>
-            <a href="./solutions.html#1" class="solutions-grid-item">
+            <a id="condition_monitoring_button" href="./solutions.html#1" class="solutions-grid-item">
               <p class="solutions-grid-item__caption">Condition Monitoring</p>
               <p class="solutions-grid-item__text">
                 <span>Get current equipment</span>
@@ -152,7 +161,7 @@
               </p>
               <p class="solutions-grid-item__link blue-link">Read more</p>
             </a>
-            <a href="./solutions.html#2" class="solutions-grid-item">
+            <a id="sensor_data_button" href="./solutions.html#2" class="solutions-grid-item">
               <p class="solutions-grid-item__caption">Sensor data processing</p>
               <p class="solutions-grid-item__text">
                 <span>Handle different</span>
@@ -160,7 +169,7 @@
               </p>
               <p class="solutions-grid-item__link blue-link">Read more</p>
             </a>
-            <a href="./solutions.html#3" class="solutions-grid-item">
+            <a id="hvac_button" href="./solutions.html#3" class="solutions-grid-item">
               <p class="solutions-grid-item__caption">Smart HVAC</p>
               <p class="solutions-grid-item__text">
                 <span>Minimize energy</span>
@@ -172,7 +181,7 @@
           </div>
 
           <div class="solutions-grid-box solutions-grid-box-2">
-            <a href="./solutions.html#4" class="solutions-grid-item">
+            <a id="machine_learning_button" href="./solutions.html#4" class="solutions-grid-item">
               <p class="solutions-grid-item__caption">
                 <span>Machine</span>
                 <span>learning</span>
@@ -184,16 +193,16 @@
               </p>
               <p class="solutions-grid-item__link blue-link">Read more</p>
             </a>
-            <a href="./solutions.html#5" class="solutions-grid-item">
+            <a id="embedded_development_button" href="./solutions.html#5" class="solutions-grid-item">
               <p class="solutions-grid-item__caption">Embedded Development</p>
               <p class="solutions-grid-item__text">
-                <span>Low - level programming</span>
-                <span>for sensors, PLCs,</span>
+                <span>Low - level</span>
+                <span>programming for PLCs</span>
                 <span>and other IoT devices</span>
               </p>
               <p class="solutions-grid-item__link blue-link">Read more</p>
             </a>
-            <a href="./solutions.html#6" class="solutions-grid-item">
+            <a id="data_processing_button" href="./solutions.html#6" class="solutions-grid-item">
               <p class="solutions-grid-item__caption">
                 <span>DATA</span>
                 <span>PROCESSING</span>
@@ -205,8 +214,8 @@
               </p>
               <p class="solutions-grid-item__link blue-link">Read more</p>
             </a>
-            <a href="./solutions.html#7" class="solutions-grid-item">
-              <p class="solutions-grid-item__caption">Visualisations and Dashboards</p>
+            <a id="visualization_button" href="./solutions.html#7" class="solutions-grid-item">
+              <p class="solutions-grid-item__caption">Visualizations and Dashboards</p>
               <p class="solutions-grid-item__text">
                 <span>Custom reporting</span>
                 <span>and data exploration</span>
@@ -225,24 +234,24 @@
         <h2 class="technology__caption">Technology stacks</h2>
         <p class="technology__subcaption">We use proven tools and frameworks to build and run data infrastructure</p>
         <div class="technology-grid">
-          <a href="./technologies.html#0" class="technology-grid-item">
+          <a id="embedded_button" href="./technologies.html#0" class="technology-grid-item">
             <p class="technology-grid-item__caption">Embedded</p>
             <p class="technology-grid-item__link blue-link">Read more</p>
           </a>
-          <a href="./technologies.html#1" class="technology-grid-item">
+          <a id="computation_button" href="./technologies.html#1" class="technology-grid-item">
             <p class="technology-grid-item__caption">Computation</p>
             <p class="technology-grid-item__link blue-link">Read more</p>
           </a>
-          <a href="./technologies.html#2" class="technology-grid-item">
+          <a id="storage_button" href="./technologies.html#2" class="technology-grid-item">
             <p class="technology-grid-item__caption">Storage</p>
             <p class="technology-grid-item__link blue-link">Read more</p>
           </a>
-          <a href="./technologies.html#3" class="technology-grid-item">
-            <p class="technology-grid-item__caption">Modelling</p>
+          <a id="modeling_button" href="./technologies.html#3" class="technology-grid-item">
+            <p class="technology-grid-item__caption">Modeling</p>
             <p class="technology-grid-item__link blue-link">Read more</p>
           </a>
-          <a href="./technologies.html#4" class="technology-grid-item">
-            <p class="technology-grid-item__caption">Visualisation</p>
+          <a id="visualization_technologies_button" href="./technologies.html#4" class="technology-grid-item">
+            <p class="technology-grid-item__caption">Visualization</p>
             <p class="technology-grid-item__link blue-link">Read more</p>
           </a>
         </div>
@@ -289,7 +298,7 @@
               <div class="form-textarea-box">
                 <textarea id="formmessage" name="message" id="message-textarea" cols="30" rows="3"
                   placeholder="Message"></textarea>
-                <button type="submit" class="form-textarea-box__btn" id="submit-button" soul="index-form">Send</button>
+                <button type="submit" class="form-textarea-box__btn send_button" id="submit-button" soul="index-form">Send</button>
               </div>
 
               <div class="form-radio-box">

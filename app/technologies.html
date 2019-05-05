@@ -21,6 +21,15 @@
   <meta property="og:title" content="ARS Data">
   <meta property="og:description" content="ARS Data website">
 
+  <!-- Google Analytics -->
+  <script>
+    window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+    ga('create', 'UA-116482002-1', 'auto');
+    ga("send", "pageview");
+  </script>
+  <script async src='https://www.google-analytics.com/analytics.js'></script>
+  <!-- End Google Analytics -->
+
   <base href="/">
   <link rel="manifest" href="manifest.json">
 
@@ -52,10 +61,10 @@
 
         <div class="navigation-desktop">
           <img src="images/logos/logo-white.svg" alt="ARS Data logo" class="navigation-desktop__logo">
-          <a class="navigation-desktop__item" href="./about-us.html">About us</a>
-          <a class="navigation-desktop__item" href="./solutions.html">Solutions</a>
-          <a class="navigation-desktop__item" href="./technologies.html">Technology</a>
-          <a class="navigation-desktop__item" href="./contacts.html">Contact</a>
+          <a class="navigation-desktop__item nav-about_button" href="./about-us.html">About us</a>
+          <a class="navigation-desktop__item nav-solutions_button" href="./solutions.html">Solutions</a>
+          <a class="navigation-desktop__item nav-technology_button" href="./technologies.html">Technologies</a>
+          <a class="navigation-desktop__item nav-contact_button" href="#contact">Contact</a>
         </div>
       </nav>
     </div>
@@ -116,7 +125,7 @@
 
               <li class="glide__slide">
                 <div class="slide-content slide-content-1">
-                  <h2 class="slide-content__title">Modelling</h2>
+                  <h2 class="slide-content__title">Modeling</h2>
                   <p class="slide-content-text">
                     <span class="slide-content-text__part">Predict the future health of equipment or an asset.</span>
                     <span class="slide-content-text__part">Estimate Remaining Useful Life (RUL).</span>
@@ -131,7 +140,7 @@
 
               <li class="glide__slide">
                 <div class="slide-content slide-content-1">
-                  <h2 class="slide-content__title">Visualisation</h2>
+                  <h2 class="slide-content__title">Visualization</h2>
                   <p class="slide-content-text">
                     <span class="slide-content-text__part">Predict the future health of equipment or an asset.</span>
                     <span class="slide-content-text__part">Estimate Remaining Useful Life (RUL).</span>
@@ -203,7 +212,8 @@
               <div class="form-textarea-box">
                 <textarea id="formmessage" name="message" id="message-textarea" cols="30" rows="3"
                   placeholder="Message"></textarea>
-                <button type="submit" class="form-textarea-box__btn" id="submit-button" soul="index-form">Send</button>
+                <button type="submit" class="form-textarea-box__btn send_button" id="submit-button"
+                  soul="index-form">Send</button>
               </div>
 
               <div class="form-radio-box">
