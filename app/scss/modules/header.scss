@@ -20,6 +20,10 @@
 
   &__logo {
     line-height: 8px;
+
+    @include lg {
+      margin-top: -10px;
+    }
   }
 
   .navigation {

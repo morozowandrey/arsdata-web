@@ -465,6 +465,15 @@ ul {
 main {
   overflow: hidden; }
 
+.main-page-bg {
+  position: absolute;
+  z-index: -10;
+  height: 586px;
+  right: 0; }
+  @media (max-width: 576px) {
+    .main-page-bg {
+      display: none; } }
+
 @font-face {
   font-family: 'Poppins-Regular';
   src: url("../../fonts/Poppins/Poppins-Light.ttf") format("truetype");
@@ -582,11 +591,15 @@ main {
       margin-left: -30px; } }
   .slider .glide__slide {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    min-height: 330px; }
     @media (max-width: 1024px) {
       .slider .glide__slide {
         flex-direction: column;
         align-items: center; } }
+    @media (max-width: 576px) {
+      .slider .glide__slide {
+        padding-right: 24px; } }
   .slider .glide-slides-numbers {
     height: 1px;
     width: 263px;
@@ -819,6 +832,9 @@ main {
       padding-top: 30px; } }
   .header__logo {
     line-height: 8px; }
+    @media (max-width: 1024px) {
+      .header__logo {
+        margin-top: -10px; } }
   .header .navigation {
     display: flex;
     justify-content: space-between;
@@ -981,7 +997,7 @@ main {
     max-width: 570px;
     display: inline-block;
     margin-top: 150px;
-    margin-bottom: 60px;
+    margin-bottom: 64px;
     color: #696969;
     font-family: "Poppins-Bold", sans-serif;
     font-size: 48px;
@@ -996,8 +1012,8 @@ main {
     @media (max-width: 576px) {
       .home-text {
         margin-top: 88px;
-        font-size: 26px;
-        line-height: 34px; } }
+        font-size: 30px;
+        line-height: 40px; } }
     .home-text__part-1 {
       color: #fff; }
   .home__mobile-img {
@@ -1025,10 +1041,13 @@ main {
     background-color: #DEDEDE; }
     @media (max-width: 1024px) {
       .about-content {
-        padding: 100px 30px 100px 130px; } }
+        padding: 100px 30px 105px 130px; } }
+    @media (max-width: 768px) {
+      .about-content {
+        padding: 105px 30px; } }
     @media (max-width: 576px) {
       .about-content {
-        padding: 0 30px 0 40px; } }
+        padding: 0 30px 105px 40px; } }
     .about-content-text {
       display: inline-block;
       margin-bottom: 40px;
@@ -1037,7 +1056,8 @@ main {
       line-height: 60px; }
       @media (max-width: 1024px) {
         .about-content-text {
-          font-size: 26px; } }
+          font-size: 26px;
+          line-height: 40px; } }
       @media (max-width: 576px) {
         .about-content-text {
           padding-top: 20px;
@@ -1049,9 +1069,15 @@ main {
         height: 50px;
         color: #fff;
         background-color: #0052FF; }
+        @media (max-width: 1024px) {
+          .about-content-text__link {
+            height: 36px; } }
         @media (max-width: 576px) {
           .about-content-text__link {
             height: 32px; } }
+        @media (max-width: 360px) {
+          .about-content-text__link:last-of-type {
+            height: 68px; } }
       .about-content-text span {
         margin-left: -6px;
         color: #fff; }
@@ -1197,13 +1223,17 @@ main {
         border-top: 1px solid #EDF1FA;
         font-size: 16px;
         line-height: 24px;
-        color: #8B8B8B; }
+        color: #8B8B8B;
+        display: block; }
         .howitworks-options-bullet__item:hover {
           border-top: 1px solid #0052FF;
+          border-bottom: 1px solid #0052FF;
           color: #0052FF;
-          cursor: pointer; }
+          cursor: pointer;
+          display: block; }
         .howitworks-options-bullet__item:hover + p {
-          border-top: 1px solid #0052FF; }
+          border-top: 1px solid #0052FF;
+          display: block; }
 
 .solutions {
   padding-bottom: 145px;
@@ -1213,12 +1243,20 @@ main {
     font-family: "Poppins-Bold", sans-serif;
     font-size: 48px;
     line-height: 72px; }
+    @media (max-width: 576px) {
+      .solutions__caption {
+        font-size: 30px;
+        line-height: 40px; } }
   .solutions-grid {
     display: flex;
-    flex-wrap: wrap; }
+    flex-direction: column;
+    overflow-x: auto; }
+    .solutions-grid-box {
+      display: flex;
+      flex-wrap: nowrap; }
     .solutions-grid-item {
       height: 295px;
-      width: 329px;
+      min-width: 329px;
       padding: 90px 70px 0;
       margin: 0.5px;
       background-color: #DEDEDE; }
@@ -1300,12 +1338,19 @@ main {
   padding-bottom: 145px;
   padding-top: 130px;
   background-color: #111111; }
+  @media (max-width: 768px) {
+    .technology .container {
+      padding-right: 24px; } }
   .technology__caption {
     margin-bottom: 10px;
     font-family: "Poppins-Bold", sans-serif;
     font-size: 48px;
     line-height: 72px;
     color: #fff; }
+    @media (max-width: 576px) {
+      .technology__caption {
+        font-size: 30px;
+        line-height: 40px; } }
   .technology__subcaption {
     max-width: 460px;
     margin-bottom: 32px;
@@ -1317,6 +1362,9 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
     justify-self: center;
     max-width: 1131px; }
+    @media (max-width: 768px) {
+      .technology-grid {
+        grid-template-columns: none; } }
     .technology-grid-item {
       height: 238px;
       padding: 84px 58px 0 40px;
@@ -1324,6 +1372,11 @@ main {
       border: 1px solid #1e1e1e;
       margin-left: -1px;
       margin-bottom: -1px; }
+      @media (max-width: 768px) {
+        .technology-grid-item {
+          padding: 32px 40px 32px 79px;
+          height: auto;
+          max-width: 312px; } }
       .technology-grid-item:nth-child(2) .technology-grid-item__caption::before {
         background-image: url(../../images/Icon/Database.svg); }
       .technology-grid-item:nth-child(3) .technology-grid-item__caption::before {
@@ -1349,6 +1402,10 @@ main {
           position: absolute;
           left: 0;
           top: -41px; }
+          @media (max-width: 768px) {
+            .technology-grid-item__caption:before {
+              left: -36px;
+              top: 2px; } }
         .technology-grid-item__caption:after {
           content: "";
           display: block;
@@ -1359,6 +1416,9 @@ main {
           width: 20px;
           background: #0052FF;
           transition: width 0.35s ease; }
+          @media (max-width: 768px) {
+            .technology-grid-item__caption:after {
+              display: none; } }
       .technology-grid-item__text {
         font-size: 16px;
         line-height: 24px;
@@ -1430,6 +1490,10 @@ main {
         line-height: 64px;
         color: #111111;
         margin-bottom: 16px; }
+        @media (max-width: 576px) {
+          .contact-content-info__caption {
+            font-size: 30px;
+            line-height: 40px; } }
       .contact-content-info__text {
         margin-bottom: 40px;
         padding-bottom: 40px;

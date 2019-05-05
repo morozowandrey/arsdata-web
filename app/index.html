@@ -36,6 +36,8 @@
     Website doesn't work when JavaScript disabled. Please enable JavaScript
   </noscript>
 
+  <img class="main-page-bg" src="./images/illustrations/main-bg.svg" alt="">
+
   <header class="header">
     <div class="container flex-between">
       <a href="index.html" class="header__logo">
@@ -97,30 +99,31 @@
         <div class="howitworks-options">
           <div class="howitworks-options-bullet">
             <p class="howitworks-options-bullet__caption">talk</p>
-            <p class="howitworks-options-bullet__item">Discuss your ideas or problems</p>
+            <a href="#contact" class="howitworks-options-bullet__item">Discuss your ideas or problems</a>
           </div>
           <div class="howitworks-options-bullet">
             <p class="howitworks-options-bullet__caption howitworks-options-bullet__caption_big">
               <span>Propose</span>
               <span>Roadmap</span>
             </p>
-            <p class="howitworks-options-bullet__item">Conduct Requirements and Data analysis</p>
-            <p class="howitworks-options-bullet__item">Articulate tradeoffs</p>
-            <p class="howitworks-options-bullet__item">Set the expectation baselines</p>
-            <p class="howitworks-options-bullet__item">Prepare project plan</p>
+            <a href="#contact" class="howitworks-options-bullet__item">Conduct Requirements and Data analysis</a>
+            <a href="#contact" class="howitworks-options-bullet__item">Articulate tradeoffs</a>
+            <a href="#contact" class="howitworks-options-bullet__item">Set the expectation baselines</a>
+            <a href="#contact" class="howitworks-options-bullet__item">Prepare project plan</a>
           </div>
           <div class="howitworks-options-bullet">
             <p class="howitworks-options-bullet__caption howitworks-options-bullet__caption_big">Deliver Pilot Product
             </p>
-            <p class="howitworks-options-bullet__item">Stay lean</p>
-            <p class="howitworks-options-bullet__item">Validate hypothesises and concepts with minimal investments</p>
-            <p class="howitworks-options-bullet__item">Analyse the feedback</p>
+            <a href="#contact" class="howitworks-options-bullet__item">Stay lean</a>
+            <a href="#contact" class="howitworks-options-bullet__item">Validate hypothesises and concepts with minimal
+              investments</a>
+            <a href="#contact" class="howitworks-options-bullet__item">Analyse the feedback</a>
           </div>
           <div class="howitworks-options-bullet">
             <p class="howitworks-options-bullet__caption">Scale</p>
-            <p class="howitworks-options-bullet__item">Deploy solution to the production environment</p>
-            <p class="howitworks-options-bullet__item">Integrate with exisiting infrastructure</p>
-            <p class="howitworks-options-bullet__item">Improve and optimize</p>
+            <a href="#contact" class="howitworks-options-bullet__item">Deploy solution to the production environment</a>
+            <a href="#contact" class="howitworks-options-bullet__item">Integrate with exisiting infrastructure</a>
+            <a href="#contact" class="howitworks-options-bullet__item">Improve and optimize</a>
           </div>
         </div>
       </div>
@@ -130,82 +133,89 @@
       <div class="container">
         <h2 class="solutions__caption">Solutions</h2>
         <div class="solutions-grid">
-          <a href="./solutions.html#0" class="solutions-grid-item" (click)="goToSolution(0)">
-            <p class="solutions-grid-item__caption">Predictive Maintenance</p>
-            <p class="solutions-grid-item__text">
-              <span>Predict the future</span>
-              <span>health of equipment</span>
-              <span>or an asset</span>
-            </p>
-            <p class="solutions-grid-item__link blue-link">Read more</p>
-          </a>
-          <a href="./solutions.html#1" class="solutions-grid-item">
-            <p class="solutions-grid-item__caption">Condition Monitoring</p>
-            <p class="solutions-grid-item__text">
-              <span>Get current equipment</span>
-              <span>health</span>
-            </p>
-            <p class="solutions-grid-item__link blue-link">Read more</p>
-          </a>
-          <a href="./solutions.html#2" class="solutions-grid-item">
-            <p class="solutions-grid-item__caption">Sensor data processing</p>
-            <p class="solutions-grid-item__text">
-              <span>Process different</span>
-              <span>types of sensor data</span>
-            </p>
-            <p class="solutions-grid-item__link blue-link">Read more</p>
-          </a>
-          <a href="./solutions.html#3" class="solutions-grid-item">
-            <p class="solutions-grid-item__caption">Smart HVAC</p>
-            <p class="solutions-grid-item__text">
-              <span>Minimize energy</span>
-              <span>footprint of the</span>
-              <span>building</span>
-            </p>
-            <p class="solutions-grid-item__link blue-link">Read more</p>
-          </a>
-          <a href="./solutions.html#4" class="solutions-grid-item">
-            <p class="solutions-grid-item__caption">
-              <span>Machine</span>
-              <span>learning</span>
-            </p>
-            <p class="solutions-grid-item__text">
-              <span>Detect anomalies</span>
-              <span>and patterns in the</span>
-              <span>raw data</span>
-            </p>
-            <p class="solutions-grid-item__link blue-link">Read more</p>
-          </a>
-          <a href="./solutions.html#5" class="solutions-grid-item">
-            <p class="solutions-grid-item__caption">Embedded Development</p>
-            <p class="solutions-grid-item__text">
-              <span>Low - level</span>
-              <span>programming, PLCs,</span>
-              <span>and other IoT devices</span>
-            </p>
-            <p class="solutions-grid-item__link blue-link">Read more</p>
-          </a>
-          <a href="./solutions.html#6" class="solutions-grid-item">
-            <p class="solutions-grid-item__caption">
-              <span>DATA</span>
-              <span>PROCESSING</span>
-            </p>
-            <p class="solutions-grid-item__text">
-              <span>Scalable solutions to</span>
-              <span>establish data flow</span>
-              <span>from field to the cloud</span>
-            </p>
-            <p class="solutions-grid-item__link blue-link">Read more</p>
-          </a>
-          <a href="./solutions.html#7" class="solutions-grid-item">
-            <p class="solutions-grid-item__caption">Visualisations and Dashboards</p>
-            <p class="solutions-grid-item__text">
-              <span>Custom reporting</span>
-              <span>and data exploration</span>
-              <span>tools</span>
-            </p>
-            <p class="solutions-grid-item__link blue-link">Read more</p>
-          </a>
+
+          <div class="solutions-grid-box">
+            <a href="./solutions.html#0" class="solutions-grid-item" (click)="goToSolution(0)">
+              <p class="solutions-grid-item__caption">Predictive Maintenance</p>
+              <p class="solutions-grid-item__text">
+                <span>Predict the future</span>
+                <span>health of equipment</span>
+                <span>or an asset</span>
+              </p>
+              <p class="solutions-grid-item__link blue-link">Read more</p>
+            </a>
+            <a href="./solutions.html#1" class="solutions-grid-item">
+              <p class="solutions-grid-item__caption">Condition Monitoring</p>
+              <p class="solutions-grid-item__text">
+                <span>Get current equipment</span>
+                <span>health</span>
+              </p>
+              <p class="solutions-grid-item__link blue-link">Read more</p>
+            </a>
+            <a href="./solutions.html#2" class="solutions-grid-item">
+              <p class="solutions-grid-item__caption">Sensor data processing</p>
+              <p class="solutions-grid-item__text">
+                <span>Process different</span>
+                <span>types of sensor data</span>
+              </p>
+              <p class="solutions-grid-item__link blue-link">Read more</p>
+            </a>
+            <a href="./solutions.html#3" class="solutions-grid-item">
+              <p class="solutions-grid-item__caption">Smart HVAC</p>
+              <p class="solutions-grid-item__text">
+                <span>Minimize energy</span>
+                <span>footprint of the</span>
+                <span>building</span>
+              </p>
+              <p class="solutions-grid-item__link blue-link">Read more</p>
+            </a>
+          </div>
+
+          <div class="solutions-grid-box">
+            <a href="./solutions.html#4" class="solutions-grid-item">
+              <p class="solutions-grid-item__caption">
+                <span>Machine</span>
+                <span>learning</span>
+              </p>
+              <p class="solutions-grid-item__text">
+                <span>Detect anomalies</span>
+                <span>and patterns in the</span>
+                <span>raw data</span>
+              </p>
+              <p class="solutions-grid-item__link blue-link">Read more</p>
+            </a>
+            <a href="./solutions.html#5" class="solutions-grid-item">
+              <p class="solutions-grid-item__caption">Embedded Development</p>
+              <p class="solutions-grid-item__text">
+                <span>Low - level</span>
+                <span>programming, PLCs,</span>
+                <span>and other IoT devices</span>
+              </p>
+              <p class="solutions-grid-item__link blue-link">Read more</p>
+            </a>
+            <a href="./solutions.html#6" class="solutions-grid-item">
+              <p class="solutions-grid-item__caption">
+                <span>DATA</span>
+                <span>PROCESSING</span>
+              </p>
+              <p class="solutions-grid-item__text">
+                <span>Scalable solutions to</span>
+                <span>establish data flow</span>
+                <span>from field to the cloud</span>
+              </p>
+              <p class="solutions-grid-item__link blue-link">Read more</p>
+            </a>
+            <a href="./solutions.html#7" class="solutions-grid-item">
+              <p class="solutions-grid-item__caption">Visualisations and Dashboards</p>
+              <p class="solutions-grid-item__text">
+                <span>Custom reporting</span>
+                <span>and data exploration</span>
+                <span>tools</span>
+              </p>
+              <p class="solutions-grid-item__link blue-link">Read more</p>
+            </a>
+          </div>
+
         </div>
       </div>
     </section>

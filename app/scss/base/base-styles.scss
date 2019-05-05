@@ -39,3 +39,14 @@ ul {
 main {
   overflow: hidden;
 }
+
+.main-page-bg {
+  position: absolute;
+  z-index: -10;
+  height: 586px;
+  right: 0;
+
+  @include sm {
+    display: none;
+  }
+}

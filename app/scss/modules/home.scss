@@ -9,7 +9,7 @@
     max-width: 570px;
     display: inline-block;
     margin-top: 150px;
-    margin-bottom: 60px;
+    margin-bottom: 64px;
 
     color: $mainGray;
     font-family: $main-ff-bold;
@@ -28,8 +28,8 @@
 
     @include sm {
       margin-top: 88px;
-      font-size: 26px;
-      line-height: 34px;
+      font-size: 30px;
+      line-height: 40px;
     }
 
     &__part-1 {

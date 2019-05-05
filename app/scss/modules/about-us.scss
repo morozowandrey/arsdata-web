@@ -16,11 +16,15 @@
     background-color: $lightGray;
 
     @include lg {
-      padding: 100px 30px 100px 130px;
+      padding: 100px 30px 105px 130px;
+    }
+
+    @include md {
+      padding: 105px 30px;
     }
 
     @include sm {
-      padding: 0 30px 0 40px;
+      padding: 0 30px 105px 40px;
     }
 
     &-text {
@@ -33,6 +37,7 @@
 
       @include lg {
         font-size: 26px;
+        line-height: 40px;
       }
 
       @include sm {
@@ -48,8 +53,18 @@
         color: #fff;
         background-color: $mainBlue;
 
+        @include lg {
+          height: 36px;
+        }
+
         @include sm {
           height: 32px;
+        }
+
+        @include xs {
+          &:last-of-type {
+            height: 68px;
+          }
         }
       }
 

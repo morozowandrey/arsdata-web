@@ -60,6 +60,11 @@
         @include title;
         color: $mainDark;
         margin-bottom: 16px;
+
+        @include sm {
+          font-size: 30px;
+          line-height: 40px;
+        }
       }
       &__text {
         margin-bottom: 40px;

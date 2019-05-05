@@ -34,10 +34,11 @@ const ars = (function () {
   publicGlide.on('mount.after', function () {
     let slideIndex = window.location.href.split('#')[1];
     let firstNumValue = '0'.concat(parseInt(slideIndex) + 1);
+    
+    firstNumValue === NaN ? privateSetSlidesNumbers(firstNumValue, lastNumValue) : privateSetSlidesNumbers('01', lastNumValue);
     if (slideIndex) {
       publicGlide.go(`=${slideIndex}`);
     }
-    privateSetSlidesNumbers(firstNumValue, lastNumValue);
   });
 
   publicGlide.on('run', function () {

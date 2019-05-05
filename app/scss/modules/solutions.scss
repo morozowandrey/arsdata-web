@@ -10,15 +10,26 @@ $listItemMargin: 10px;
     font-family: $main-ff-bold;
     font-size: 48px;
     line-height: 72px;
+
+    @include sm {
+      font-size: 30px;
+      line-height: 40px;
+    }
   }
 
   &-grid {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    overflow-x: auto;
+
+    &-box {
+      display: flex;
+      flex-wrap: nowrap;
+    }
 
     &-item {
       height: 295px;
-      width: 329px;
+      min-width: 329px;
       padding: 90px 70px 0;
       margin: 0.5px;
       background-color: $lightGray;

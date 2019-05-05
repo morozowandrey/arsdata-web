@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="780px" height="659px" viewBox="0 0 780 659" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>main-bg</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-88.182208%" y1="252.928673%" x2="67.3342115%" y2="-59.4530912%" id="linearGradient-1">
+            <stop stop-color="#0052FF" offset="0%"></stop>
+            <stop stop-color="#111111" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="88.8542164%" y1="-290.030421%" x2="-60.5696199%" y2="72.1455267%" id="linearGradient-2">
+            <stop stop-color="#111111" offset="0%"></stop>
+            <stop stop-color="#0052FF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-55.6089409%" y1="50%" x2="219.106935%" y2="147.521936%" id="linearGradient-3">
+            <stop stop-color="#111111" offset="0%"></stop>
+            <stop stop-color="#0052FF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="69.7377946%" y1="0%" x2="-24.7730762%" y2="159.166818%" id="linearGradient-4">
+            <stop stop-color="#111111" offset="0%"></stop>
+            <stop stop-color="#0052FF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-51.8551331%" y1="100%" x2="87.3911853%" y2="176.566282%" id="linearGradient-5">
+            <stop stop-color="#0052FF" stop-opacity="0.976336051" offset="0%"></stop>
+            <stop stop-color="#111111" offset="100%"></stop>
+            <stop stop-color="#111111" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="10.0480437%" y1="-104.119034%" x2="-11.3062286%" y2="80.9459745%" id="linearGradient-6">
+            <stop stop-color="#0052FF" offset="0%"></stop>
+            <stop stop-color="#111111" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="172.481923%" y1="-293.194832%" x2="3.72215855%" y2="100%" id="linearGradient-7">
+            <stop stop-color="#3A3A3A" offset="0%"></stop>
+            <stop stop-color="#393939" offset="0%"></stop>
+            <stop stop-color="#171717" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-132.420639%" y1="-349.837747%" x2="3.72215855%" y2="100%" id="linearGradient-8">
+            <stop stop-color="#3A3A3A" offset="0%"></stop>
+            <stop stop-color="#171717" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="61.3498837%" y1="553.087725%" x2="31.0501909%" y2="-11.5219738%" id="linearGradient-9">
+            <stop stop-color="#3A3A3A" offset="0%"></stop>
+            <stop stop-color="#171717" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-278.354901%" y1="-191.890956%" x2="50%" y2="167.668922%" id="linearGradient-10">
+            <stop stop-color="#3A3A3A" offset="0%"></stop>
+            <stop stop-color="#171717" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-26.6644895%" y1="8.08803912%" x2="318.536399%" y2="62.0490643%" id="linearGradient-11">
+            <stop stop-color="#111111" offset="0%"></stop>
+            <stop stop-color="#0052FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Desktop-Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ARSData_Homepage_v1@2x" transform="translate(-586.000000, 0.000000)">
+            <g id="First-screen">
+                <g id="main-bg" transform="translate(586.000000, 0.000000)">
+                    <g id="Graphic-element">
+                        <path d="M402,480 L401,480 L401,430 L402,430 L402,479 L545,479 L545,480 L402,480 Z" id="Combined-Shape" fill="url(#linearGradient-1)"></path>
+                        <path d="M590,406 L590,446 L589,446 L589,406 L589,405 L781,405 L781,406 L719.5,406 L719.5,445.5 L718.5,445.5 L718.5,406 L678.5,406 L678.5,445.5 L677.5,445.5 L677.5,406 L590,406 Z" id="Combined-Shape" fill="url(#linearGradient-2)"></path>
+                        <path d="M556,128 L403,128 L402,128 L402,-9.18485099e-17 L403,9.18485099e-17 L403,127 L557,127 L557,128 L557,158 L556,158 L556,128 Z" id="Combined-Shape" fill="url(#linearGradient-3)"></path>
+                        <path d="M722,120 L721,120 L721,-9.18485099e-17 L722,9.18485099e-17 L722,119 L780,119 L780,120 L722,120 Z" id="Combined-Shape" fill="url(#linearGradient-4)"></path>
+                        <path d="M638,265 L638,226 L639,226 L639,265 L780,265 L780,266 L536,266 L536,265 L556,265 L556,226 L557,226 L557,265 L597,265 L597,226 L598,226 L598,265 L638,265 Z" id="Combined-Shape" fill="url(#linearGradient-5)"></path>
+                        <path d="M424,609 L424,659 L423,659 L423,609 L423,608 L780,608 L780,609 L424,609 Z" id="Combined-Shape" fill="url(#linearGradient-6)"></path>
+                        <rect id="Rectangle" fill="url(#linearGradient-7)" x="498" y="158" width="170" height="68" rx="3"></rect>
+                        <rect id="Rectangle-Copy-18" fill="url(#linearGradient-8)" x="351" y="361" width="100" height="68" rx="3"></rect>
+                        <rect id="Rectangle-Copy-20" fill="#DEDEDE" opacity="0.03" x="545" y="446" width="60" height="68" rx="3"></rect>
+                        <rect id="Rectangle-Copy-21" fill="url(#linearGradient-9)" x="635" y="446" width="100" height="68" rx="3"></rect>
+                        <rect id="Rectangle-Copy-9" fill="url(#linearGradient-10)" x="542" y="158" width="30" height="68" rx="3"></rect>
+                        <rect id="Rectangle-Copy-9" fill="url(#linearGradient-8)" x="575" y="446" width="30" height="68" rx="3"></rect>
+                        <path d="M200,277 L200,428 L200,429 L101,429 L101,557 L602,557 L602,558 L602,608 L601,608 L601,558 L101,558 L100,558 L100,429 L100,428 L199,428 L199,185 L0,185 L0,184 L0,0 L1,0 L1,184 L199,184 L200,184 L200,276 L402,276 L402,277 L402,361 L401,361 L401,277 L200,277 Z" id="Combined-Shape" fill="url(#linearGradient-11)"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

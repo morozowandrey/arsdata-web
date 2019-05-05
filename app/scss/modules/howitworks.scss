@@ -89,15 +89,19 @@
         font-size: 16px;
         line-height: 24px;
         color: $secondGray;
+        display: block;
 
         &:hover {
           border-top: 1px solid $mainBlue;
+          border-bottom: 1px solid $mainBlue;
           color: $mainBlue;
           cursor: pointer;
+          display: block;
         }
 
         &:hover + p {
           border-top: 1px solid $mainBlue;
+          display: block;
         }
       }
     }

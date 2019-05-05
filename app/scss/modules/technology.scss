@@ -3,12 +3,23 @@
   padding-top: 130px;
   background-color: $mainDark;
 
+  .container {
+    @include md {
+      padding-right: 24px;
+    }
+  }
+
   &__caption {
     margin-bottom: 10px;
     font-family: $main-ff-bold;
     font-size: 48px;
     line-height: 72px;
     color: #fff;
+
+    @include sm {
+      font-size: 30px;
+      line-height: 40px;
+    }
   }
 
   &__subcaption {
@@ -25,6 +36,10 @@
     justify-self: center;
     max-width: 1131px;
 
+    @include md {
+      grid-template-columns: none;
+    }
+
     &-item {
       height: 238px;
       padding: 84px 58px 0 40px;
@@ -32,6 +47,12 @@
       border: 1px solid #1e1e1e;
       margin-left: -1px;
       margin-bottom: -1px;
+
+      @include md {
+        padding: 32px 40px 32px 79px;
+        height: auto;
+        max-width: 312px;
+      }
 
       // Icons
       &:nth-child(2) .technology-grid-item__caption::before {
@@ -65,6 +86,11 @@
           position: absolute;
           left: 0;
           top: -41px;
+
+          @include md {
+            left: -36px;
+            top: 2px;
+          }
         }
 
         &:after {
@@ -77,6 +103,10 @@
           width: 20px;
           background: $mainBlue;
           transition: width 0.35s ease;
+
+          @include md {
+            display: none;
+          }
         }
       }
 
