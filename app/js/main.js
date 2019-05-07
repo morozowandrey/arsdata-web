@@ -285,7 +285,7 @@ $("#submit-button").click(function (event) {
     // }
 
     $.ajax({
-      url: "",
+      url: "server/server.php",
       method: "POST",
       data: formValue,
       success: function (response) {

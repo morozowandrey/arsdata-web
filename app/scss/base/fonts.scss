@@ -1,17 +1,17 @@
 @font-face {
     font-family: 'Poppins-Regular';
-    src: url('../../fonts/Poppins/Poppins-Light.ttf') format('truetype');
+    src: url('../fonts/Poppins/Poppins-Light.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Poppins-Bold';
-    src: url('../../fonts/Poppins/poppins-bold-webfont.eot');
-    src: url('../../fonts/Poppins/poppins-bold-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../../fonts/Poppins/poppins-bold-webfont.woff2') format('woff2'),
-        url('../../fonts/Poppins/poppins-bold-webfont.woff') format('woff'),
-        url('../../fonts/Poppins/Poppins-Bold.ttf');
+    src: url('../fonts/Poppins/poppins-bold-webfont.eot');
+    src: url('../fonts/Poppins/poppins-bold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Poppins/poppins-bold-webfont.woff2') format('woff2'),
+        url('../fonts/Poppins/poppins-bold-webfont.woff') format('woff'),
+        url('../fonts/Poppins/Poppins-Bold.ttf');
     font-weight: normal;
     font-style: normal;
 }

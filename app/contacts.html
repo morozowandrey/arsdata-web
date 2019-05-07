@@ -30,7 +30,6 @@
   <script async src='https://www.google-analytics.com/analytics.js'></script>
   <!-- End Google Analytics -->
 
-  <base href="/">
   <link rel="manifest" href="manifest.json">
 
   <!--build:css css/styles.min.css-->
@@ -105,8 +104,8 @@
                 placeholder="Message"></textarea>
               <!-- <button class="form-textarea-box__btn" id="submit-button">Send</button> -->
               <div class="flex-between">
-                <button type="submit" class="home__startbtn blue-link contact-page-submit-button" id="submit-button"
-                  soul="contacts-form">Send
+                <button type="submit" name="submit_message" class="home__startbtn blue-link contact-page-submit-button"
+                  id="submit-button" soul="contacts-form">Send
                   message</button>
                 <span class="home__startbtn blue-link form-success-text send_message_button">Send message</span>
                 <span class="home__startbtn blue-link form-error-text">Your message wasn’t sent</span>
@@ -131,9 +130,9 @@
 
   </main>
 
-  <!--build:js js/main.min.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
   <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
+  <!--build:js js/main.min.js -->
   <script src='js/lib/glide.min.js'></script>
   <script src="js/main.js"></script>
   <!-- endbuild -->

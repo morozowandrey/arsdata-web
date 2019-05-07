@@ -21,7 +21,15 @@
   <meta property="og:title" content="ARS Data">
   <meta property="og:description" content="ARS Data website">
 
-  <base href="/">
+  <!-- Google Analytics -->
+  <script>
+    window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+    ga('create', 'UA-116482002-1', 'auto');
+    ga("send", "pageview");
+  </script>
+  <script async src='https://www.google-analytics.com/analytics.js'></script>
+  <!-- End Google Analytics -->
+
   <link rel="manifest" href="manifest.json">
 
   <link rel="stylesheet" href="css/styles.min.css">
@@ -71,6 +79,8 @@
 
   </main>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
+  <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
   <script src="js/main.min.js"></script>
 </body>
 

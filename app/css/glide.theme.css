@@ -26,7 +26,7 @@
   left: 0;
 }
 .glide__arrow--left::after {
-  content: url("../../images/icon/arrow-blue.svg");
+  content: url("../images/icon/arrow-blue.svg");
   position: absolute;
 
   -moz-transform: scaleX(-1);
@@ -40,7 +40,7 @@
   left: 37px;
 }
 .glide__arrow--right::after {
-  content: url("../../images/icon/arrow-blue.svg");
+  content: url("../images/icon/arrow-blue.svg");
   position: absolute;
 }
 .glide__arrow--disabled {

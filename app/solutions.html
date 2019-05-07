@@ -30,7 +30,6 @@
   <script async src='https://www.google-analytics.com/analytics.js'></script>
   <!-- End Google Analytics -->
 
-  <base href="/">
   <link rel="manifest" href="manifest.json">
 
   <!--build:css css/styles.min.css-->
@@ -256,8 +255,8 @@
               <div class="form-textarea-box">
                 <textarea id="formmessage" name="message" id="message-textarea" cols="30" rows="3"
                   placeholder="Message"></textarea>
-                <button type="submit" class="form-textarea-box__btn send_button" id="submit-button"
-                  soul="index-form">Send</button>
+                <button type="submit" name="submit_message" class="form-textarea-box__btn send_button"
+                  id="submit-button" soul="index-form">Send</button>
               </div>
 
               <div class="form-radio-box">
@@ -294,9 +293,9 @@
     </footer>
   </main>
 
-  <!--build:js js/main.min.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
   <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
+  <!--build:js js/main.min.js -->
   <script src='js/lib/glide.min.js'></script>
   <script src="js/main.js"></script>
   <!-- endbuild -->

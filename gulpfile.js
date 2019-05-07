@@ -60,7 +60,7 @@ gulp.task('useref', function () {
 
   return gulp.src('app/*.html')
     .pipe(useref())
-    .pipe(gulpIf('*.js', uglify()))
+    // .pipe(gulpIf('*.js', uglify()))
     .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest('dist'));
 });
@@ -79,6 +79,11 @@ gulp.task('images', function () {
 gulp.task('fonts', function () {
   return gulp.src('app/fonts/**/*')
     .pipe(gulp.dest('dist/fonts'))
+})
+
+gulp.task('php', function () {
+  return gulp.src('app/server/**/*.php')
+    .pipe(gulp.dest('dist/server'))
 })
 
 // Cleaning 
@@ -105,6 +110,7 @@ gulp.task('build', function (callback) {
   runSequence(
     'clean:dist',
     'sass',
+    'php',
     ['useref', 'images', 'fonts'],
     callback
   )

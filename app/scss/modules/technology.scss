@@ -56,16 +56,16 @@
 
       // Icons
       &:nth-child(2) .technology-grid-item__caption::before {
-        background-image: url(../../images/Icon/Сircle.svg);
+        background-image: url(../images/Icon/Сircle.svg);
       }
       &:nth-child(3) .technology-grid-item__caption::before {
-        background-image: url(../../images/Icon/Database.svg);
+        background-image: url(../images/Icon/Database.svg);
       }
       &:nth-child(4) .technology-grid-item__caption::before {
-        background-image: url(../../images/Icon/Cube.svg);
+        background-image: url(../images/Icon/Cube.svg);
       }
       &:nth-child(5) .technology-grid-item__caption::before {
-        background-image: url(../../images/Icon/Eye.svg);
+        background-image: url(../images/Icon/Eye.svg);
       }
       
       &__caption {
@@ -77,7 +77,7 @@
         text-transform: uppercase;
         
         &:before {
-          background-image: url(../../images/technology/Processor.svg);
+          background-image: url(../images/technology/Processor.svg);
           background-size: 20px;
           content: "";
           height: 20px;

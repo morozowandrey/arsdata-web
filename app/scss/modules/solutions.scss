@@ -30,30 +30,30 @@ $listItemMargin: 10px;
         .solutions-grid-item {
           // Icons
           &:nth-child(1) .solutions-grid-item__caption::before {
-            content: url(../../images/solutions/blue/predictive-maintenance.svg);
+            content: url(../images/solutions/blue/predictive-maintenance.svg);
           }
           &:nth-child(2) .solutions-grid-item__caption::before {
-            content: url(../../images/solutions/blue/condition-monitoring.svg);
+            content: url(../images/solutions/blue/condition-monitoring.svg);
           }
           &:nth-child(3) .solutions-grid-item__caption::before {
-            content: url(../../images/solutions/blue/sensor-data-processing.svg);
+            content: url(../images/solutions/blue/sensor-data-processing.svg);
           }
           &:nth-child(4) .solutions-grid-item__caption::before {
-            content: url(../../images/solutions/blue/smart-hvac.svg);
+            content: url(../images/solutions/blue/smart-hvac.svg);
           }
 
           // Hover
           &:nth-child(1):hover .solutions-grid-item__caption::before {
-            content: url(../../images/solutions/white/predictive-maintenance.svg);
+            content: url(../images/solutions/white/predictive-maintenance.svg);
           }
           &:nth-child(2):hover .solutions-grid-item__caption::before {
-            content: url(../../images/solutions/white/condition-monitoring.svg);
+            content: url(../images/solutions/white/condition-monitoring.svg);
           }
           &:nth-child(3):hover .solutions-grid-item__caption::before {
-            content: url(../../images/solutions/white/sensor-data-processing.svg);
+            content: url(../images/solutions/white/sensor-data-processing.svg);
           }
           &:nth-child(4):hover .solutions-grid-item__caption::before {
-            content: url(../../images/solutions/white/smart-hvac.svg);
+            content: url(../images/solutions/white/smart-hvac.svg);
           }
         }
       }
@@ -62,30 +62,30 @@ $listItemMargin: 10px;
         .solutions-grid-item {
           // Icons
           &:nth-child(1) .solutions-grid-item__caption::before {
-            content: url(../../images/solutions/blue/machine-learning.svg);
+            content: url(../images/solutions/blue/machine-learning.svg);
           }
           &:nth-child(2) .solutions-grid-item__caption::before {
-            content: url(../../images/solutions/blue/embedded-development.svg);
+            content: url(../images/solutions/blue/embedded-development.svg);
           }
           &:nth-child(3) .solutions-grid-item__caption::before {
-            content: url(../../images/solutions/blue/data-processing.svg);
+            content: url(../images/solutions/blue/data-processing.svg);
           }
           &:nth-child(4) .solutions-grid-item__caption::before {
-            content: url(../../images/solutions/blue/visualisations.svg);
+            content: url(../images/solutions/blue/visualisations.svg);
           }
 
           // Hover
           &:nth-child(1):hover .solutions-grid-item__caption::before {
-            content: url(../../images/solutions/white/machine-learning.svg);
+            content: url(../images/solutions/white/machine-learning.svg);
           }
           &:nth-child(2):hover .solutions-grid-item__caption::before {
-            content: url(../../images/solutions/white/embedded-development.svg);
+            content: url(../images/solutions/white/embedded-development.svg);
           }
           &:nth-child(3):hover .solutions-grid-item__caption::before {
-            content: url(../../images/solutions/white/data-processing.svg);
+            content: url(../images/solutions/white/data-processing.svg);
           }
           &:nth-child(4):hover .solutions-grid-item__caption::before {
-            content: url(../../images/solutions/white/visualisations.svg);
+            content: url(../images/solutions/white/visualisations.svg);
           }
         }
       }
@@ -112,7 +112,7 @@ $listItemMargin: 10px;
         }
 
         &:before {
-          content: url(../../images/solutions/blue/predictive-maintenance.svg);
+          content: url(../images/solutions/blue/predictive-maintenance.svg);
           height: 30px;
           width: 30px;
           display: block;
@@ -164,7 +164,7 @@ $listItemMargin: 10px;
         color: #fff;
 
         // &:before {
-        //   content: url(../../images/solutions/white/predictive-maintenance.svg);
+        //   content: url(../images/solutions/white/predictive-maintenance.svg);
         // }
       }
 

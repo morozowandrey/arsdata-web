@@ -476,14 +476,14 @@ main {
 
 @font-face {
   font-family: 'Poppins-Regular';
-  src: url("../../fonts/Poppins/Poppins-Light.ttf") format("truetype");
+  src: url("../fonts/Poppins/Poppins-Light.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Poppins-Bold';
-  src: url("../../fonts/Poppins/poppins-bold-webfont.eot");
-  src: url("../../fonts/Poppins/poppins-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/Poppins/poppins-bold-webfont.woff2") format("woff2"), url("../../fonts/Poppins/poppins-bold-webfont.woff") format("woff"), url("../../fonts/Poppins/Poppins-Bold.ttf");
+  src: url("../fonts/Poppins/poppins-bold-webfont.eot");
+  src: url("../fonts/Poppins/poppins-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Poppins/poppins-bold-webfont.woff2") format("woff2"), url("../fonts/Poppins/poppins-bold-webfont.woff") format("woff"), url("../fonts/Poppins/Poppins-Bold.ttf");
   font-weight: normal;
   font-style: normal; }
 
@@ -1254,37 +1254,37 @@ main {
       display: flex;
       flex-wrap: nowrap; }
       .solutions-grid-box-1 .solutions-grid-item:nth-child(1) .solutions-grid-item__caption::before {
-        content: url(../../images/solutions/blue/predictive-maintenance.svg); }
+        content: url(../images/solutions/blue/predictive-maintenance.svg); }
       .solutions-grid-box-1 .solutions-grid-item:nth-child(2) .solutions-grid-item__caption::before {
-        content: url(../../images/solutions/blue/condition-monitoring.svg); }
+        content: url(../images/solutions/blue/condition-monitoring.svg); }
       .solutions-grid-box-1 .solutions-grid-item:nth-child(3) .solutions-grid-item__caption::before {
-        content: url(../../images/solutions/blue/sensor-data-processing.svg); }
+        content: url(../images/solutions/blue/sensor-data-processing.svg); }
       .solutions-grid-box-1 .solutions-grid-item:nth-child(4) .solutions-grid-item__caption::before {
-        content: url(../../images/solutions/blue/smart-hvac.svg); }
+        content: url(../images/solutions/blue/smart-hvac.svg); }
       .solutions-grid-box-1 .solutions-grid-item:nth-child(1):hover .solutions-grid-item__caption::before {
-        content: url(../../images/solutions/white/predictive-maintenance.svg); }
+        content: url(../images/solutions/white/predictive-maintenance.svg); }
       .solutions-grid-box-1 .solutions-grid-item:nth-child(2):hover .solutions-grid-item__caption::before {
-        content: url(../../images/solutions/white/condition-monitoring.svg); }
+        content: url(../images/solutions/white/condition-monitoring.svg); }
       .solutions-grid-box-1 .solutions-grid-item:nth-child(3):hover .solutions-grid-item__caption::before {
-        content: url(../../images/solutions/white/sensor-data-processing.svg); }
+        content: url(../images/solutions/white/sensor-data-processing.svg); }
       .solutions-grid-box-1 .solutions-grid-item:nth-child(4):hover .solutions-grid-item__caption::before {
-        content: url(../../images/solutions/white/smart-hvac.svg); }
+        content: url(../images/solutions/white/smart-hvac.svg); }
       .solutions-grid-box-2 .solutions-grid-item:nth-child(1) .solutions-grid-item__caption::before {
-        content: url(../../images/solutions/blue/machine-learning.svg); }
+        content: url(../images/solutions/blue/machine-learning.svg); }
       .solutions-grid-box-2 .solutions-grid-item:nth-child(2) .solutions-grid-item__caption::before {
-        content: url(../../images/solutions/blue/embedded-development.svg); }
+        content: url(../images/solutions/blue/embedded-development.svg); }
       .solutions-grid-box-2 .solutions-grid-item:nth-child(3) .solutions-grid-item__caption::before {
-        content: url(../../images/solutions/blue/data-processing.svg); }
+        content: url(../images/solutions/blue/data-processing.svg); }
       .solutions-grid-box-2 .solutions-grid-item:nth-child(4) .solutions-grid-item__caption::before {
-        content: url(../../images/solutions/blue/visualisations.svg); }
+        content: url(../images/solutions/blue/visualisations.svg); }
       .solutions-grid-box-2 .solutions-grid-item:nth-child(1):hover .solutions-grid-item__caption::before {
-        content: url(../../images/solutions/white/machine-learning.svg); }
+        content: url(../images/solutions/white/machine-learning.svg); }
       .solutions-grid-box-2 .solutions-grid-item:nth-child(2):hover .solutions-grid-item__caption::before {
-        content: url(../../images/solutions/white/embedded-development.svg); }
+        content: url(../images/solutions/white/embedded-development.svg); }
       .solutions-grid-box-2 .solutions-grid-item:nth-child(3):hover .solutions-grid-item__caption::before {
-        content: url(../../images/solutions/white/data-processing.svg); }
+        content: url(../images/solutions/white/data-processing.svg); }
       .solutions-grid-box-2 .solutions-grid-item:nth-child(4):hover .solutions-grid-item__caption::before {
-        content: url(../../images/solutions/white/visualisations.svg); }
+        content: url(../images/solutions/white/visualisations.svg); }
     .solutions-grid-item {
       height: 295px;
       min-width: 329px;
@@ -1302,7 +1302,7 @@ main {
         .solutions-grid-item__caption span {
           display: block; }
         .solutions-grid-item__caption:before {
-          content: url(../../images/solutions/blue/predictive-maintenance.svg);
+          content: url(../images/solutions/blue/predictive-maintenance.svg);
           height: 30px;
           width: 30px;
           display: block;
@@ -1379,13 +1379,13 @@ main {
           height: auto;
           max-width: 312px; } }
       .technology-grid-item:nth-child(2) .technology-grid-item__caption::before {
-        background-image: url(../../images/Icon/Сircle.svg); }
+        background-image: url(../images/Icon/Сircle.svg); }
       .technology-grid-item:nth-child(3) .technology-grid-item__caption::before {
-        background-image: url(../../images/Icon/Database.svg); }
+        background-image: url(../images/Icon/Database.svg); }
       .technology-grid-item:nth-child(4) .technology-grid-item__caption::before {
-        background-image: url(../../images/Icon/Cube.svg); }
+        background-image: url(../images/Icon/Cube.svg); }
       .technology-grid-item:nth-child(5) .technology-grid-item__caption::before {
-        background-image: url(../../images/Icon/Eye.svg); }
+        background-image: url(../images/Icon/Eye.svg); }
       .technology-grid-item__caption {
         position: relative;
         font-size: 16px;
@@ -1394,7 +1394,7 @@ main {
         color: #fff;
         text-transform: uppercase; }
         .technology-grid-item__caption:before {
-          background-image: url(../../images/technology/Processor.svg);
+          background-image: url(../images/technology/Processor.svg);
           background-size: 20px;
           content: "";
           height: 20px;
@@ -1506,7 +1506,7 @@ main {
         .contact-content-info__location:before, .contact-content-info__email:before {
           content: "";
           background-size: 18px;
-          background-image: url(../../images/Icon/Location.svg);
+          background-image: url(../images/Icon/Location.svg);
           height: 18px;
           width: 18px;
           display: block;
@@ -1522,7 +1522,7 @@ main {
         .contact-content-info__email:before {
           content: "";
           background-size: 18px;
-          background-image: url(../../images/Icon/Mail.svg);
+          background-image: url(../images/Icon/Mail.svg);
           top: 4px; }
     .contact-content-form {
       max-width: 563px; }
@@ -1651,7 +1651,7 @@ main {
 
 [type="checkbox"]:checked + label:after,
 [type="checkbox"]:not(:checked) + label:after {
-  content: url(../../images/Icon/checbox-active.svg);
+  content: url(../images/Icon/checbox-active.svg);
   width: 8px;
   height: 8px;
   position: absolute;
