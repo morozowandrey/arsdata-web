@@ -1,4 +1,4 @@
-const ars = (function () {
+const ArsModule = (function () {
 
   firstNumNode = $('.glide-slides-numbers__first');
   lastNumNode = $('.glide-slides-numbers__last');
@@ -6,6 +6,8 @@ const ars = (function () {
   firstNumValue = '01';
   lastNumValue = '0'.concat(slides.length.toString());
   currentSlide = null;
+
+  /* =================== private methods ================= */
 
   function privateSetSlidesNumbers(firstNum, lastNum) {
     firstNumNode.html(firstNum);
@@ -22,7 +24,29 @@ const ars = (function () {
     $('.slide-text').removeClass('visio');
   }
 
-  let publicGlide = new Glide('.glide', {
+  function privateInitSolutionsSlider() {
+    if ($('#solutionsPage').length != 0) {
+      ga('send', {
+        hitType: 'event',
+        eventCategory: 'solutions_category',
+        eventAction: 'predictive_maintenance_slider'
+      });
+      pivateGlide.mount();
+    }
+  }
+
+  function privateInitTechSlider() {
+    if ($('#techPage').length != 0) {
+      ga('send', {
+        hitType: 'event',
+        eventCategory: 'technologies_category',
+        eventAction: 'embedded_slider'
+      });
+      pivateGlide.mount();
+    }
+  }
+
+  let pivateGlide = new Glide('.glide', {
     type: 'carousel',
     startAt: 0,
     perView: 1,
@@ -31,69 +55,69 @@ const ars = (function () {
     animationTimingFunc: 'cubic-bezier(0.85, 0.15, 0.15, 0.85)'
   });
 
-  publicGlide.on('mount.after', function () {
+  pivateGlide.on('mount.after', function () {
     let slideIndex = window.location.href.split('#')[1];
     let firstNumValue = '0'.concat(parseInt(slideIndex) + 1);
 
     firstNumValue === NaN ? privateSetSlidesNumbers(firstNumValue, lastNumValue) : privateSetSlidesNumbers('01', lastNumValue);
     if (slideIndex) {
-      publicGlide.go(`=${slideIndex}`);
+      pivateGlide.go(`=${slideIndex}`);
     }
   });
 
-  publicGlide.on('run', function () {
-    let firstSlideNum = '0'.concat((publicGlide.index + 1).toString());
+  pivateGlide.on('run', function () {
+    let firstSlideNum = '0'.concat((pivateGlide.index + 1).toString());
     firstNumNode.html(firstSlideNum);
     privateStartSliderAnimations();
   });
 
-  publicGlide.on('run.after', function (event) {
+  pivateGlide.on('run.after', function (event) {
     privateStopSlidersAnimations();
 
-    if (window.location.pathname === "/solutions.html") {
-      if (publicGlide.index == 0) {
+    if ($('#solutionsPage').length != 0) {
+      if (pivateGlide.index == 0) {
         ga('send', {
           hitType: 'event',
           eventCategory: 'solutions_category',
           eventAction: 'predictive_maintenance_slider'
         });
-      } else if (publicGlide.index == 1) {
+      } else if (pivateGlide.index == 1) {
         ga('send', {
           hitType: 'event',
           eventCategory: 'solutions_category',
           eventAction: 'condition_monitoring_slider'
         });
-      } else if (publicGlide.index == 2) {
+      } else if (pivateGlide.index == 2) {
         ga('send', {
           hitType: 'event',
           eventCategory: 'solutions_category',
           eventAction: 'sensor_data_slider'
         });
-      } else if (publicGlide.index == 3) {
+      } else if (pivateGlide.index == 3) {
         ga('send', {
           hitType: 'event',
           eventCategory: 'solutions_category',
           eventAction: 'hvac_slider'
         });
-      } else if (publicGlide.index == 4) {
+      } else if (pivateGlide.index == 4) {
         ga('send', {
           hitType: 'event',
           eventCategory: 'solutions_category',
           eventAction: 'machine_learning_slider'
         });
-      } else if (publicGlide.index == 5) {
+      } else if (pivateGlide.index == 5) {
         ga('send', {
           hitType: 'event',
           eventCategory: 'solutions_category',
           eventAction: 'embedded_development_slider'
         });
-      } else if (publicGlide.index == 6) {
+      } else if (pivateGlide.index == 6) {
         ga('send', {
           hitType: 'event',
           eventCategory: 'solutions_category',
           eventAction: 'data_processing_slider'
         });
-      } else if (publicGlide.index == 7) {
+      } else if (pivateGlide.index == 7) {
         ga('send', {
           hitType: 'event',
           eventCategory: 'solutions_category',
@@ -102,34 +126,34 @@ const ars = (function () {
       }
     }
 
-    if (window.location.pathname === "/technologies.html") {
-      if (publicGlide.index == 0) {
+    if ($('#techPage').length != 0) {
+      if (pivateGlide.index == 0) {
         ga('send', {
           hitType: 'event',
           eventCategory: 'technologies_category',
           eventAction: 'embedded_slider'
         });
-      } else if (publicGlide.index == 1) {
+      } else if (pivateGlide.index == 1) {
         ga('send', {
           hitType: 'event',
           eventCategory: 'technologies_category',
           eventAction: 'computation_slider'
         });
-      } else if (publicGlide.index == 2) {
+      } else if (pivateGlide.index == 2) {
         ga('send', {
           hitType: 'event',
           eventCategory: 'technologies_category',
           eventAction: 'storage_slider'
         });
 
-      } else if (publicGlide.index == 3) {
+      } else if (pivateGlide.index == 3) {
         ga('send', {
           hitType: 'event',
           eventCategory: 'technologies_category',
           eventAction: 'modeling_slider'
         });
 
-      } else if (publicGlide.index == 4) {
+      } else if (pivateGlide.index == 4) {
         ga('send', {
           hitType: 'event',
           eventCategory: 'technologies_category',
@@ -140,6 +164,8 @@ const ars = (function () {
     }
 
   });
+
+  /* =================== public methods ================== */
 
   function publicToAnchor(currentNode, event) {
     const $target = $(currentNode.getAttribute('href'));
@@ -167,137 +193,48 @@ const ars = (function () {
     $('main').toggleClass('hidden');
   }
 
-  if (window.location.pathname === "/solutions.html") {
-    ga('send', {
-      hitType: 'event',
-      eventCategory: 'solutions_category',
-      eventAction: 'predictive_maintenance_slider'
-    });
-    publicGlide.mount();
-  }
+  function publicValideteForm(formValue) {
+    let namePattern = /^[A-Za-z]+$/;
+    let mailPattern = /^[a-z0-9]\w+\.?\w*@[a-z]+\.[a-z]{2,8}$/;
 
-  if (window.location.pathname === "/technologies.html") {
-    ga('send', {
-      hitType: 'event',
-      eventCategory: 'technologies_category',
-      eventAction: 'embedded_slider'
-    });
-    publicGlide.mount();
-  }
+    if (namePattern.test(formValue.name)) {
+      $('#formname').css('border-bottom', '1px solid #BFBFBF');
+      $('#formNameLable').hide();
+    } else {
+      $('#formname').css('border-bottom', '1px solid #E63A0F');
+      $('#formNameLable').show();
+      $('#formNameLable').text("please enter a valid name");
+      return false
+    }
 
-  return {
-    glide: publicGlide,
-    toAnchor: publicToAnchor,
-    toggleNav: publicToggleNav,
-  };
-})();
+    if (mailPattern.test(formValue.email)) {
+      $('#formemail').css('border-bottom', '1px solid #BFBFBF');
+      $('#formEmailLable').hide();
+    } else {
+      $('#formemail').css('border-bottom', '1px solid #E63A0F');
+      $('#formEmailLable').show();
+      $('#formEmailLable').text("please enter a valid email address");
+      return false
+    }
 
-
-
-// FORM LOGIC
-let valideteForm = function (formValue) {
-  let namePattern = /^[A-Za-z]+$/;
-  let mailPattern = /^[a-z0-9]\w+\.?\w*@[a-z]+\.[a-z]{2,8}$/;
-
-  if (namePattern.test(formValue.name)) {
-    $('#formname').css('border-bottom', '1px solid #BFBFBF');
-    $('#formNameLable').hide();
-  } else {
-    $('#formname').css('border-bottom', '1px solid #E63A0F');
-    $('#formNameLable').show();
-    $('#formNameLable').text("please enter a valid name");
-    return false
-  }
-
-  if (mailPattern.test(formValue.email)) {
-    $('#formemail').css('border-bottom', '1px solid #BFBFBF');
-    $('#formEmailLable').hide();
-  } else {
-    $('#formemail').css('border-bottom', '1px solid #E63A0F');
-    $('#formEmailLable').show();
-    $('#formEmailLable').text("please enter a valid email address");
-    return false
-  }
-
-  // if (formValue.message == '') {
-  //   $('#formmessage').css('border-bottom', '1px solid #E63A0F');
-  //   return false
-  // } else {
-  //   $('#formmessage').css('border-bottom', '1px solid #BFBFBF');
-  // }
-
-  if (formValue.termsAndConditions) {
-    $('.form-radio-box').removeClass('errorCheckbox');
-  } else {
-    $('.form-radio-box').addClass('errorCheckbox');
-    return false
-  }
-
-  return true;
-}.bind(this);
-
-
-//----------------EVENTS----------------//
-
-// TOGGLE HAMBURGER & COLLAPSE NAV
-$('.navigation-mobile').click(function () {
-  ars.toggleNav();
-});
-
-// REMOVE X & COLLAPSE NAV ON ON CLICK
-$('.navigation-desktop__item').click(function () {
-  $(".navigation-desktop").removeClass('open');
-  $('.navigation-desktop').removeClass('collapse');
-  $('.navigation-mobile').removeClass('open');
-  $('main').removeClass('hidden');
-});
-
-// LINKS TO ANCHORS
-$('a[href^="#"]').click(function (event) {
-  let currentNode = this;
-  ars.toAnchor(currentNode, event);
-});
-
-// FORM SUBMIT
-$("#submit-button").click(function (event) {
-  $('.form-error-text').hide();
-  $(".contact-content-form__caption").text("Got questions? — get in touch");
-  $(".contact-content-form__caption").removeClass("error");
-
-  let formValue = $(this.form).serializeArray().reduce(function (obj, item) {
-    obj[item.name] = item.value;
-    return obj;
-  }, {});
-
-  if (valideteForm(formValue)) {
-    console.log("valid data");
-    console.log(formValue);
-
-    let that = this;
-    // let submitBtn = $(this.form).find("#submit-button");
-    // if (submitBtn.attr("soul") === "contacts-form") {
-    //   $("#submit-button").hide();
-    //   $(".form-success-text").text("Your message was sent");
-    //   $(".form-success-text").addClass('form-success-text_visible');
+    // if (formValue.message == '') {
+    //   $('#formmessage').css('border-bottom', '1px solid #E63A0F');
+    //   return false
     // } else {
-    //   $(".contact-content-form__caption").text("Your message was sent");
-    //   $(".contact-content-form__text").text("We will get back to you as soon as possible");
+    //   $('#formmessage').css('border-bottom', '1px solid #BFBFBF');
     // }
 
-    $.ajax({
-      url: "server/server.php",
-      method: "POST",
-      data: formValue,
-      success: function (response) {
-        successFormSubmit(response).bind(this);
-      },
-      error: function (jqXHR, exception) {
-        getErrorMessage(that, jqXHR, exception);
-      },
-    });
-  };
+    if (formValue.termsAndConditions) {
+      $('.form-radio-box').removeClass('errorCheckbox');
+    } else {
+      $('.form-radio-box').addClass('errorCheckbox');
+      return false
+    }
 
-  function successFormSubmit(response) {
+    return true;
+  }
+
+  function publicSuccessFormSubmit(response) {
     console.log(response, response.responseText);
 
     let submitBtn = $(this.form).find("#submit-button");
@@ -311,7 +248,7 @@ $("#submit-button").click(function (event) {
     }
   }
 
-  function getErrorMessage(that, jqXHR, exception) {
+  function publicGetErrorMessage(that, jqXHR, exception) {
     var msg = '';
     if (jqXHR.status === 0) {
       msg = 'Not connect.\n Verify Network.';
@@ -341,7 +278,92 @@ $("#submit-button").click(function (event) {
     console.log(jqXHR, msg);
   }
 
+  function publicHandleCookiesPopUp(hideOrshow) {
+    if (hideOrshow == 'hide') {
+      document.getElementById('cookies-popup').style.display = "none";
+      localStorage.setItem("popupWasShown", true);
+    }
+    else if (localStorage.getItem("popupWasShown") == null) {
+      document.getElementById('cookies-popup').removeAttribute('style');
+    }
+  }
+
+  function init() {
+    privateInitTechSlider();
+    privateInitSolutionsSlider();
+  }
+
+  return {
+    toAnchor: publicToAnchor,
+    toggleNav: publicToggleNav,
+    valideteForm: publicValideteForm,
+    successFormSubmit: publicSuccessFormSubmit,
+    getErrorMessage: publicGetErrorMessage,
+    handleCookiesPopUp: publicHandleCookiesPopUp,
+    init: init
+  };
+})();
+
+
+$(document).ready(function () {
+  ArsModule.init();
+  
+  // localStorage.removeItem("popupWasShown");
+  setTimeout(function () {
+    ArsModule.handleCookiesPopUp('show');
+  }, 0);
+});
+
+//----------------EVENTS----------------//
+
+// TOGGLE HAMBURGER & COLLAPSE NAV
+$('.navigation-mobile').click(function () {
+  ArsModule.toggleNav();
+});
+
+// REMOVE X & COLLAPSE NAV ON ON CLICK
+$('.navigation-desktop__item').click(function () {
+  $(".navigation-desktop").removeClass('open');
+  $('.navigation-desktop').removeClass('collapse');
+  $('.navigation-mobile').removeClass('open');
+  $('main').removeClass('hidden');
+});
+
+// LINKS TO ANCHORS
+$('a[href^="#"]').click(function (event) {
+  let currentNode = this;
+  ArsModule.toAnchor(currentNode, event);
+});
+
+// FORM SUBMIT
+$("#submit-button").click(function (event) {
   event.preventDefault();
+  
+  $('.form-error-text').hide();
+  $(".contact-content-form__caption").text("Got questions? — get in touch");
+  $(".contact-content-form__caption").removeClass("error");
+
+  let formValue = $(this.form).serializeArray().reduce(function (obj, item) {
+    obj[item.name] = item.value;
+    return obj;
+  }, {});
+
+  if (ArsModule.valideteForm(formValue)) {
+    let that = this;
+    console.log("valid data", formValue);
+
+    $.ajax({
+      url: "server/server.php",
+      method: "POST",
+      data: formValue,
+      success: function (response) {
+        ArsModule.successFormSubmit(response);
+      },
+      error: function (jqXHR, exception) {
+        ArsModule.getErrorMessage(that, jqXHR, exception);
+      },
+    });
+  };
 });
 
 
@@ -519,25 +541,3 @@ $(".send_message_button").click(function (e) {
     eventAction: 'send_message_button'
   });
 });
-
-
-function PopUp(hideOrshow) {
-  if (hideOrshow == 'hide') {
-    document.getElementById('cookies-popup').style.display = "none";
-  }
-  else if (localStorage.getItem("popupWasShown") == null) {
-    localStorage.setItem("popupWasShown", true);
-    document.getElementById('cookies-popup').removeAttribute('style');
-  }
-}
-window.onload = function () {
-  // localStorage.removeItem("popupWasShown")‰
-  setTimeout(function () {
-    PopUp('show');
-  }, 0);
-}
-
-
-function hideNow(e) {
-  if (e.target.id == 'cookies-popup') document.getElementById('cookies-popup').style.display = 'none';
-}
