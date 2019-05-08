@@ -569,7 +569,8 @@ main {
     .slider .slide-content-2 {
       padding-right: 128px;
       min-height: 313px;
-      min-width: 498px; }
+      min-width: 498px;
+      max-width: 618px; }
       @media (max-width: 1024px) {
         .slider .slide-content-2 {
           padding-right: 80px; } }

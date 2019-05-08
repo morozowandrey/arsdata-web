@@ -49,6 +49,8 @@
       padding-right: 128px;
       min-height: 313px;
       min-width: 498px;
+      max-width: 618px;
+      
       @include lg {
         padding-right: 80px;
       }
