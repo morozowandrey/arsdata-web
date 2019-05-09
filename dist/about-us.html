@@ -33,7 +33,7 @@
   <link rel="manifest" href="manifest.json">
 
   <link rel="stylesheet" href="css/styles.min.css">
-  <link rel="shortcut icon" type="image/png" href="./images/Icon/favicon-16x16.png" />
+  <link rel="shortcut icon" type="image/png" href="./images/icon/favicon-16x16.png" />
 </head>
 
 <body>
@@ -116,30 +116,27 @@
             <p class="contact-content-form__text">Send us your questions and we will get back to you as soon as possible
             </p>
 
-            <form class="form" id="contact-form">
+            <form class="form" id="contact-form" onsubmit="return false;">
               <div class="form-input-box">
-                <input id="formname" name="name" type="text" class="form-input-box__input" type="text"
-                  placeholder="Name" required>
-                <label for="name" id="formNameLable" class="form-input-box__lable"></label>
+                <input id="formname" name="n" type="text" class="form-input-box__input" type="text" placeholder="Name" required>
+                <label for="n" id="formNameLable" class="form-input-box__lable"></label>
               </div>
-
+            
               <div class="form-input-box">
-                <input id="formemail" name="email" type="email" class="form-input-box__input" placeholder="Email"
-                  required>
-                <label for="email" id="formEmailLable" class="form-input-box__lable"></label>
+                <input id="formemail" name="e" type="email" class="form-input-box__input" placeholder="Email" required>
+                <label for="e" id="formEmailLable" class="form-input-box__lable"></label>
               </div>
-
+            
               <div class="form-textarea-box">
-                <textarea id="formmessage" name="message" id="message-textarea" cols="30" rows="3"
-                  placeholder="Message"></textarea>
-                <button type="submit" name="submit_message" class="form-textarea-box__btn send_button"
-                  id="submit-button" soul="index-form">Send</button>
+                <textarea id="formmessage" name="m" id="message-textarea" cols="30" rows="3" placeholder="Message"></textarea>
+                <input type="submit" name="submit_message" class="form-textarea-box__btn send_button" id="submit-button"
+                  soul="index-form" value="Send" onclick="ArsModule.submitForm(event)">
+                <!-- <input id="mybtn" type="submit" value="Submit Form"> -->
               </div>
-
+            
               <div class="form-radio-box">
                 <p>
-                  <input class="form-radio-box__radio" type="checkbox" name="termsAndConditions"
-                    id="termsAndConditions">
+                  <input class="form-radio-box__radio" type="checkbox" name="termsAndConditions" id="termsAndConditions">
                   <label class="form-radio-box-lable" for="termsAndConditions">By clicking the button above, I agree
                     with
                     <a href="./terms-and-conditions.html" target="_blanc" class="form-radio-box-lable__link">Terms of
@@ -149,7 +146,7 @@
                 </p>
                 </label>
               </div>
-
+            
             </form>
 
 
@@ -171,7 +168,7 @@
   </main>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
-  <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
   <script src="js/main.min.js"></script>
 </body>
 

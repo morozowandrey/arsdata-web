@@ -80,7 +80,7 @@
         &:before {
           content: "";
           background-size: 18px;
-          background-image: url(../images/Icon/Location.svg);
+          background-image: url(../images/icon/location.svg);
           height: 18px;
           width: 18px;
           display: block;
@@ -101,7 +101,7 @@
         &:before {
           content: "";
           background-size: 18px;
-          background-image: url(../images/Icon/Mail.svg);
+          background-image: url(../images/icon/mail.svg);
           top: 4px;
         }
       }
@@ -251,7 +251,7 @@
 }
 [type="checkbox"]:checked + label:after,
 [type="checkbox"]:not(:checked) + label:after {
-  content: url(../images/Icon/checbox-active.svg);
+  content: url(../images/icon/checbox-active.svg);
   width: 8px;
   height: 8px;
   // background: $mainBlue;

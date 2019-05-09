@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -475,15 +474,15 @@ main {
       display: none; } }
 
 @font-face {
-  font-family: 'Poppins-Regular';
-  src: url("../fonts/Poppins/Poppins-Light.ttf") format("truetype");
+  font-family: 'poppins-regular';
+  src: url("../fonts/poppins/poppins-light.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Poppins-Bold';
-  src: url("../fonts/Poppins/poppins-bold-webfont.eot");
-  src: url("../fonts/Poppins/poppins-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Poppins/poppins-bold-webfont.woff2") format("woff2"), url("../fonts/Poppins/poppins-bold-webfont.woff") format("woff"), url("../fonts/Poppins/Poppins-Bold.ttf");
+  font-family: 'poppins-bold';
+  src: url("../fonts/poppins/poppins-bold-webfont.eot");
+  src: url("../fonts/poppins/poppins-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/poppins/poppins-bold-webfont.woff2") format("woff2"), url("../fonts/poppins/poppins-bold-webfont.woff") format("woff"), url("../fonts/poppins/poppins-bold.ttf");
   font-weight: normal;
   font-style: normal; }
 
@@ -1366,7 +1365,8 @@ main {
     max-width: 1131px; }
     @media (max-width: 768px) {
       .technology-grid {
-        grid-template-columns: none; } }
+        grid-template-columns: none;
+        justify-content: center; } }
     .technology-grid-item {
       height: 238px;
       padding: 84px 58px 0 40px;
@@ -1378,15 +1378,18 @@ main {
         .technology-grid-item {
           padding: 32px 40px 32px 79px;
           height: auto;
-          max-width: 312px; } }
+          max-width: 312px;
+          min-width: 312px; } }
       .technology-grid-item:nth-child(2) .technology-grid-item__caption::before {
-        background-image: url(../images/Icon/Сircle.svg); }
+        background-image: url(../images/icon/circle.svg); }
       .technology-grid-item:nth-child(3) .technology-grid-item__caption::before {
-        background-image: url(../images/Icon/Database.svg); }
+        background-image: url(../images/icon/database.svg); }
       .technology-grid-item:nth-child(4) .technology-grid-item__caption::before {
-        background-image: url(../images/Icon/Cube.svg); }
+        background-image: url(../images/icon/cube.svg); }
       .technology-grid-item:nth-child(5) .technology-grid-item__caption::before {
-        background-image: url(../images/Icon/Eye.svg); }
+        background-image: url(../images/icon/eye.svg);
+        background-size: 24px;
+        width: 24px; }
       .technology-grid-item__caption {
         position: relative;
         font-size: 16px;
@@ -1395,7 +1398,7 @@ main {
         color: #fff;
         text-transform: uppercase; }
         .technology-grid-item__caption:before {
-          background-image: url(../images/technology/Processor.svg);
+          background-image: url(../images/technology/processor.svg);
           background-size: 20px;
           content: "";
           height: 20px;
@@ -1436,8 +1439,14 @@ main {
         margin-bottom: 60px; }
       .technology-grid-item:hover .technology-grid-item__link {
         display: inline; }
+        @media (max-width: 768px) {
+          .technology-grid-item:hover .technology-grid-item__link {
+            display: none; } }
       .technology-grid-item:hover .technology-grid-item__caption {
         color: #fff; }
+        @media (max-width: 768px) {
+          .technology-grid-item:hover .technology-grid-item__caption {
+            margin-bottom: 0; } }
       .technology-grid-item:hover .technology-grid-item__text {
         color: #fff; }
 
@@ -1507,7 +1516,7 @@ main {
         .contact-content-info__location:before, .contact-content-info__email:before {
           content: "";
           background-size: 18px;
-          background-image: url(../images/Icon/Location.svg);
+          background-image: url(../images/icon/location.svg);
           height: 18px;
           width: 18px;
           display: block;
@@ -1523,7 +1532,7 @@ main {
         .contact-content-info__email:before {
           content: "";
           background-size: 18px;
-          background-image: url(../images/Icon/Mail.svg);
+          background-image: url(../images/icon/mail.svg);
           top: 4px; }
     .contact-content-form {
       max-width: 563px; }
@@ -1652,7 +1661,7 @@ main {
 
 [type="checkbox"]:checked + label:after,
 [type="checkbox"]:not(:checked) + label:after {
-  content: url(../images/Icon/checbox-active.svg);
+  content: url(../images/icon/checbox-active.svg);
   width: 8px;
   height: 8px;
   position: absolute;

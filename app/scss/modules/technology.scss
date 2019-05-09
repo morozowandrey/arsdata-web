@@ -38,6 +38,7 @@
 
     @include md {
       grid-template-columns: none;
+      justify-content: center;
     }
 
     &-item {
@@ -52,22 +53,25 @@
         padding: 32px 40px 32px 79px;
         height: auto;
         max-width: 312px;
+        min-width: 312px;
       }
 
       // Icons
       &:nth-child(2) .technology-grid-item__caption::before {
-        background-image: url(../images/Icon/Сircle.svg);
+        background-image: url(../images/icon/circle.svg);
       }
       &:nth-child(3) .technology-grid-item__caption::before {
-        background-image: url(../images/Icon/Database.svg);
+        background-image: url(../images/icon/database.svg);
       }
       &:nth-child(4) .technology-grid-item__caption::before {
-        background-image: url(../images/Icon/Cube.svg);
+        background-image: url(../images/icon/cube.svg);
       }
       &:nth-child(5) .technology-grid-item__caption::before {
-        background-image: url(../images/Icon/Eye.svg);
+        background-image: url(../images/icon/eye.svg);
+        background-size: 24px;
+        width: 24px;
       }
-      
+
       &__caption {
         position: relative;
         font-size: 16px;
@@ -75,9 +79,9 @@
         line-height: 24px;
         color: #fff;
         text-transform: uppercase;
-        
+
         &:before {
-          background-image: url(../images/technology/Processor.svg);
+          background-image: url(../images/technology/processor.svg);
           background-size: 20px;
           content: "";
           height: 20px;
@@ -135,10 +139,18 @@
 
       &:hover .technology-grid-item__link {
         display: inline;
+
+        @include md {
+          display: none;
+        }
       }
 
       &:hover .technology-grid-item__caption {
         color: #fff;
+
+        @include md {
+          margin-bottom: 0;
+        }
       }
 
       &:hover .technology-grid-item__text {

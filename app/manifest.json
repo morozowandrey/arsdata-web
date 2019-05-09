@@ -8,7 +8,7 @@
   "description": "ARS Data website",
   "icons": [
     {
-      "src": "images/Icon/favicon-16x16.png",
+      "src": "images/icon/favicon-16x16.png",
       "sizes": "48x48",
       "type": "image/png"
     }

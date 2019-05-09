@@ -35,7 +35,7 @@
   <!--build:css css/styles.min.css-->
   <link rel="stylesheet" href="css/main.css">
   <!--endbuild-->
-  <link rel="shortcut icon" type="image/png" href="./images/Icon/favicon-16x16.png" />
+  <link rel="shortcut icon" type="image/png" href="./images/icon/favicon-16x16.png" />
 </head>
 
 <body>
@@ -84,28 +84,28 @@
           </p>
         </div>
         <div class="contact-page-content contact-page-content_2">
-          <form class="form" id="contact-form">
+
+          <form class="form" id="contact-form" onsubmit="return false;">
 
             <div class="form-input-box">
-              <input id="formname" name="name" type="text" class="form-input-box__input" type="text" placeholder="Name"
+              <input id="formname" name="n" type="text" class="form-input-box__input" type="text" placeholder="Name"
                 required>
-              <label for="name" id="formNameLable" class="form-input-box__lable"></label>
+              <label for="n" id="formNameLable" class="form-input-box__lable"></label>
             </div>
 
             <div class="form-input-box">
-              <input id="formemail" name="email" type="email" class="form-input-box__input" placeholder="Email"
+              <input id="formemail" name="e" type="email" class="form-input-box__input" placeholder="Email"
                 required>
-              <label for="email" id="formEmailLable" class="form-input-box__lable"></label>
+              <label for="e" id="formEmailLable" class="form-input-box__lable"></label>
             </div>
 
 
             <div class="form-textarea-box">
-              <textarea id="formmessage" name="message" id="message-textarea" cols="30" rows="3"
+              <textarea id="formmessage" name="m" id="message-textarea" cols="30" rows="3"
                 placeholder="Message"></textarea>
-              <!-- <button class="form-textarea-box__btn" id="submit-button">Send</button> -->
               <div class="flex-between">
                 <button type="submit" name="submit_message" class="home__startbtn blue-link contact-page-submit-button"
-                  id="submit-button" soul="contacts-form">Send
+                  id="submit-button" soul="contacts-form" onclick="ArsModule.submitForm(event)">Send
                   message</button>
                 <span class="home__startbtn blue-link form-success-text send_message_button">Send message</span>
                 <span class="home__startbtn blue-link form-error-text">Your message wasn’t sent</span>
@@ -131,7 +131,7 @@
   </main>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
-  <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
   <!--build:js js/main.min.js -->
   <script src='js/lib/glide.min.js'></script>
   <script src="js/main.js"></script>

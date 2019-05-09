@@ -46,6 +46,8 @@ const ArsModule = (function () {
     }
   }
 
+  function _(id) { return document.getElementById(id); }
+
   let pivateGlide = new Glide('.glide', {
     type: 'carousel',
     startAt: 0,
@@ -197,7 +199,7 @@ const ArsModule = (function () {
     let namePattern = /^[A-Za-z]+$/;
     let mailPattern = /^[a-z0-9]\w+\.?\w*@[a-z]+\.[a-z]{2,8}$/;
 
-    if (namePattern.test(formValue.name)) {
+    if (namePattern.test(formValue.get("n"))) {
       $('#formname').css('border-bottom', '1px solid #BFBFBF');
       $('#formNameLable').hide();
     } else {
@@ -207,7 +209,7 @@ const ArsModule = (function () {
       return false
     }
 
-    if (mailPattern.test(formValue.email)) {
+    if (mailPattern.test(formValue.get("e"))) {
       $('#formemail').css('border-bottom', '1px solid #BFBFBF');
       $('#formEmailLable').hide();
     } else {
@@ -217,14 +219,7 @@ const ArsModule = (function () {
       return false
     }
 
-    // if (formValue.message == '') {
-    //   $('#formmessage').css('border-bottom', '1px solid #E63A0F');
-    //   return false
-    // } else {
-    //   $('#formmessage').css('border-bottom', '1px solid #BFBFBF');
-    // }
-
-    if (formValue.termsAndConditions) {
+    if ($('#termsAndConditions').is(":checked")) {
       $('.form-radio-box').removeClass('errorCheckbox');
     } else {
       $('.form-radio-box').addClass('errorCheckbox');
@@ -235,8 +230,6 @@ const ArsModule = (function () {
   }
 
   function publicSuccessFormSubmit(response) {
-    console.log(response, response.responseText);
-
     let submitBtn = $(this.form).find("#submit-button");
     if (submitBtn.attr("soul") === "contacts-form") {
       $("#submit-button").hide();
@@ -249,24 +242,7 @@ const ArsModule = (function () {
   }
 
   function publicGetErrorMessage(that, jqXHR, exception) {
-    var msg = '';
-    if (jqXHR.status === 0) {
-      msg = 'Not connect.\n Verify Network.';
-    } else if (jqXHR.status == 404) {
-      msg = 'Requested page not found. [404]';
-    } else if (jqXHR.status == 500) {
-      msg = 'Internal Server Error [500].';
-    } else if (exception === 'parsererror') {
-      msg = 'Requested JSON parse failed.';
-    } else if (exception === 'timeout') {
-      msg = 'Time out error.';
-    } else if (exception === 'abort') {
-      msg = 'Ajax request aborted.';
-    } else {
-      msg = 'Uncaught Error.\n' + jqXHR.responseText;
-    }
-
-    let submitBtn = $(that.form).find("#submit-button");
+    let submitBtn = $("#submit-button");
     if (submitBtn.attr("soul") === "contacts-form") {
       $('.form-error-text').show();
       $('.form-error-text').text("Your message wasn’t sent");
@@ -274,8 +250,34 @@ const ArsModule = (function () {
       $(".contact-content-form__caption").addClass("error");
       $(".contact-content-form__caption").text("Your message wasn’t sent");
     }
+  }
 
-    console.log(jqXHR, msg);
+  function publicSubmitForm() {
+    event.preventDefault();
+    $('.form-error-text').hide();
+    $(".contact-content-form__caption").text("Got questions? — get in touch");
+    $(".contact-content-form__caption").removeClass("error");
+
+    var formdata = new FormData();
+    formdata.append("n", _("formname").value);
+    formdata.append("e", _("formemail").value);
+    formdata.append("m", _("formmessage").value);
+    formdata.append("c", _("termsAndConditions").value);
+
+    if (publicValideteForm(formdata)) {
+      var ajax = new XMLHttpRequest();
+      ajax.open("POST", "server.php");
+      ajax.onreadystatechange = function () {
+        if (ajax.readyState == 4 && ajax.status == 200) {
+          if (ajax.responseText == "nullsuccess") {
+            publicSuccessFormSubmit();
+          } else {
+            publicGetErrorMessage();
+          }
+        }
+      }
+      ajax.send(formdata);
+    }
   }
 
   function publicHandleCookiesPopUp(hideOrshow) {
@@ -300,6 +302,7 @@ const ArsModule = (function () {
     successFormSubmit: publicSuccessFormSubmit,
     getErrorMessage: publicGetErrorMessage,
     handleCookiesPopUp: publicHandleCookiesPopUp,
+    submitForm: publicSubmitForm,
     init: init
   };
 })();
@@ -307,11 +310,12 @@ const ArsModule = (function () {
 
 $(document).ready(function () {
   ArsModule.init();
-  
+
   // localStorage.removeItem("popupWasShown");
   setTimeout(function () {
     ArsModule.handleCookiesPopUp('show');
   }, 0);
+  
 });
 
 //----------------EVENTS----------------//
@@ -336,38 +340,37 @@ $('a[href^="#"]').click(function (event) {
 });
 
 // FORM SUBMIT
-$("#submit-button").click(function (event) {
-  event.preventDefault();
-  
-  $('.form-error-text').hide();
-  $(".contact-content-form__caption").text("Got questions? — get in touch");
-  $(".contact-content-form__caption").removeClass("error");
 
-  let formValue = $(this.form).serializeArray().reduce(function (obj, item) {
-    obj[item.name] = item.value;
-    return obj;
-  }, {});
+// $("#submit-button").click(function (event) {
 
-  if (ArsModule.valideteForm(formValue)) {
-    let that = this;
-    console.log("valid data", formValue);
+//   $('.form-error-text').hide();
+//   $(".contact-content-form__caption").text("Got questions? — get in touch");
+//   $(".contact-content-form__caption").removeClass("error");
 
-    $.ajax({
-      url: "server/server.php",
-      method: "POST",
-      data: formValue,
-      success: function (response) {
-        ArsModule.successFormSubmit(response);
-      },
-      error: function (jqXHR, exception) {
-        ArsModule.getErrorMessage(that, jqXHR, exception);
-      },
-    });
-  };
-});
+//   let formValue = $(this.form).serializeArray().reduce(function (obj, item) {
+//     obj[item.name] = item.value;
+//     return obj;
+//   }, {});
 
+//   if (ArsModule.valideteForm(formValue)) {
+//     let that = this;
+//     console.log("valid data", formValue);
 
-
+//     $.ajax({
+//       method: "POST",
+//       url: "/server/server.php",
+//       data: formValue,
+//       dataType: "json",
+//       success: function (response) {
+//         ArsModule.successFormSubmit(response);
+//       },
+//       error: function (jqXHR, exception) {
+//         ArsModule.getErrorMessage(that, jqXHR, exception);
+//       },
+//     });
+//     event.preventDefault();
+//   };
+// });
 
 // GOOGLE ANALITICS
 

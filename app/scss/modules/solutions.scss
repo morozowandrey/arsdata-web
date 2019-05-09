@@ -28,7 +28,7 @@ $listItemMargin: 10px;
 
       &-1 {
         .solutions-grid-item {
-          // Icons
+          // icons
           &:nth-child(1) .solutions-grid-item__caption::before {
             content: url(../images/solutions/blue/predictive-maintenance.svg);
           }

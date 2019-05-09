@@ -36,7 +36,7 @@
   <link rel=" stylesheet" href="css/main.css">
   <!-- <link rel="stylesheet" href="css/var.css"> -->
   <!--endbuild-->
-  <link rel="shortcut icon" type="image/png" href="./images/Icon/favicon-16x16.png" />
+  <link rel="shortcut icon" type="image/png" href="./images/icon/favicon-16x16.png" />
 </head>
 
 <body>
@@ -282,24 +282,24 @@
             <p class="contact-content-form__text">Send us your questions and we will get back to you as soon as possible
             </p>
 
-            <form class="form" id="contact-form" method="POST">
+            <form class="form" id="contact-form" onsubmit="return false;">
               <div class="form-input-box">
-                <input id="formname" name="name" type="text" class="form-input-box__input" type="text"
-                  placeholder="Name" required>
-                <label for="name" id="formNameLable" class="form-input-box__lable"></label>
+                <input id="formname" name="n" type="text" class="form-input-box__input" type="text" placeholder="Name"
+                  required>
+                <label for="n" id="formNameLable" class="form-input-box__lable"></label>
               </div>
 
               <div class="form-input-box">
-                <input id="formemail" name="email" type="email" class="form-input-box__input" placeholder="Email"
-                  required>
-                <label for="email" id="formEmailLable" class="form-input-box__lable"></label>
+                <input id="formemail" name="e" type="email" class="form-input-box__input" placeholder="Email" required>
+                <label for="e" id="formEmailLable" class="form-input-box__lable"></label>
               </div>
 
               <div class="form-textarea-box">
-                <textarea id="formmessage" name="message" id="message-textarea" cols="30" rows="3"
+                <textarea id="formmessage" name="m" id="message-textarea" cols="30" rows="3"
                   placeholder="Message"></textarea>
-                <button type="submit" name="submit_message" class="form-textarea-box__btn send_button"
-                  id="submit-button" soul="index-form">Send</button>
+                <input type="submit" name="submit_message" class="form-textarea-box__btn send_button" id="submit-button"
+                  soul="index-form" value="Send" onclick="ArsModule.submitForm(event)">
+                <!-- <input id="mybtn" type="submit" value="Submit Form"> -->
               </div>
 
               <div class="form-radio-box">
@@ -317,7 +317,6 @@
               </div>
 
             </form>
-
 
           </div>
 
@@ -342,16 +341,18 @@
       By continuing to use the service, you agree to our use of cookies as described in the
       <a target="_blanc" class="cookies-popup-text__link">Cookie Policy</a>.
     </p>
-    <button type="button" class="home__startbtn blue-link" onClick="ArsModule.handleCookiesPopUp('hide')">accept</button>
+    <button type="button" class="home__startbtn blue-link"
+      onClick="ArsModule.handleCookiesPopUp('hide')">accept</button>
   </div>
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
-  <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
   <!--build:js js/main.min.js -->
   <script src='js/lib/glide.min.js'></script>
   <script src="js/main.js"></script>
   <!-- endbuild -->
+
 </body>
 
 </html>
