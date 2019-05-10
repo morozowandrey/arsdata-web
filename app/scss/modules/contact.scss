@@ -22,11 +22,11 @@
     display: flex;
     justify-content: space-between;
 
-    padding: 125px 125px 85px 80px;
+    padding: 125px 125px 85px;
     background-color: $lightGray;
 
     @include lg {
-      padding: 86px 60px 85px 60px;
+      padding: 86px 60px 85px;
     }
 
     @include md {
@@ -100,9 +100,12 @@
 
         &:before {
           content: "";
-          background-size: 18px;
+          background-size: cover;
           background-image: url(../images/icon/mail.svg);
-          top: 4px;
+          top: 5px;
+          width: 16px;
+          height: 14px;
+          left: 1px
         }
       }
     }
@@ -165,6 +168,7 @@
         &-textarea-box {
           position: relative;
           margin-bottom: 33px;
+          @include textareaScrollbar;
 
           textarea {
             @include formelementst-reset;
@@ -191,15 +195,12 @@
             padding: 10px 28px 10px 10px;
 
             &:after {
-              content: "";
+              content: url(../../images/icon/arrow-right-blue.svg);
               display: block;
               position: absolute;
 
-              right: 0;
-              top: 22px;
-              height: 1px;
-              width: 20px;
-              background: $mainBlue;
+              right: -6px;
+              top: 12px;
             }
           }
         }
@@ -390,6 +391,7 @@
       &__input {
         @include formelementst-reset;
         @include formelementst-custom-style;
+        border-bottom: 1px solid $thirdDark;
 
         display: block;
         width: 100%;
@@ -428,11 +430,13 @@
 
     &-textarea-box {
       position: relative;
-      margin-bottom: 33px;
+      margin-bottom: 48px;
 
       textarea {
         @include formelementst-reset;
         @include formelementst-custom-style;
+
+        border-bottom: 1px solid $thirdDark;
 
         &:-webkit-autofill {
           -webkit-text-fill-color: #fff;

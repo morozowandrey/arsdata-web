@@ -2,8 +2,22 @@ $gridPadding: 15px;
 $listItemMargin: 10px;
 
 .solutions {
-  padding-bottom: 145px;
+  @include noScrollbar;
+  padding-bottom: 100px;
   background-color: #fff;
+
+  @include lg {
+    padding-bottom: 60px;
+  }
+
+  @include md {
+    padding-bottom: 60px;
+  }
+
+  @include sm {
+    @include blueScrollbar;
+    padding-bottom: 48px;
+  }
 
   &__caption {
     margin-bottom: 30px;
@@ -21,6 +35,7 @@ $listItemMargin: 10px;
     display: flex;
     flex-direction: column;
     overflow-x: auto;
+    padding-bottom: 48px;
 
     &-box {
       display: flex;
@@ -45,15 +60,27 @@ $listItemMargin: 10px;
           // Hover
           &:nth-child(1):hover .solutions-grid-item__caption::before {
             content: url(../images/solutions/white/predictive-maintenance.svg);
+            @include md {
+              content: url(../images/solutions/blue/predictive-maintenance.svg);
+            }
           }
           &:nth-child(2):hover .solutions-grid-item__caption::before {
             content: url(../images/solutions/white/condition-monitoring.svg);
+            @include md {
+              content: url(../images/solutions/blue/condition-monitoring.svg);
+            }
           }
           &:nth-child(3):hover .solutions-grid-item__caption::before {
             content: url(../images/solutions/white/sensor-data-processing.svg);
+            @include md {
+              content: url(../images/solutions/blue/sensor-data-processing.svg);
+            }
           }
           &:nth-child(4):hover .solutions-grid-item__caption::before {
             content: url(../images/solutions/white/smart-hvac.svg);
+            @include md {
+              content: url(../images/solutions/blue/smart-hvac.svg);
+            }
           }
         }
       }
@@ -97,6 +124,12 @@ $listItemMargin: 10px;
       padding: 90px 70px 0;
       margin: 0.5px;
       background-color: $lightGray;
+      
+      @include md {
+        min-width: 335px;
+        height: auto;
+        padding: 68px 82px;
+      }
 
       &__caption {
         position: relative;
@@ -106,6 +139,11 @@ $listItemMargin: 10px;
         line-height: 24px;
         color: $mainBlue;
         text-transform: uppercase;
+
+        @include md {
+          margin-bottom: 0;
+          padding-left: 48px;
+        }
 
         span {
           display: block;
@@ -119,6 +157,10 @@ $listItemMargin: 10px;
           position: absolute;
           left: 0;
           top: -33px;
+
+          @include md {
+            top: 9px;
+          }
         }
       }
 
@@ -126,6 +168,10 @@ $listItemMargin: 10px;
         font-size: 16px;
         line-height: 24px;
         color: $secondGray;
+
+        @include md {
+          display: none;
+        }
 
         span {
           display: block;
@@ -139,6 +185,11 @@ $listItemMargin: 10px;
       &:hover {
         background-color: $mainBlue;
         cursor: pointer;
+
+        @include md {
+          background-color: $lightGray;
+          cursor: default;
+        }
       }
 
       .blue-link {
@@ -154,14 +205,26 @@ $listItemMargin: 10px;
 
       &:hover .solutions-grid-item__caption {
         margin-bottom: 60px;
+
+        @include md {
+          margin-bottom: 0px;
+        }
       }
 
       &:hover .solutions-grid-item__link {
         display: block;
+
+        @include md {
+          display: none;
+        }
       }
 
       &:hover .solutions-grid-item__caption {
         color: #fff;
+
+        @include md {
+          color: $mainBlue;
+        }
 
         // &:before {
         //   content: url(../images/solutions/white/predictive-maintenance.svg);
@@ -170,6 +233,10 @@ $listItemMargin: 10px;
 
       &:hover .solutions-grid-item__text {
         color: #fff;
+
+        @include md {
+          color: $mainBlue;
+        }
       }
     }
   }

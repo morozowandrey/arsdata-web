@@ -68,8 +68,10 @@
       }
       &:nth-child(5) .technology-grid-item__caption::before {
         background-image: url(../images/icon/eye.svg);
-        background-size: 24px;
+        background-size: contain;
         width: 24px;
+        top: -39px;
+        background-repeat: no-repeat;
       }
 
       &__caption {
@@ -125,8 +127,14 @@
       }
 
       &:hover {
+        border: none;
+        padding: 85px 59px 1px 41px;
         background: linear-gradient(180deg, #1b1b1b 0%, #171717 100%);
         cursor: pointer;
+
+        @include md {
+          padding: 33px 41px 33px 80px;
+        }
       }
 
       &:hover .technology-grid-item__text {

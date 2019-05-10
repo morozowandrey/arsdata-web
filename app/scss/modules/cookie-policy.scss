@@ -89,7 +89,7 @@
       }
 
       &-list {
-        padding-left: 7px;
+        // padding-left: 7px;
 
         &_mb {
           margin-bottom: 24px;
@@ -99,8 +99,16 @@
           @include text;
           position: relative;
 
+          span {
+            padding-left: 8px;
+          }
+
           &_title {
             color: #fff;
+
+            span {
+              padding-left: 8px;
+            }
 
           }
 
@@ -108,7 +116,7 @@
             content: "\2022";
             width: 2px;
             position: absolute;
-            left: -8px;
+            left: 0px;
             color: $mainBlue;
             font-weight: bold;
           }

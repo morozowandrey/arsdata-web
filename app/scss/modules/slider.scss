@@ -16,6 +16,7 @@
 
     &__title {
       @include title;
+      margin-bottom: 8px;
     }
 
     &-text {
@@ -126,6 +127,7 @@
     left: -30px;
   }
   .glide-slides-numbers__last {
+    color: $secondGray;
     right: -30px;
   }
 

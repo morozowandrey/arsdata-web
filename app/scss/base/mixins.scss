@@ -83,3 +83,68 @@
   filter: FlipH;
   -ms-filter: "FlipH";
 }
+
+@mixin blueScrollbar {
+  ::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #edf1fa;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #0052ff;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #edf1fa;
+  }
+}
+
+@mixin textareaScrollbar {
+  ::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #0052ff;
+    opacity: 0.5;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: transparent;
+  }
+}
+
+@mixin whiteScrollbar {
+  ::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #111;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #fff;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #111;
+  }
+}
+
+@mixin noScrollbar {
+  ::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: transparent;
+  }
+}

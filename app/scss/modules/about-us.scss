@@ -167,6 +167,10 @@
       @include text;
       max-width: 497px;
       margin-bottom: 24px;
+
+      span {
+        display: block;
+      }
     }
 
     &__text:last-of-type {
