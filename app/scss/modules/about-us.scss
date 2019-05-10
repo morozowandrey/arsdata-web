@@ -68,7 +68,15 @@
         }
       }
 
-      span {
+      .about-content-text__part {
+        display: block;
+
+        @include xl {
+          display: inline-block;
+        }
+      }
+      
+      .coma {
         margin-left: -6px;
         color: #fff;
       }

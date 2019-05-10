@@ -687,7 +687,7 @@ main {
     line-height: 25px;
     color: #8B8B8B;
     color: #fff;
-    max-width: 784px;
+    max-width: 783px;
     line-height: 24px;
     margin-right: 24px; }
     @media (max-width: 768px) {
@@ -1077,7 +1077,12 @@ main {
         @media (max-width: 360px) {
           .about-content-text__link:last-of-type {
             height: 68px; } }
-      .about-content-text span {
+      .about-content-text .about-content-text__part {
+        display: block; }
+        @media (max-width: 1366px) {
+          .about-content-text .about-content-text__part {
+            display: inline-block; } }
+      .about-content-text .coma {
         margin-left: -6px;
         color: #fff; }
     .about-content__link:before {
