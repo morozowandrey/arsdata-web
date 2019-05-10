@@ -173,7 +173,6 @@ const ArsModule = (function () {
     const $target = $(currentNode.getAttribute('href'));
 
     const $targetSoutions = currentNode.getAttribute('href').split('#')[1]
-    console.log($targetSoutions);
     if ($target.length) {
       event.preventDefault();
       if ($targetSoutions == "solutions") {
@@ -230,7 +229,7 @@ const ArsModule = (function () {
   }
 
   function publicSuccessFormSubmit(response) {
-    let submitBtn = $(this.form).find("#submit-button");
+    let submitBtn = $("#submit-button");
     if (submitBtn.attr("soul") === "contacts-form") {
       $("#submit-button").hide();
       $(".form-success-text").text("Your message was sent");
@@ -339,38 +338,6 @@ $('a[href^="#"]').click(function (event) {
   ArsModule.toAnchor(currentNode, event);
 });
 
-// FORM SUBMIT
-
-// $("#submit-button").click(function (event) {
-
-//   $('.form-error-text').hide();
-//   $(".contact-content-form__caption").text("Got questions? — get in touch");
-//   $(".contact-content-form__caption").removeClass("error");
-
-//   let formValue = $(this.form).serializeArray().reduce(function (obj, item) {
-//     obj[item.name] = item.value;
-//     return obj;
-//   }, {});
-
-//   if (ArsModule.valideteForm(formValue)) {
-//     let that = this;
-//     console.log("valid data", formValue);
-
-//     $.ajax({
-//       method: "POST",
-//       url: "/server/server.php",
-//       data: formValue,
-//       dataType: "json",
-//       success: function (response) {
-//         ArsModule.successFormSubmit(response);
-//       },
-//       error: function (jqXHR, exception) {
-//         ArsModule.getErrorMessage(that, jqXHR, exception);
-//       },
-//     });
-//     event.preventDefault();
-//   };
-// });
 
 // GOOGLE ANALITICS
 
