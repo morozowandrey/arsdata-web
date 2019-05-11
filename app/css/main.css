@@ -882,7 +882,7 @@ main {
     @media (max-width: 768px) {
       .header .navigation {
         padding-right: 40px; } }
-    @media (max-width: 576px) {
+    @media (max-width: 1024px) {
       .header .navigation {
         padding-right: 25px;
         text-transform: none; } }
@@ -1556,6 +1556,10 @@ main {
         width: 24px;
         top: -39px;
         background-repeat: no-repeat; }
+        @media (max-width: 768px) {
+          .technology-grid-item:nth-child(5) .technology-grid-item__caption::before {
+            left: -36px;
+            top: 2px; } }
       .technology-grid-item__caption {
         position: relative;
         font-size: 16px;
