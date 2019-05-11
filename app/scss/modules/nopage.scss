@@ -21,6 +21,7 @@
   &-title {
     @include title;
     margin-bottom: 8px;
+    padding-right: 40px;
 
     @include md {
       font-size: 30px;
@@ -29,6 +30,19 @@
   }
   &-text {
     @include text;
-    margin-bottom: 60px;
+    margin-bottom: 64px;
+
+    @include sm {
+      span {
+        display: block;
+      }
+    }
+  }
+
+  .home__startbtn {
+    @include sm {
+      margin-bottom: 0px;
+      margin-left: 0px;
+    }
   }
 }

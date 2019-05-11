@@ -91,6 +91,11 @@
           justify-content: center;
           padding-left: 24px;
         }
+
+        @include xs {
+          padding-top: 65px;
+        }
+
       }
       &.collapse .navigation-desktop__item {
         @include title;
@@ -111,8 +116,12 @@
         font-size: 14px;
         letter-spacing: 1px;
         line-height: 21px;
-        text-transform: uppercase;
         transition: color 0.35s ease;
+
+        @include xs {
+          font-size: 30px;
+          line-height: 46px;
+        }
 
         &:hover {
           color: #fff;

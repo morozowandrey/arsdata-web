@@ -36,6 +36,7 @@
   <link rel="stylesheet" href="css/main.css">
   <!--endbuild-->
   <link rel="shortcut icon" type="image/png" href="./images/icon/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="./images/icon/favicon-16x16.png">
 </head>
 
 <body>
@@ -60,7 +61,7 @@
           <img src="images/logos/logo-white.svg" alt="ARS Data logo" class="navigation-desktop__logo">
           <a class="navigation-desktop__item" href="./about-us.html">About us</a>
           <a class="navigation-desktop__item" href="./solutions.html">Solutions</a>
-          <a class="navigation-desktop__item" href="./technologies.html">Technologies</a>
+          <a class="navigation-desktop__item" href="./technologies.html">Technology</a>
           <a class="navigation-desktop__item" href="./contacts.html">Contact</a>
         </div>
       </nav>
@@ -325,16 +326,18 @@
                   <span>Your address, telephone number, and e-mail address;</span>
                 </li>
                 <li class="policy-content-paragraph-list__item">
-                  <span>A statement that you have a good faith belief that use of the objectionable material is not authorized
-                  by the
-                  copyright owner, its agent, or under the law;</span>
+                  <span>A statement that you have a good faith belief that use of the objectionable material is not
+                    authorized
+                    by the
+                    copyright owner, its agent, or under the law;</span>
                 </li>
                 <li class="policy-content-paragraph-list__item">
-                  <span>A statement that the information in the notification is accurate, and under penalty of perjury, that
-                  you are either
-                  the owner of the copyright that has allegedly been infringed or that you are authorized to act on
-                  behalf of the
-                  copyright owner.</span>
+                  <span>A statement that the information in the notification is accurate, and under penalty of perjury,
+                    that
+                    you are either
+                    the owner of the copyright that has allegedly been infringed or that you are authorized to act on
+                    behalf of the
+                    copyright owner.</span>
                 </li>
               </ul>
               <p class="policy-content-paragraph__text">
@@ -449,6 +452,16 @@
     </section>
 
   </main>
+
+  <div id="cookies-popup" style='display:none' class="cookies-popup flex-between">
+    <p class="cookies-popup-text">
+      We use cookies to improve your experience with our site, including analytics and personalisation.
+      By continuing to use the service, you agree to our use of cookies as described in the
+      <a href="./cookie-policy.html" target="_blanc" class="cookies-popup-text__link">Cookie Policy</a>.
+    </p>
+    <button type="button" class="home__startbtn blue-link"
+      onClick="ArsModule.handleCookiesPopUp('hide')">accept</button>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
   <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>

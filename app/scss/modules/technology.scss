@@ -2,6 +2,16 @@
   padding-bottom: 145px;
   padding-top: 130px;
   background-color: $mainDark;
+  
+  @include md {
+    padding-bottom: 80px;
+    padding-top: 70px;
+  }
+
+  @include xs {
+    padding-bottom: 48px;
+    padding-top: 40px;
+  }
 
   .container {
     @include md {

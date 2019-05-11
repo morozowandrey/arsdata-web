@@ -1,6 +1,12 @@
 .home {
   padding-bottom: 150px;
 
+  .container {
+    @include sm {
+      padding-left: 0px;
+    }
+  }
+
   @include sm {
     padding-bottom: 0px;
   }
@@ -30,6 +36,7 @@
       margin-top: 88px;
       font-size: 30px;
       line-height: 40px;
+      padding-left: 24px;
     }
 
     &__part-1 {
@@ -48,6 +55,7 @@
   &__startbtn {
     @include sm {
       margin-bottom: 57px;
+      margin-left: 24px;
     }
   }
 }

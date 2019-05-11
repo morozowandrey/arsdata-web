@@ -38,6 +38,7 @@
   <link rel="stylesheet" href="css/glide.theme.css">
   <!--endbuild-->
   <link rel="shortcut icon" type="image/png" href="./images/icon/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="./images/icon/favicon-16x16.png">
 </head>
 
 <body id="techPage">
@@ -62,7 +63,7 @@
           <img src="images/logos/logo-white.svg" alt="ARS Data logo" class="navigation-desktop__logo">
           <a class="navigation-desktop__item nav-about_button" href="./about-us.html">About us</a>
           <a class="navigation-desktop__item nav-solutions_button" href="./solutions.html">Solutions</a>
-          <a class="navigation-desktop__item nav-technology_button" href="./technologies.html">Technologies</a>
+          <a class="navigation-desktop__item nav-technology_button" href="./technologies.html">Technology</a>
           <a class="navigation-desktop__item nav-contact_button" href="#contact">Contact</a>
         </div>
       </nav>
@@ -191,24 +192,27 @@
 
             <form class="form" id="contact-form" onsubmit="return false;">
               <div class="form-input-box">
-                <input id="formname" name="n" type="text" class="form-input-box__input" type="text" placeholder="Name" required>
+                <input id="formname" name="n" type="text" class="form-input-box__input" type="text" placeholder="Name"
+                  required>
                 <label for="n" id="formNameLable" class="form-input-box__lable"></label>
               </div>
-            
+
               <div class="form-input-box">
                 <input id="formemail" name="e" type="email" class="form-input-box__input" placeholder="Email" required>
                 <label for="e" id="formEmailLable" class="form-input-box__lable"></label>
               </div>
-            
+
               <div class="form-textarea-box">
-                <textarea id="formmessage" name="m" id="message-textarea" cols="30" rows="3" placeholder="Message"></textarea>
-                <button type="submit" name="submit_message" class="form-textarea-box__btn send_button" id="submit-button"
-                  soul="index-form" value="Send" onclick="ArsModule.submitForm(event)">Send</button>
+                <textarea id="formmessage" name="m" id="message-textarea" cols="30" rows="3"
+                  placeholder="Message"></textarea>
+                <button type="submit" name="submit_message" class="form-textarea-box__btn send_button"
+                  id="submit-button" soul="index-form" value="Send" onclick="ArsModule.submitForm(event)">Send</button>
               </div>
-            
+
               <div class="form-radio-box">
                 <p>
-                  <input class="form-radio-box__radio" type="checkbox" name="termsAndConditions" id="termsAndConditions">
+                  <input class="form-radio-box__radio" type="checkbox" name="termsAndConditions"
+                    id="termsAndConditions">
                   <label class="form-radio-box-lable" for="termsAndConditions">By clicking the button above, I agree
                     with
                     <a href="./terms-and-conditions.html" target="_blanc" class="form-radio-box-lable__link">Terms of
@@ -218,7 +222,7 @@
                 </p>
                 </label>
               </div>
-            
+
             </form>
 
 
@@ -238,6 +242,16 @@
       </div>
     </footer>
   </main>
+
+  <div id="cookies-popup" style='display:none' class="cookies-popup flex-between">
+    <p class="cookies-popup-text">
+      We use cookies to improve your experience with our site, including analytics and personalisation.
+      By continuing to use the service, you agree to our use of cookies as described in the
+      <a href="./cookie-policy.html" target="_blanc" class="cookies-popup-text__link">Cookie Policy</a>.
+    </p>
+    <button type="button" class="home__startbtn blue-link"
+      onClick="ArsModule.handleCookiesPopUp('hide')">accept</button>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
   <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>

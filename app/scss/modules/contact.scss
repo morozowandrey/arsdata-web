@@ -105,7 +105,7 @@
           top: 5px;
           width: 16px;
           height: 14px;
-          left: 1px
+          left: 1px;
         }
       }
     }
@@ -237,6 +237,10 @@
   font-size: 14px;
   display: inline-block;
   color: $secondGray;
+
+  @include xs {
+    padding-right: 22px;
+  }
 }
 [type="checkbox"]:checked + label:before,
 [type="checkbox"]:not(:checked) + label:before {
@@ -249,6 +253,10 @@
   border: 1px solid $secondGray;
   border-radius: 2px;
   background: transparent;
+
+  @include xs {
+    top: 5px;
+  }
 }
 [type="checkbox"]:checked + label:after,
 [type="checkbox"]:not(:checked) + label:after {
@@ -263,6 +271,10 @@
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
+
+  @include xs {
+    top: 3px;
+  }
 }
 [type="checkbox"]:not(:checked) + label:after {
   opacity: 0;
@@ -320,6 +332,18 @@
   padding-top: 170px;
   padding-bottom: 63px;
 
+  @include lg {
+    padding-top: 100px;
+  }
+
+  @include md {
+    padding-top: 80px;
+  }
+
+  @include sm {
+    padding-top: 58px;
+  }
+
   &-bg {
     position: absolute;
     z-index: -10;
@@ -337,9 +361,13 @@
   &-content {
     &-title {
       @include title;
-      margin-bottom: 8px;
       min-width: 401px;
       margin-right: 64px;
+
+      @include sm {
+        font-size: 30px;
+        line-height: 40px;
+      }
 
       &__part {
         display: inline-block;
@@ -361,11 +389,18 @@
       @include text;
       max-width: 497px;
       margin-bottom: 24px;
+
+      @include sm {
+        margin-bottom: 0;
+      }
     }
 
     &_1 {
       @include lg {
         margin-bottom: 64px;
+      }
+      @include sm {
+        margin-bottom: 48px;
       }
     }
 
@@ -432,6 +467,10 @@
       position: relative;
       margin-bottom: 48px;
 
+      @include sm {
+        margin-bottom: 32px;
+      }
+
       textarea {
         @include formelementst-reset;
         @include formelementst-custom-style;
@@ -462,6 +501,10 @@
 
         &:focus {
           border-bottom: 1px solid $mainBlue;
+        }
+
+        @include sm {
+          margin-bottom: 24px;
         }
       }
 
@@ -504,6 +547,31 @@
       background: transparent;
       border: none;
       outline: none;
+
+      @include sm {
+        margin: 0;
+        padding-left: 0;
+
+        &::before {
+          content: none;
+        }
+
+        &::after {
+          content: url(../../images/icon/arrow-right-blue.svg);
+          display: block;
+          position: absolute;
+
+          right: -27px;
+          top: 3px;
+        }
+      }
+    }
+  }
+
+  [type="checkbox"]:checked + label,
+  [type="checkbox"]:not(:checked) + label {
+    @include xs {
+      padding-right: 0px;
     }
   }
 }
