@@ -873,7 +873,8 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-right: 128px; }
+    padding-right: 128px;
+    text-transform: uppercase; }
     @media (max-width: 1024px) {
       .header .navigation {
         display: block;
@@ -883,7 +884,8 @@ main {
         padding-right: 40px; } }
     @media (max-width: 576px) {
       .header .navigation {
-        padding-right: 25px; } }
+        padding-right: 25px;
+        text-transform: none; } }
     .header .navigation-desktop {
       min-width: 492px;
       max-height: none;
@@ -1390,12 +1392,24 @@ main {
         content: url(../images/solutions/blue/visualisations.svg); }
       .solutions-grid-box-2 .solutions-grid-item:nth-child(1):hover .solutions-grid-item__caption::before {
         content: url(../images/solutions/white/machine-learning.svg); }
+        @media (max-width: 768px) {
+          .solutions-grid-box-2 .solutions-grid-item:nth-child(1):hover .solutions-grid-item__caption::before {
+            content: url(../images/solutions/blue/machine-learning.svg); } }
       .solutions-grid-box-2 .solutions-grid-item:nth-child(2):hover .solutions-grid-item__caption::before {
         content: url(../images/solutions/white/embedded-development.svg); }
+        @media (max-width: 768px) {
+          .solutions-grid-box-2 .solutions-grid-item:nth-child(2):hover .solutions-grid-item__caption::before {
+            content: url(../images/solutions/blue/embedded-development.svg); } }
       .solutions-grid-box-2 .solutions-grid-item:nth-child(3):hover .solutions-grid-item__caption::before {
         content: url(../images/solutions/white/data-processing.svg); }
+        @media (max-width: 768px) {
+          .solutions-grid-box-2 .solutions-grid-item:nth-child(3):hover .solutions-grid-item__caption::before {
+            content: url(../images/solutions/blue/data-processing.svg); } }
       .solutions-grid-box-2 .solutions-grid-item:nth-child(4):hover .solutions-grid-item__caption::before {
         content: url(../images/solutions/white/visualisations.svg); }
+        @media (max-width: 768px) {
+          .solutions-grid-box-2 .solutions-grid-item:nth-child(4):hover .solutions-grid-item__caption::before {
+            content: url(../images/solutions/blue/visualisations.svg); } }
     .solutions-grid-item {
       height: 295px;
       min-width: 329px;

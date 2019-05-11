@@ -31,6 +31,7 @@
     justify-content: space-between;
     align-items: center;
     padding-right: 128px;
+    text-transform: uppercase;
 
     @include lg {
       display: block;
@@ -41,6 +42,7 @@
     }
     @include sm {
       padding-right: 25px;
+      text-transform: none;
     }
 
     &-desktop {
