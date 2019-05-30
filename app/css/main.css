@@ -548,7 +548,7 @@ main {
       font-family: "Poppins-Bold", sans-serif;
       font-size: 48px;
       line-height: 64px; }
-      @media (max-width: 360px) {
+      @media (max-width: 576px) {
         .slider .slide-content__title {
           font-size: 30px;
           line-height: 40px; } }
@@ -559,7 +559,7 @@ main {
       max-width: 498px; }
       .slider .slide-content-text__part {
         display: block; }
-        @media (max-width: 360px) {
+        @media (max-width: 576px) {
           .slider .slide-content-text__part {
             display: inline; } }
     .slider .slide-content__img {
@@ -613,9 +613,6 @@ main {
         flex-direction: column;
         align-items: center; } }
     @media (max-width: 576px) {
-      .slider .glide__slide {
-        padding-right: 24px; } }
-    @media (max-width: 360px) {
       .slider .glide__slide {
         padding-right: 0px; } }
   .slider .glide-slides-numbers {

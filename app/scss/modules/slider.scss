@@ -22,7 +22,7 @@
     &__title {
       @include title;
 
-      @include xs {
+      @include sm {
         font-size: 30px;
         line-height: 40px;
       }
@@ -35,7 +35,7 @@
       &__part {
         display: block;
 
-        @include xs {
+        @include sm {
           display: inline;
         }
       }
@@ -112,10 +112,6 @@
     }
 
     @include sm {
-      padding-right: 24px;
-    }
-
-    @include xs {
       padding-right: 0px;
     }
   }
