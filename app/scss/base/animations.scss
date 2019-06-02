@@ -22,3 +22,37 @@
     opacity: 1;
   }
 }
+
+.fadeIn {
+  animation: fadeIn 1s linear;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes anim {
+  0% {
+    background-position-x: -566px;
+  }
+  100% {
+    background-position-x: 566px;
+    // background-position: top;
+  }
+}
+
+@keyframes home-text-animation-main {
+  0% {
+    background-position-x: -566px;
+  }
+  100% {
+    background-position-x: 0px;
+    // background-position: top;
+  }
+}

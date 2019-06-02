@@ -506,6 +506,27 @@ main {
   100% {
     opacity: 1; } }
 
+.fadeIn {
+  animation: fadeIn 1s linear; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes anim {
+  0% {
+    background-position-x: -566px; }
+  100% {
+    background-position-x: 566px; } }
+
+@keyframes home-text-animation-main {
+  0% {
+    background-position-x: -566px; }
+  100% {
+    background-position-x: 0px; } }
+
 .blue-link {
   max-width: 300px;
   display: block;
@@ -1071,6 +1092,7 @@ main {
     .home {
       padding-bottom: 0px; } }
   .home-text {
+    position: relative;
     max-width: 570px;
     display: inline-block;
     margin-top: 150px;
@@ -1092,8 +1114,164 @@ main {
         font-size: 30px;
         line-height: 40px;
         padding-left: 24px; } }
-    .home-text__part-1 {
-      color: #fff; }
+    .home-text__part-1_animated {
+      display: inline-block !important;
+      background-color: #696969;
+      background-position-x: -567px;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+      -ms-background-clip: text;
+      -ms-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      background-image: url(../../images/text-anim-bg-white.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      -webkit-animation: anim 5s linear;
+      -moz-animation: anim 5s linear;
+      -ms-animation: anim 5s linear;
+      animation: anim 5s linear;
+      animation-delay: 1s; }
+      .home-text__part-1_animated_2 {
+        animation-delay: 1.3s; }
+      .home-text__part-1_animated_3 {
+        animation-delay: 1.7s; }
+      .home-text__part-1_animated:before {
+        position: absolute;
+        content: "";
+        z-index: -2;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-size: cover;
+        -webkit-animation: anim 5s linear;
+        -moz-animation: anim 5s linear;
+        -ms-animation: anim 5s linear;
+        animation: anim 5s linear;
+        animation-delay: 1s; }
+      .home-text__part-1_animated:after {
+        position: absolute;
+        content: "";
+        z-index: -1;
+        top: 0.125em;
+        right: 0.125em;
+        bottom: 0.125em;
+        left: 0.125em; }
+    .home-text__part-2_animated {
+      display: inline-block !important;
+      background-color: #696969;
+      background-position-x: -567px;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+      -ms-background-clip: text;
+      -ms-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      background-image: url(../../images/text-anim-bg-white.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      -webkit-animation: anim 5s linear;
+      -moz-animation: anim 5s linear;
+      -ms-animation: anim 5s linear;
+      animation: anim 5s linear;
+      animation-delay: 2.5s; }
+      .home-text__part-2_animated_1 {
+        animation-delay: 2.5s; }
+      .home-text__part-2_animated_2 {
+        animation-delay: 2.9s;
+        animation-duration: 3s;
+        animation-name: home-text-animation-main;
+        animation-fill-mode: forwards; }
+      .home-text__part-2_animated_3 {
+        animation-delay: 3.8s;
+        animation-duration: 3s;
+        animation-name: home-text-animation-main;
+        animation-fill-mode: forwards; }
+      .home-text__part-2_animated:before {
+        position: absolute;
+        content: "";
+        z-index: -2;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-size: cover;
+        -webkit-animation: anim 5s linear;
+        -moz-animation: anim 5s linear;
+        -ms-animation: anim 5s linear;
+        animation: anim 5s linear;
+        animation-delay: 1s; }
+      .home-text__part-2_animated:after {
+        position: absolute;
+        content: "";
+        z-index: -1;
+        top: 0.125em;
+        right: 0.125em;
+        bottom: 0.125em;
+        left: 0.125em; }
+    .home-text__part-3_animated {
+      display: inline-block !important;
+      background-color: #696969;
+      background-position-x: -567px;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+      -ms-background-clip: text;
+      -ms-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      background-image: url(../../images/text-anim-bg-white.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      -webkit-animation: anim 5s linear;
+      -moz-animation: anim 5s linear;
+      -ms-animation: anim 5s linear;
+      animation: anim 5s linear;
+      animation-delay: 1s; }
+      .home-text__part-3_animated_1 {
+        animation-delay: 5s;
+        animation-duration: 3s;
+        animation-name: home-text-animation-main;
+        animation-fill-mode: forwards; }
+      .home-text__part-3_animated_2 {
+        animation-delay: 5.5s;
+        animation-duration: 3s;
+        animation-duration: 3s;
+        animation-name: home-text-animation-main;
+        animation-fill-mode: forwards; }
+      .home-text__part-3_animated_3 {
+        animation-delay: 6.8s;
+        animation-duration: 3s;
+        animation-name: home-text-animation-main;
+        animation-fill-mode: forwards; }
+      .home-text__part-3_animated:before {
+        position: absolute;
+        content: "";
+        z-index: -2;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-size: cover;
+        -webkit-animation: anim 5s linear;
+        -moz-animation: anim 5s linear;
+        -ms-animation: anim 5s linear;
+        animation: anim 5s linear;
+        animation-delay: 1s; }
+      .home-text__part-3_animated:after {
+        position: absolute;
+        content: "";
+        z-index: -1;
+        top: 0.125em;
+        right: 0.125em;
+        bottom: 0.125em;
+        left: 0.125em; }
   .home__mobile-img {
     display: none; }
     @media (max-width: 576px) {
