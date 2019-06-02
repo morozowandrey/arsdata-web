@@ -161,7 +161,7 @@
       }
 
       &:hover .technology-grid-item__link {
-        display: inline;
+        display: block;
 
         @include md {
           display: none;
@@ -181,4 +181,7 @@
       }
     }
   }
+}
+.technology-grid-item:hover .technology-grid-item__caption:after {
+  display: none;
 }

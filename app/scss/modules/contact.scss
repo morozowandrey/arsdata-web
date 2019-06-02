@@ -192,15 +192,15 @@
             right: 0;
             bottom: 0;
             z-index: 5;
-            padding: 10px 28px 10px 10px;
+            padding: 10px 18px 10px 10px;
 
             &:after {
-              content: url(../../images/icon/arrow-right-blue.svg);
+              content: url(../../images/icon/arrow-right-blue_short.svg);
               display: block;
               position: absolute;
 
-              right: -6px;
-              top: 12px;
+              right: 0px;
+              top: 9px;
             }
           }
         }
@@ -550,19 +550,18 @@
 
       @include sm {
         margin: 0;
-        padding-left: 0;
 
         &::before {
           content: none;
         }
 
         &::after {
-          content: url(../../images/icon/arrow-right-blue.svg);
+          content: url(../../images/icon/arrow-blue.svg);
           display: block;
           position: absolute;
 
-          right: -27px;
-          top: 3px;
+          left: 0px;
+          top: 0px;
         }
       }
     }
