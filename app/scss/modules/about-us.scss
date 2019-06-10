@@ -11,9 +11,22 @@
     padding-bottom: 50px;
   }
 
-  &-content {
-    padding: 180px 100px 175px 165px;
+  &-background {
+    width: 3000px;
+    position: absolute;
     background-color: $lightGray;
+    height: 100%;
+    left: 3000px;
+  }
+
+  &-content {
+    position: relative;
+    padding: 180px 100px 175px 165px;
+    // background-color: $lightGray;
+    // background-image: url(../../images/slide-bg-grey.png);
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // background-position-x: 3000px;
 
     @include lg {
       padding: 100px 30px 105px 130px;
@@ -34,6 +47,7 @@
       font-family: $main-ff-bold;
       font-size: 36px;
       line-height: 60px;
+      opacity: 0;
 
       @include lg {
         font-size: 26px;
@@ -80,7 +94,7 @@
           display: inline-block;
         }
       }
-      
+
       .coma {
         margin-left: -6px;
         color: #fff;
@@ -88,7 +102,8 @@
     }
 
     &__link {
-
+      opacity: 0;
+      
       &:before {
         content: "";
         display: block;
@@ -107,21 +122,21 @@
     position: relative;
     width: 100%;
 
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      right: -99%;
-      top: 0;
-      height: 100%;
-      width: 100%;
-      background-color: $lightGray;
-    }
+    // &:after {
+    //   content: "";
+    //   display: block;
+    //   position: absolute;
+    //   right: -99%;
+    //   top: 0;
+    //   height: 100%;
+    //   width: 100%;
+    //   background-color: $lightGray;
+    // }
   }
 
   &__mobile-img {
     display: none;
-    
+
     @include sm {
       // width: 100%;
       // display: block;
@@ -132,7 +147,7 @@
 .about-page {
   padding-top: 158px;
   padding-bottom: 170px;
-  
+
   @include md {
     padding-top: 80px;
     padding-bottom: 100px;

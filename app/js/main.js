@@ -306,7 +306,6 @@ const ArsModule = (function () {
   };
 })();
 
-
 $(document).ready(function () {
   ArsModule.init();
 
@@ -314,8 +313,62 @@ $(document).ready(function () {
   setTimeout(function () {
     ArsModule.handleCookiesPopUp('show');
   }, 0);
-  
+
 });
+
+const sectionsPosition = {
+  aboutSectionTop: $('#about').offset().top,
+  howitworksSectionTop: $('#howitworks').offset().top,
+  solutionsSectionTop: $('#solutions').offset().top,
+  technologySectionTop: $('#technology').offset().top,
+  contactSectionTop: $('#contact').offset().top,
+  footerSectionTop: $('#footer').offset().top,
+}
+
+$(window).scroll(function () {
+  const scrollDepth = $(window).scrollTop();
+
+  checkAboutScrollDepth(scrollDepth, sectionsPosition.aboutSectionTop);
+  checkHowitworksScrollDepth(scrollDepth, sectionsPosition.howitworksSectionTop);
+  checkSolutionsScrollDepth(scrollDepth, sectionsPosition.solutionsSectionTop);
+  checkTechnologyScrollDepth(scrollDepth, sectionsPosition.technologySectionTop);
+  checkContactScrollDepth(scrollDepth, sectionsPosition.contactSectionTop);
+  checkFooterScrollDepth(scrollDepth, sectionsPosition.footerSectionTop);
+
+});
+
+let checkAboutScrollDepth = throttle(function (depth, target) {
+  if (depth >= target-600) {
+    $('.about-background').addClass("bgSlideIn");
+    $('.about-content-text, .about-content__link').addClass("aboutTextFadeIn");
+    $('.read_more_button').addClass("aboutTextFadeIn");
+  }
+}, 1000);
+
+let checkHowitworksScrollDepth = throttle(function (depth, target) {
+  if (depth >= target) {
+  }
+}, 2000);
+
+let checkSolutionsScrollDepth = throttle(function (depth, target) {
+  if (depth >= target) {
+  }
+}, 2000);
+
+let checkTechnologyScrollDepth = throttle(function (depth, target) {
+  if (depth >= target) {
+  }
+}, 2000);
+
+let checkContactScrollDepth = throttle(function (depth, target) {
+  if (depth >= target) {
+  }
+}, 2000);
+
+let checkFooterScrollDepth = throttle(function (depth, target) {
+  if (depth >= target) {
+  }
+}, 2000);
 
 //----------------EVENTS----------------//
 
@@ -511,3 +564,14 @@ $(".send_message_button").click(function (e) {
     eventAction: 'send_message_button'
   });
 });
+
+function throttle(func, wait) {
+  var time = Date.now();
+  return function () {
+    let context = this, args = arguments;
+    if ((time + wait - Date.now()) < 0) {
+      func.apply(context, args);;
+      time = Date.now();
+    }
+  }
+} 

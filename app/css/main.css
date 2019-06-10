@@ -491,14 +491,14 @@ main {
 .blast {
   animation: blast 1s cubic-bezier(0.85, 0.15, 0.15, 0.85) 0s 1; }
 
-.visio {
-  animation: visio 1s cubic-bezier(0.85, 0.15, 0.15, 0.85) 0s 1; }
-
 @keyframes blast {
   0% {
     transform: translateX(-100%); }
   100% {
     transform: translateX(0%); } }
+
+.visio {
+  animation: visio 1s cubic-bezier(0.85, 0.15, 0.15, 0.85) 0s 1; }
 
 @keyframes visio {
   0% {
@@ -507,13 +507,50 @@ main {
     opacity: 1; } }
 
 .fadeIn {
-  animation: fadeIn 1s linear; }
+  animation: fadeIn 1s linear forwards; }
 
 @keyframes fadeIn {
   from {
     opacity: 0; }
   to {
     opacity: 1; } }
+
+.aboutTextFadeIn {
+  animation: fadeIn 1.5s ease-in forwards;
+  animation-delay: 0.8s; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.fadeOut {
+  animation: fadeOut 1s linear forwards; }
+
+@keyframes fadeOut {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
+.bgSlideIn {
+  animation: bgSlideIn 1s ease-in-out forwards; }
+
+@keyframes bgSlideIn {
+  from {
+    left: 3000px; }
+  to {
+    left: 119px; } }
+
+.bgSlideOut {
+  animation: bgSlideOut 1s ease-in-out forwards; }
+
+@keyframes bgSlideOut {
+  from {
+    left: 0; }
+  to {
+    left: 3000px; } }
 
 @keyframes anim {
   0% {
@@ -1289,9 +1326,15 @@ main {
   @media (max-width: 576px) {
     .about {
       padding-bottom: 50px; } }
+  .about-background {
+    width: 3000px;
+    position: absolute;
+    background-color: #DEDEDE;
+    height: 100%;
+    left: 3000px; }
   .about-content {
-    padding: 180px 100px 175px 165px;
-    background-color: #DEDEDE; }
+    position: relative;
+    padding: 180px 100px 175px 165px; }
     @media (max-width: 1024px) {
       .about-content {
         padding: 100px 30px 105px 130px; } }
@@ -1306,7 +1349,8 @@ main {
       margin-bottom: 64px;
       font-family: "Poppins-Bold", sans-serif;
       font-size: 36px;
-      line-height: 60px; }
+      line-height: 60px;
+      opacity: 0; }
       @media (max-width: 1024px) {
         .about-content-text {
           font-size: 26px;
@@ -1339,27 +1383,20 @@ main {
       .about-content-text .coma {
         margin-left: -6px;
         color: #fff; }
-    .about-content__link:before {
-      content: "";
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 12px;
-      height: 1px;
-      width: 20px;
-      background: #0052FF; }
+    .about-content__link {
+      opacity: 0; }
+      .about-content__link:before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 12px;
+        height: 1px;
+        width: 20px;
+        background: #0052FF; }
   .about .container {
     position: relative;
     width: 100%; }
-    .about .container:after {
-      content: "";
-      display: block;
-      position: absolute;
-      right: -99%;
-      top: 0;
-      height: 100%;
-      width: 100%;
-      background-color: #DEDEDE; }
   .about__mobile-img {
     display: none; }
 

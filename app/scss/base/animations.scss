@@ -1,10 +1,6 @@
 .blast {
   animation: blast 1s cubic-bezier(0.85, 0.15, 0.15, 0.85) 0s 1;
 }
-.visio {
-  animation: visio 1s cubic-bezier(0.85, 0.15, 0.15, 0.85) 0s 1;
-}
-
 @keyframes blast {
   0% {
     transform: translateX(-100%);
@@ -14,6 +10,9 @@
   }
 }
 
+.visio {
+  animation: visio 1s cubic-bezier(0.85, 0.15, 0.15, 0.85) 0s 1;
+}
 @keyframes visio {
   0% {
     opacity: 0;
@@ -23,8 +22,24 @@
   }
 }
 
+
+
 .fadeIn {
-  animation: fadeIn 1s linear;
+  animation: fadeIn 1s linear forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.aboutTextFadeIn {
+  animation: fadeIn 1.5s ease-in forwards;
+  animation-delay: 0.8s;
 }
 
 @keyframes fadeIn {
@@ -36,6 +51,48 @@
     opacity: 1;
   }
 }
+
+.fadeOut {
+  animation: fadeOut 1s linear forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.bgSlideIn {
+  animation: bgSlideIn 1s ease-in-out forwards;
+}
+
+@keyframes bgSlideIn {
+  from {
+    left: 3000px;
+  }
+
+  to {
+    left: 119px;
+  }
+}
+.bgSlideOut {
+  animation: bgSlideOut 1s ease-in-out forwards;
+}
+
+@keyframes bgSlideOut {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 3000px;
+  }
+}
+
 
 @keyframes anim {
   0% {
