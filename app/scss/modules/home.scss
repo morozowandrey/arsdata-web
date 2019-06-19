@@ -41,26 +41,9 @@
     }
 
     &__part-1 {
-      // background-color: #fff;
-
       &_animated {
-        display: inline-block !important;
-        background-color: $mainGray;
-        background-position-x: -567px;
+        @include animatedTextPart;
 
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -moz-background-clip: text;
-        -moz-text-fill-color: transparent;
-        -ms-background-clip: text;
-        -ms-text-fill-color: transparent;
-
-        background-clip: text;
-        text-fill-color: transparent;
-
-        background-image: url(../../images/text-anim-bg-white.png);
-        background-size: cover;
-        background-repeat: no-repeat;
         -webkit-animation: anim 5s linear;
         -moz-animation: anim 5s linear;
         -ms-animation: anim 5s linear;
@@ -86,6 +69,7 @@
           bottom: 0;
           left: 0;
           background-size: cover;
+
           -webkit-animation: anim 5s linear;
           -moz-animation: anim 5s linear;
           -ms-animation: anim 5s linear;
@@ -109,23 +93,8 @@
 
     &__part-2 {
       &_animated {
-        display: inline-block !important;
-        background-color: $mainGray;
-        background-position-x: -567px;
+        @include animatedTextPart;
 
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -moz-background-clip: text;
-        -moz-text-fill-color: transparent;
-        -ms-background-clip: text;
-        -ms-text-fill-color: transparent;
-
-        background-clip: text;
-        text-fill-color: transparent;
-
-        background-image: url(../../images/text-anim-bg-white.png);
-        background-size: cover;
-        background-repeat: no-repeat;
         -webkit-animation: anim 5s linear;
         -moz-animation: anim 5s linear;
         -ms-animation: anim 5s linear;
@@ -158,6 +127,7 @@
           bottom: 0;
           left: 0;
           background-size: cover;
+
           -webkit-animation: anim 5s linear;
           -moz-animation: anim 5s linear;
           -ms-animation: anim 5s linear;
@@ -181,23 +151,8 @@
 
     &__part-3 {
       &_animated {
-        display: inline-block !important;
-        background-color: $mainGray;
-        background-position-x: -567px;
+        @include animatedTextPart;
 
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -moz-background-clip: text;
-        -moz-text-fill-color: transparent;
-        -ms-background-clip: text;
-        -ms-text-fill-color: transparent;
-
-        background-clip: text;
-        text-fill-color: transparent;
-
-        background-image: url(../../images/text-anim-bg-white.png);
-        background-size: cover;
-        background-repeat: no-repeat;
         -webkit-animation: anim 2s linear;
         -moz-animation: anim 2s linear;
         -ms-animation: anim 2s linear;
@@ -230,6 +185,7 @@
           bottom: 0;
           left: 0;
           background-size: cover;
+
           -webkit-animation: anim 5s linear;
           -moz-animation: anim 5s linear;
           -ms-animation: anim 5s linear;
