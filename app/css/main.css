@@ -630,7 +630,7 @@ main {
   -moz-animation: aboutUsTextSlideIn_3 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
   -ms-animation: aboutUsTextSlideIn_3 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
   animation: aboutUsTextSlideIn_3 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
-  animation-delay: 2.45s; }
+  animation-delay: 2.49s; }
 
 @keyframes aboutUsTextSlideIn_3 {
   0% {
@@ -1421,10 +1421,13 @@ main {
     left: 3000px; }
   .about-content {
     position: relative;
-    padding: 180px 100px 175px 165px; }
+    padding: 180px 128px 180px 166px; }
+    @media (max-width: 1440px) {
+      .about-content {
+        padding: 160px 100px 160px 124px; } }
     @media (max-width: 1024px) {
       .about-content {
-        padding: 100px 30px 105px 130px; } }
+        padding: 100px 30px 100px 130px; } }
     @media (max-width: 768px) {
       .about-content {
         padding: 105px 30px; } }
@@ -1462,7 +1465,7 @@ main {
             position: absolute;
             bottom: -10px;
             right: -9px;
-            color: #fff; }
+            color: #000; }
             @media (max-width: 1024px) {
               .about-content-text-animbox:first-of-type:after {
                 bottom: -5px;

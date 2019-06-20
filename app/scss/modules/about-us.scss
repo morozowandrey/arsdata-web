@@ -21,15 +21,14 @@
 
   &-content {
     position: relative;
-    padding: 180px 100px 175px 165px;
-    // background-color: $lightGray;
-    // background-image: url(../../images/slide-bg-grey.png);
-    // background-size: cover;
-    // background-repeat: no-repeat;
-    // background-position-x: 3000px;
+    padding: 180px 128px 180px 166px;
+
+    @include xxl {
+      padding: 160px 100px 160px 124px;
+    }
 
     @include lg {
-      padding: 100px 30px 105px 130px;
+      padding: 100px 30px 100px 130px;
     }
 
     @include md {
@@ -78,7 +77,7 @@
             position: absolute;
             bottom: -10px;
             right: -9px;
-            color: #fff;
+            color: #000;
 
             @include lg {
               bottom: -5px;

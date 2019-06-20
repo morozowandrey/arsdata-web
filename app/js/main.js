@@ -371,11 +371,9 @@ let checkAboutScrollDepth = throttle(function (depth, target) {
 
     windowWidth = ArsModule.checkSize();
 
-    if (windowWidth == "wide" || "xxl") {
-      $('.about-background').addClass("bgSlideInWide");
-    }
+    $('.about-background').addClass("bgSlideInWide");
 
-    if (windowWidth == "md" || "sm" || "xs") {
+    if (windowWidth == "md" || windowWidth == "sm" || windowWidth == "xs") {
       $('.about-background').addClass("bgSlideInMobile");
     }
 
