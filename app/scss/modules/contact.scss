@@ -31,6 +31,8 @@
     justify-content: space-between;
     padding: 125px 125px 85px;
 
+    background-color: $lightGray; 
+
     @include lg {
       padding: 86px 60px 85px;
     }
@@ -335,6 +337,12 @@
   margin-bottom: 0;
 }
 
+
+
+
+
+
+
 // PAGE STILES
 .contact-page {
   padding-top: 170px;
@@ -367,6 +375,8 @@
   }
 
   &-content {
+    opacity: 0;
+    
     &-title {
       @include title;
       min-width: 401px;
@@ -579,6 +589,21 @@
   [type="checkbox"]:not(:checked) + label {
     @include xs {
       padding-right: 0px;
+    }
+  }
+}
+
+
+#aboutUsPage {
+  .contact {
+    position: relative;
+    
+    &-content {
+      background-color: transparent;
+      &-info,
+      &-form {
+        opacity: 0;
+      }
     }
   }
 }

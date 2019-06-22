@@ -375,102 +375,218 @@ $(document).ready(function (event) {
 
   const windowWidth = ArsModule.checkSize();
 
-  const aboutIo = new IntersectionObserver(entries => {
-    for (const entry of entries) {
+  //ANIMATIONS TRIGGERS
+  if (document.getElementById('homePage')) {
 
-      // ABOUT BLOCK ANIMATIONS
-      if (entry.target.id == 'about' && entry.isIntersecting) {
-        $('.about-content-text, .about-content__link').addClass("aboutTextFadeIn");
-        $('.read_more_button').addClass("aboutTextFadeIn");
+    const aboutIo = new IntersectionObserver(entries => {
+      for (const entry of entries) {
 
-        $('.about-content-text__link_1').addClass("aboutUsTextSlideIn_1");
-        $('.about-content-text__link_2').addClass("aboutUsTextSlideIn_2");
-        $('.about-content-text__link_3').addClass("aboutUsTextSlideIn_3");
+        // ABOUT BLOCK ANIMATIONS
+        if (entry.target.id == 'about' && entry.isIntersecting) {
+          $('.about-content-text, .about-content__link').addClass("aboutTextFadeIn");
+          $('.read_more_button').addClass("aboutTextFadeIn");
 
-        $('.about-content-text-animbox_1').addClass("aboutUsBgSlideIn_1");
-        $('.about-content-text-animbox_2').addClass("aboutUsBgSlideIn_2");
-        $('.about-content-text-animbox_3').addClass("aboutUsBgSlideIn_3");
+          $('.about-content-text__link_1').addClass("aboutUsTextSlideIn_1");
+          $('.about-content-text__link_2').addClass("aboutUsTextSlideIn_2");
+          $('.about-content-text__link_3').addClass("aboutUsTextSlideIn_3");
 
-        if (windowWidth == "md" || windowWidth == "sm" || windowWidth == "xs") {
-          $('.about-background').addClass("bgSlideInMobile");
-        } else {
-          $('.about-background').addClass("bgSlideInWide");
+          $('.about-content-text-animbox_1').addClass("aboutUsBgSlideIn_1");
+          $('.about-content-text-animbox_2').addClass("aboutUsBgSlideIn_2");
+          $('.about-content-text-animbox_3').addClass("aboutUsBgSlideIn_3");
+
+          if (windowWidth == "md" || windowWidth == "sm" || windowWidth == "xs") {
+            $('.about-background').addClass("bgSlideInMobile");
+          } else {
+            $('.about-background').addClass("bgSlideInWide");
+          }
         }
+
       }
+    }, { threshold: 0.3 });
 
-    }
-  }, { threshold: 0.3 });
+    const howitworksIo = new IntersectionObserver(entries => {
+      for (const entry of entries) {
 
-  const howitworksIo = new IntersectionObserver(entries => {
-    for (const entry of entries) {
-
-      // HOWITWORKS ANIMATIONS
-      if (entry.target.id == 'howitworks' && entry.isIntersecting) {
-        $('.howitworks__caption, .howitworks-options').addClass('fadeInUp');
-      }
-
-    }
-  }, { threshold: 0.2 });
-
-  const solutionsIo = new IntersectionObserver(entries => {
-    for (const entry of entries) {
-
-      // SOLUTIONS ANIMATIONS
-      if (entry.target.id == 'solutions' && entry.isIntersecting) {
-        $('.solutions__caption').addClass('fadeInUp');
-      }
-
-    }
-  }, { threshold: 0.2 });
-
-  const solutionsGridIo = new IntersectionObserver(entries => {
-    for (const entry of entries) {
-
-      // SOLUTIONS ANIMATIONS
-      if (entry.target.id == 'solutionsGrid' && entry.isIntersecting) {
-        $('.solutions-grid-item__text, .solutions-grid-item__caption').addClass('fadeIn');
-        $('.solutions-grid').addClass('fadeInUp');
-      }
-
-    }
-  }, { threshold: 0.5 });
-
-  const technologyIo = new IntersectionObserver(entries => {
-    for (const entry of entries) {
-
-      // TECHNOLOGIES ANIMATIONS
-      if (entry.target.id == 'technology' && entry.isIntersecting) {
-        $('.technology__caption, .technology__subcaption, .technology-grid').addClass('fadeInUp');
-      }
-
-    }
-  }, { threshold: 0.4 });
-
-  const contactIo = new IntersectionObserver(entries => {
-    for (const entry of entries) {
-
-      // CONTACTS ANIMATIONS
-      if (entry.target.id == 'contact' && entry.isIntersecting) {
-        if (windowWidth == "md" || windowWidth == "sm" || windowWidth == "xs") {
-          $('.contact-background').addClass("bgSlideInMobile");
-        } else {
-          $('.contact-background').addClass("bgSlideInWide");
+        // HOWITWORKS ANIMATIONS
+        if (entry.target.id == 'howitworks' && entry.isIntersecting) {
+          $('.howitworks__caption, .howitworks-options').addClass('fadeInUp');
         }
-        $('.contact-content-info, .contact-content-form').addClass('contactFadeIn');
+
       }
+    }, { threshold: 0.2 });
 
-    }
-  }, { threshold: 0.3 });
+    const solutionsIo = new IntersectionObserver(entries => {
+      for (const entry of entries) {
 
-  aboutIo.observe(document.getElementById('about'));
-  howitworksIo.observe(document.getElementById('howitworks'));
+        // SOLUTIONS ANIMATIONS
+        if (entry.target.id == 'solutions' && entry.isIntersecting) {
+          $('.solutions__caption').addClass('fadeInUp');
+        }
 
-  solutionsIo.observe(document.getElementById('solutions'));
-  solutionsGridIo.observe(document.getElementById('solutionsGrid'));
+      }
+    }, { threshold: 0.2 });
 
-  technologyIo.observe(document.getElementById('technology'));
+    const solutionsGridIo = new IntersectionObserver(entries => {
+      for (const entry of entries) {
 
-  contactIo.observe(document.getElementById('contact'));
+        // SOLUTIONS ANIMATIONS
+        if (entry.target.id == 'solutionsGrid' && entry.isIntersecting) {
+          $('.solutions-grid-item__text, .solutions-grid-item__caption').addClass('fadeIn');
+          $('.solutions-grid').addClass('fadeInUp');
+        }
+
+      }
+    }, { threshold: 0.5 });
+
+    const technologyIo = new IntersectionObserver(entries => {
+      for (const entry of entries) {
+
+        // TECHNOLOGIES ANIMATIONS
+        if (entry.target.id == 'technology' && entry.isIntersecting) {
+          $('.technology__caption, .technology__subcaption, .technology-grid').addClass('fadeInUp');
+        }
+
+      }
+    }, { threshold: 0.4 });
+
+    const contactIo = new IntersectionObserver(entries => {
+      for (const entry of entries) {
+
+        // CONTACTS ANIMATIONS
+        if (entry.target.id == 'contact' && entry.isIntersecting) {
+          if (windowWidth == "md" || windowWidth == "sm" || windowWidth == "xs") {
+            $('.contact-background').addClass("bgSlideInMobile");
+          } else {
+            $('.contact-background').addClass("bgSlideInWide");
+          }
+          $('.contact-content-info, .contact-content-form').addClass('contactFadeIn');
+        }
+
+      }
+    }, { threshold: 0.3 });
+
+    aboutIo.observe(document.getElementById('about'));
+    howitworksIo.observe(document.getElementById('howitworks'));
+    solutionsIo.observe(document.getElementById('solutions'));
+    solutionsGridIo.observe(document.getElementById('solutionsGrid'));
+    technologyIo.observe(document.getElementById('technology'));
+    contactIo.observe(document.getElementById('contact'));
+  }
+
+  if (document.getElementById('contactsPage')) {
+    const contactPageIo = new IntersectionObserver(entries => {
+      for (const entry of entries) {
+
+        if (entry.target.id == 'contactPage' && entry.isIntersecting) {
+          $('.contact-page-content').addClass('fadeInUpFixed');
+        }
+
+      }
+    }, { threshold: 0.3 });
+
+    contactPageIo.observe(document.getElementById('contactPage'));
+  }
+
+  if (document.getElementById('aboutUsPage')) {
+    const aboutUsPageIo = new IntersectionObserver(entries => {
+      for (const entry of entries) {
+
+        if (entry.target.id == 'aboutUsPage' && entry.isIntersecting) {
+          $('.about-page-content').addClass('fadeInUpFixed');
+        }
+
+      }
+    }, { threshold: 0 });
+
+    const aboutUsContactIo = new IntersectionObserver(entries => {
+      for (const entry of entries) {
+
+        if (entry.target.id == 'contact' && entry.isIntersecting) {
+          $('.contact-content-info, .contact-content-form').addClass('contactFadeIn');
+          if (windowWidth == "md" || windowWidth == "sm" || windowWidth == "xs") {
+            $('.contact-background').addClass("bgSlideInMobile");
+          } else {
+            $('.contact-background').addClass("bgSlideInWide");
+          }
+        }
+
+      }
+    }, { threshold: 0.3 });
+
+    aboutUsPageIo.observe(document.getElementById('aboutUsPage'));
+    aboutUsContactIo.observe(document.getElementById('contact'));
+  }
+
+  if (document.getElementById('policyPage')) {
+    const contactPageIo = new IntersectionObserver(entries => {
+      for (const entry of entries) {
+
+        if (entry.target.id == 'contactPage' && entry.isIntersecting) {
+          $('.contact-page-content').addClass('fadeInUpFixed');
+        }
+
+      }
+    }, { threshold: 0.3 });
+
+    contactPageIo.observe(document.getElementById('contactPage'));
+  }
+
+  if (document.getElementById('cookiePage')) {
+    const contactPageIo = new IntersectionObserver(entries => {
+      for (const entry of entries) {
+
+        if (entry.target.id == 'contactPage' && entry.isIntersecting) {
+          $('.contact-page-content').addClass('fadeInUpFixed');
+        }
+
+      }
+    }, { threshold: 0.3 });
+
+    contactPageIo.observe(document.getElementById('contactPage'));
+  }
+
+  if (document.getElementById('solutionsPage')) {
+    const contactPageIo = new IntersectionObserver(entries => {
+      for (const entry of entries) {
+
+        if (entry.target.id == 'contactPage' && entry.isIntersecting) {
+          $('.contact-page-content').addClass('fadeInUpFixed');
+        }
+
+      }
+    }, { threshold: 0.3 });
+
+    contactPageIo.observe(document.getElementById('contactPage'));
+  }
+
+  if (document.getElementById('techPage')) {
+    const contactPageIo = new IntersectionObserver(entries => {
+      for (const entry of entries) {
+
+        if (entry.target.id == 'contactPage' && entry.isIntersecting) {
+          $('.contact-page-content').addClass('fadeInUpFixed');
+        }
+
+      }
+    }, { threshold: 0.3 });
+
+    contactPageIo.observe(document.getElementById('contactPage'));
+  }
+
+  if (document.getElementById('termsPage')) {
+    const contactPageIo = new IntersectionObserver(entries => {
+      for (const entry of entries) {
+
+        if (entry.target.id == 'contactPage' && entry.isIntersecting) {
+          $('.contact-page-content').addClass('fadeInUpFixed');
+        }
+
+      }
+    }, { threshold: 0.3 });
+
+    contactPageIo.observe(document.getElementById('contactPage'));
+  }
+
 
 });
 

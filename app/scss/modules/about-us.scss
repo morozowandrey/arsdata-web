@@ -205,6 +205,8 @@
   }
 
   &-content {
+    opacity: 0;
+    
     &-title {
       @include title;
       min-width: 368px;
