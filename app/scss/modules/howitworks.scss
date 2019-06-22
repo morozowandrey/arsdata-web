@@ -12,6 +12,7 @@
   }
 
   &__caption {
+    opacity: 0;
     margin-bottom: 53px;
     font-family: $main-ff-bold;
     font-size: 48px;
@@ -24,6 +25,7 @@
   }
 
   &-options {
+    opacity: 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;

@@ -489,7 +489,7 @@ main {
   font-style: normal; }
 
 .fadeIn {
-  animation: fadeIn 1s linear forwards; }
+  animation: fadeIn 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards; }
 
 @keyframes fadeIn {
   from {
@@ -497,8 +497,18 @@ main {
   to {
     opacity: 1; } }
 
+.contactFadeIn {
+  animation: contactFadeIn 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+  animation-delay: 1s; }
+
+@keyframes contactFadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
 .fadeOut {
-  animation: fadeOut 1s linear forwards; }
+  animation: fadeOut 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards; }
 
 @keyframes fadeOut {
   from {
@@ -650,6 +660,33 @@ main {
     background-position-x: -566px; }
   100% {
     background-position-x: 0px; } }
+
+@keyframes fromLeftIn {
+  0% {
+    transform: translate(-3000, 0); }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1 !important; } }
+
+.fromLeftIn {
+  animation: fromLeftIn 2s ease-in-out forwards; }
+
+.fromLeftOut,
+.fromRightOut {
+  opacity: 0 !important; }
+
+.fadeInUp {
+  animation: fadeInUp 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 30%, 0);
+    transform: translate3d(0, 30%, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
 
 .blue-link {
   max-width: 300px;
@@ -1611,6 +1648,7 @@ main {
   .howitworks .container {
     padding-right: 24px; }
   .howitworks__caption {
+    opacity: 0;
     margin-bottom: 53px;
     font-family: "Poppins-Bold", sans-serif;
     font-size: 48px;
@@ -1620,6 +1658,7 @@ main {
         font-size: 30px;
         line-height: 40px; } }
   .howitworks-options {
+    opacity: 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
@@ -1713,6 +1752,7 @@ main {
       .solutions ::-webkit-scrollbar-thumb:hover {
         background-color: #edf1fa; } }
   .solutions__caption {
+    opacity: 0;
     margin-bottom: 30px;
     font-family: "Poppins-Bold", sans-serif;
     font-size: 48px;
@@ -1722,6 +1762,7 @@ main {
         font-size: 30px;
         line-height: 40px; } }
   .solutions-grid {
+    opacity: 0;
     display: flex;
     flex-direction: column;
     overflow-x: auto;
@@ -1790,13 +1831,15 @@ main {
       min-width: 329px;
       padding: 90px 70px 0;
       margin: 0.5px;
-      background-color: #DEDEDE; }
+      background-color: #DEDEDE;
+      cursor: pointer; }
       @media (max-width: 768px) {
         .solutions-grid-item {
           min-width: 335px;
           height: auto;
           padding: 68px 82px; } }
       .solutions-grid-item__caption {
+        opacity: 0;
         position: relative;
         margin-bottom: 15px;
         font-size: 16px;
@@ -1822,6 +1865,7 @@ main {
             .solutions-grid-item__caption:before {
               top: 9px; } }
       .solutions-grid-item__text {
+        opacity: 0;
         font-size: 16px;
         line-height: 24px;
         color: #8B8B8B; }
@@ -1850,6 +1894,11 @@ main {
         @media (max-width: 768px) {
           .solutions-grid-item:hover .solutions-grid-item__caption {
             margin-bottom: 0px; } }
+      .solutions-grid-item:hover .solutions-grid-item__caption_bigmb {
+        margin-bottom: 82px; }
+        @media (max-width: 768px) {
+          .solutions-grid-item:hover .solutions-grid-item__caption_bigmb {
+            margin-bottom: 0px; } }
       .solutions-grid-item:hover .solutions-grid-item__link {
         display: block; }
         @media (max-width: 768px) {
@@ -1867,6 +1916,7 @@ main {
             color: #0052FF; } }
 
 .technology {
+  position: relative;
   padding-bottom: 145px;
   padding-top: 130px;
   background-color: #111111; }
@@ -1878,10 +1928,13 @@ main {
     .technology {
       padding-bottom: 48px;
       padding-top: 40px; } }
-  @media (max-width: 768px) {
-    .technology .container {
-      padding-right: 24px; } }
+  .technology .container {
+    position: relative; }
+    @media (max-width: 768px) {
+      .technology .container {
+        padding-right: 24px; } }
   .technology__caption {
+    opacity: 0;
     margin-bottom: 10px;
     font-family: "Poppins-Bold", sans-serif;
     font-size: 48px;
@@ -1892,12 +1945,14 @@ main {
         font-size: 30px;
         line-height: 40px; } }
   .technology__subcaption {
+    opacity: 0;
     max-width: 460px;
     margin-bottom: 32px;
     font-size: 16px;
     line-height: 24px;
     color: #8B8B8B; }
   .technology-grid {
+    opacity: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
     justify-self: center;
@@ -1909,7 +1964,7 @@ main {
     .technology-grid-item {
       height: 238px;
       padding: 84px 58px 0 40px;
-      background-color: #111111;
+      background-color: rgba(17, 17, 17, 0);
       border: 1px solid #1e1e1e;
       margin-left: -1px;
       margin-bottom: -1px; }
@@ -2018,11 +2073,16 @@ main {
       height: 100%;
       width: 100%;
       background-color: #DEDEDE; }
+  .contact-background {
+    width: 3000px;
+    position: absolute;
+    background-color: #DEDEDE;
+    height: 100%;
+    left: 3000px; }
   .contact-content {
     display: flex;
     justify-content: space-between;
-    padding: 125px 125px 85px;
-    background-color: #DEDEDE; }
+    padding: 125px 125px 85px; }
     @media (max-width: 1024px) {
       .contact-content {
         padding: 86px 60px 85px; } }
@@ -2033,6 +2093,7 @@ main {
       .contact-content {
         padding: 40px; } }
     .contact-content-info {
+      opacity: 0;
       max-width: 290px;
       min-width: 256px;
       margin-right: 100px; }
@@ -2091,6 +2152,7 @@ main {
           height: 14px;
           left: 1px; }
     .contact-content-form {
+      opacity: 0;
       max-width: 563px; }
       .contact-content-form__caption {
         margin-bottom: 16px; }

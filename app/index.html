@@ -174,7 +174,7 @@
     <section id="solutions" class="solutions">
       <div class="container">
         <h2 class="solutions__caption">Solutions</h2>
-        <div class="solutions-grid">
+        <div id="solutionsGrid" class="solutions-grid">
 
           <div class="solutions-grid-box solutions-grid-box-1">
             <a id="predictive_maintenance_button" href="./solutions.html#0" class="solutions-grid-item"
@@ -216,7 +216,7 @@
               </span>
             </a>
             <a id="hvac_button" href="./solutions.html#3" class="solutions-grid-item">
-              <p class="solutions-grid-item__caption">Smart HVAC</p>
+              <p class="solutions-grid-item__caption solutions-grid-item__caption_bigmb">Smart HVAC</p>
               <p class="solutions-grid-item__text">
                 <span>Minimize energy</span>
                 <span>footprint of the</span>
@@ -297,9 +297,9 @@
 
     <section id="technology" class="technology">
       <div class="container">
-        <h2 class="technology__caption">Technology stacks</h2>
+        <h2 id="technologyCaption" class="technology__caption">Technology stacks</h2>
         <p class="technology__subcaption">We use proven tools and frameworks to build and run data infrastructure</p>
-        <div class="technology-grid">
+        <div id="technologyGrid" class="technology-grid">
           <a id="embedded_button" href="./technologies.html#0" class="technology-grid-item">
             <p class="technology-grid-item__caption">Embedded</p>
             <span class="technology-grid-item__link blue-link">
@@ -346,6 +346,7 @@
 
     <section id="contact" class="contact">
       <div class="container">
+        <div class="contact-background"></div>
         <div class="contact-content">
 
           <div class="contact-content-info">
@@ -433,6 +434,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
   <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
+  <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
   <!--build:js js/main.min.js -->
   <script src='js/lib/glide.min.js'></script>
   <script src="js/main.js"></script>

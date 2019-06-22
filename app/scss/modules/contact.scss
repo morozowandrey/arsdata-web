@@ -18,12 +18,18 @@
     }
   }
 
+  &-background {
+    width: 3000px;
+    position: absolute;
+    background-color: $lightGray;
+    height: 100%;
+    left: 3000px;
+  }
+
   &-content {
     display: flex;
     justify-content: space-between;
-
     padding: 125px 125px 85px;
-    background-color: $lightGray;
 
     @include lg {
       padding: 86px 60px 85px;
@@ -39,6 +45,7 @@
 
     // CONTACT INFO
     &-info {
+      opacity: 0;
       max-width: 290px;
       min-width: 256px;
       margin-right: 100px;
@@ -112,6 +119,7 @@
 
     // CONTACT FORM
     &-form {
+      opacity: 0;
       max-width: 563px;
 
       &__caption {

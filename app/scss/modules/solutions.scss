@@ -20,6 +20,7 @@ $listItemMargin: 10px;
   }
 
   &__caption {
+    opacity: 0;
     margin-bottom: 30px;
     font-family: $main-ff-bold;
     font-size: 48px;
@@ -32,6 +33,7 @@ $listItemMargin: 10px;
   }
 
   &-grid {
+    opacity: 0;
     display: flex;
     flex-direction: column;
     overflow-x: auto;
@@ -136,7 +138,8 @@ $listItemMargin: 10px;
       padding: 90px 70px 0;
       margin: 0.5px;
       background-color: $lightGray;
-      
+      cursor: pointer;
+
       @include md {
         min-width: 335px;
         height: auto;
@@ -144,6 +147,7 @@ $listItemMargin: 10px;
       }
 
       &__caption {
+        opacity: 0;
         position: relative;
         margin-bottom: 15px;
         font-size: 16px;
@@ -177,6 +181,7 @@ $listItemMargin: 10px;
       }
 
       &__text {
+        opacity: 0;
         font-size: 16px;
         line-height: 24px;
         color: $secondGray;
@@ -217,6 +222,14 @@ $listItemMargin: 10px;
 
       &:hover .solutions-grid-item__caption {
         margin-bottom: 60px;
+
+        @include md {
+          margin-bottom: 0px;
+        }
+      }
+
+      &:hover .solutions-grid-item__caption_bigmb {
+        margin-bottom: 82px;
 
         @include md {
           margin-bottom: 0px;

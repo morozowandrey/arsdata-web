@@ -207,7 +207,12 @@ const ArsModule = (function () {
         $('html, body').stop().animate({
           scrollTop: $target.offset().top - 20
         }, 500, 'easeInOutQuad');
-      } else {
+      } else if ($targetSoutions == "technology") {
+        $('html, body').stop().animate({
+          scrollTop: $target.offset().top
+        }, 500, 'easeInOutQuad');
+      }
+      else {
         $('html, body').stop().animate({
           scrollTop: $target.offset().top - 50
         }, 500, 'easeInOutQuad');
@@ -345,78 +350,6 @@ $(document).ready(function () {
 
 });
 
-const sectionsPosition = {
-  aboutSectionTop: $('#about').offset().top,
-  howitworksSectionTop: $('#howitworks').offset().top,
-  solutionsSectionTop: $('#solutions').offset().top,
-  technologySectionTop: $('#technology').offset().top,
-  contactSectionTop: $('#contact').offset().top,
-  footerSectionTop: $('#footer').offset().top,
-}
-
-$(window).scroll(function () {
-  const scrollDepth = $(window).scrollTop();
-
-  checkAboutScrollDepth(scrollDepth, sectionsPosition.aboutSectionTop);
-  checkHowitworksScrollDepth(scrollDepth, sectionsPosition.howitworksSectionTop);
-  checkSolutionsScrollDepth(scrollDepth, sectionsPosition.solutionsSectionTop);
-  checkTechnologyScrollDepth(scrollDepth, sectionsPosition.technologySectionTop);
-  checkContactScrollDepth(scrollDepth, sectionsPosition.contactSectionTop);
-  checkFooterScrollDepth(scrollDepth, sectionsPosition.footerSectionTop);
-
-});
-
-let checkAboutScrollDepth = throttle(function (depth, target) {
-  if (depth >= target - 600) {
-
-    windowWidth = ArsModule.checkSize();
-
-    $('.about-background').addClass("bgSlideInWide");
-
-    if (windowWidth == "md" || windowWidth == "sm" || windowWidth == "xs") {
-      $('.about-background').addClass("bgSlideInMobile");
-    }
-
-    $('.about-content-text, .about-content__link').addClass("aboutTextFadeIn");
-    $('.read_more_button').addClass("aboutTextFadeIn");
-
-    $('.about-content-text__link_1').addClass("aboutUsTextSlideIn_1");
-    $('.about-content-text__link_2').addClass("aboutUsTextSlideIn_2");
-    $('.about-content-text__link_3').addClass("aboutUsTextSlideIn_3");
-
-    $('.about-content-text-animbox_1').addClass("aboutUsBgSlideIn_1");
-    $('.about-content-text-animbox_2').addClass("aboutUsBgSlideIn_2");
-    $('.about-content-text-animbox_3').addClass("aboutUsBgSlideIn_3");
-
-  }
-}, 2000);
-
-let checkHowitworksScrollDepth = throttle(function (depth, target) {
-  if (depth >= target) {
-
-  }
-}, 2000);
-
-let checkSolutionsScrollDepth = throttle(function (depth, target) {
-  if (depth >= target) {
-  }
-}, 2000);
-
-let checkTechnologyScrollDepth = throttle(function (depth, target) {
-  if (depth >= target) {
-  }
-}, 2000);
-
-let checkContactScrollDepth = throttle(function (depth, target) {
-  if (depth >= target) {
-  }
-}, 2000);
-
-let checkFooterScrollDepth = throttle(function (depth, target) {
-  if (depth >= target) {
-  }
-}, 2000);
-
 //----------------EVENTS----------------//
 
 // TOGGLE HAMBURGER & COLLAPSE NAV
@@ -439,7 +372,106 @@ $('a[href^="#"]').click(function (event) {
 });
 
 $(document).ready(function (event) {
-  console.log(ArsModule.checkSize());
+
+  const windowWidth = ArsModule.checkSize();
+
+  const aboutIo = new IntersectionObserver(entries => {
+    for (const entry of entries) {
+
+      // ABOUT BLOCK ANIMATIONS
+      if (entry.target.id == 'about' && entry.isIntersecting) {
+        $('.about-content-text, .about-content__link').addClass("aboutTextFadeIn");
+        $('.read_more_button').addClass("aboutTextFadeIn");
+
+        $('.about-content-text__link_1').addClass("aboutUsTextSlideIn_1");
+        $('.about-content-text__link_2').addClass("aboutUsTextSlideIn_2");
+        $('.about-content-text__link_3').addClass("aboutUsTextSlideIn_3");
+
+        $('.about-content-text-animbox_1').addClass("aboutUsBgSlideIn_1");
+        $('.about-content-text-animbox_2').addClass("aboutUsBgSlideIn_2");
+        $('.about-content-text-animbox_3').addClass("aboutUsBgSlideIn_3");
+
+        if (windowWidth == "md" || windowWidth == "sm" || windowWidth == "xs") {
+          $('.about-background').addClass("bgSlideInMobile");
+        } else {
+          $('.about-background').addClass("bgSlideInWide");
+        }
+      }
+
+    }
+  }, { threshold: 0.3 });
+
+  const howitworksIo = new IntersectionObserver(entries => {
+    for (const entry of entries) {
+
+      // HOWITWORKS ANIMATIONS
+      if (entry.target.id == 'howitworks' && entry.isIntersecting) {
+        $('.howitworks__caption, .howitworks-options').addClass('fadeInUp');
+      }
+
+    }
+  }, { threshold: 0.2 });
+
+  const solutionsIo = new IntersectionObserver(entries => {
+    for (const entry of entries) {
+
+      // SOLUTIONS ANIMATIONS
+      if (entry.target.id == 'solutions' && entry.isIntersecting) {
+        $('.solutions__caption').addClass('fadeInUp');
+      }
+
+    }
+  }, { threshold: 0.2 });
+
+  const solutionsGridIo = new IntersectionObserver(entries => {
+    for (const entry of entries) {
+
+      // SOLUTIONS ANIMATIONS
+      if (entry.target.id == 'solutionsGrid' && entry.isIntersecting) {
+        $('.solutions-grid-item__text, .solutions-grid-item__caption').addClass('fadeIn');
+        $('.solutions-grid').addClass('fadeInUp');
+      }
+
+    }
+  }, { threshold: 0.5 });
+
+  const technologyIo = new IntersectionObserver(entries => {
+    for (const entry of entries) {
+
+      // TECHNOLOGIES ANIMATIONS
+      if (entry.target.id == 'technology' && entry.isIntersecting) {
+        $('.technology__caption, .technology__subcaption, .technology-grid').addClass('fadeInUp');
+      }
+
+    }
+  }, { threshold: 0.4 });
+
+  const contactIo = new IntersectionObserver(entries => {
+    for (const entry of entries) {
+
+      // CONTACTS ANIMATIONS
+      if (entry.target.id == 'contact' && entry.isIntersecting) {
+        if (windowWidth == "md" || windowWidth == "sm" || windowWidth == "xs") {
+          $('.contact-background').addClass("bgSlideInMobile");
+        } else {
+          $('.contact-background').addClass("bgSlideInWide");
+        }
+        $('.contact-content-info, .contact-content-form').addClass('contactFadeIn');
+      }
+
+    }
+  }, { threshold: 0.3 });
+
+  aboutIo.observe(document.getElementById('about'));
+  howitworksIo.observe(document.getElementById('howitworks'));
+
+  solutionsIo.observe(document.getElementById('solutions'));
+  solutionsGridIo.observe(document.getElementById('solutionsGrid'));
+
+  technologyIo.observe(document.getElementById('technology'));
+
+  contactIo.observe(document.getElementById('contact'));
+
 });
 
 
