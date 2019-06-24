@@ -1,13 +1,27 @@
 @import 'var';
 
 // base styles
-@import 'base/base-styles';
+@import 'base/reset';
 @import 'base/mixins';
 @import 'base/media-mixins';
+@import 'base/helpers';
+@import 'base/base-styles';
 @import 'base/fonts';
-@import 'base/reset';
+@import 'base/animations.scss';
+@import 'modules/buttons';
+@import 'modules/slider';
+@import 'modules/nopage';
+@import 'modules/cookies-popup';
+@import 'modules/cookie-policy';
+@import 'modules/privacy-policy';
+@import 'modules/terms-and-conditions';
 
 // modules
 @import 'modules/header';
+@import 'modules/home';
+@import 'modules/about-us';
+@import 'modules/howitworks';
+@import 'modules/solutions';
+@import 'modules/technology';
+@import 'modules/contact';
 @import 'modules/footer';
-@import 'modules/buttons';

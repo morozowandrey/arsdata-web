@@ -1,0 +1,225 @@
+.home {
+  padding-bottom: 150px;
+
+  .container {
+    @include sm {
+      padding-left: 0px;
+    }
+  }
+
+  @include sm {
+    padding-bottom: 0px;
+  }
+
+  &-text {
+    position: relative;
+    max-width: 570px;
+    display: inline-block;
+    margin-top: 150px;
+    margin-bottom: 64px;
+
+    color: $mainGray;
+    font-family: $main-ff-bold;
+    font-size: 48px;
+    line-height: 64px;
+
+    span {
+      display: block;
+    }
+
+    @include md {
+      margin-top: 88px;
+      font-size: 36px;
+      line-height: 46px;
+    }
+
+    @include sm {
+      margin-top: 88px;
+      font-size: 30px;
+      line-height: 40px;
+      padding-left: 24px;
+    }
+
+    &__part-1 {
+      &_animated {
+        @include animatedTextPart;
+
+        -webkit-animation: anim 5s linear;
+        -moz-animation: anim 5s linear;
+        -ms-animation: anim 5s linear;
+        animation: anim 3s linear;
+        animation-delay: 1s;
+
+        &_1 {
+        }
+        &_2 {
+          animation-delay: 1.2s;
+        }
+        &_3 {
+          animation-delay: 1.4s;
+        }
+
+        &:before {
+          position: absolute;
+          content: "";
+
+          z-index: -2;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover;
+
+          -webkit-animation: anim 5s linear;
+          -moz-animation: anim 5s linear;
+          -ms-animation: anim 5s linear;
+          animation: anim 5s linear;
+          animation-delay: 1s;
+        }
+
+        &:after {
+          position: absolute;
+          content: "";
+
+          z-index: -1;
+          top: 0.125em;
+          right: 0.125em;
+          bottom: 0.125em;
+          left: 0.125em;
+          // background-color: #ffffff;
+        }
+      }
+    }
+
+    &__part-2 {
+      &_animated {
+        @include animatedTextPart;
+
+        -webkit-animation: anim 5s linear;
+        -moz-animation: anim 5s linear;
+        -ms-animation: anim 5s linear;
+        animation: anim 3s linear;
+        animation-delay: 2.5s;
+
+        &_1 {
+          animation-delay: 2s;
+        }
+        &_2 {
+          animation-delay: 2.1s;
+          animation-duration: 2s;
+          animation-name: home-text-animation-main;
+          animation-fill-mode: forwards;
+        }
+        &_3 {
+          animation-delay: 2.6s;
+          animation-duration: 2s;
+          animation-name: home-text-animation-main;
+          animation-fill-mode: forwards;
+        }
+
+        &:before {
+          position: absolute;
+          content: "";
+
+          z-index: -2;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover;
+
+          -webkit-animation: anim 5s linear;
+          -moz-animation: anim 5s linear;
+          -ms-animation: anim 5s linear;
+          animation: anim 5s linear;
+          animation-delay: 1s;
+        }
+
+        &:after {
+          position: absolute;
+          content: "";
+
+          z-index: -1;
+          top: 0.125em;
+          right: 0.125em;
+          bottom: 0.125em;
+          left: 0.125em;
+          // background-color: #ffffff;
+        }
+      }
+    }
+
+    &__part-3 {
+      &_animated {
+        @include animatedTextPart;
+
+        -webkit-animation: anim 2s linear;
+        -moz-animation: anim 2s linear;
+        -ms-animation: anim 2s linear;
+        animation: anim 2s linear;
+        animation-delay: 1s;
+
+        &_1 {
+          animation-delay: 3.4s;
+          animation-name: home-text-animation-main;
+          animation-fill-mode: forwards;
+        }
+        &_2 {
+          animation-delay: 4s;
+          animation-name: home-text-animation-main;
+          animation-fill-mode: forwards;
+        }
+        &_3 {
+          animation-delay: 4.8s;
+          animation-name: home-text-animation-main;
+          animation-fill-mode: forwards;
+        }
+
+        &:before {
+          position: absolute;
+          content: "";
+
+          z-index: -2;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover;
+
+          -webkit-animation: anim 5s linear;
+          -moz-animation: anim 5s linear;
+          -ms-animation: anim 5s linear;
+          animation: anim 5s linear;
+          animation-delay: 1s;
+        }
+
+        &:after {
+          position: absolute;
+          content: "";
+
+          z-index: -1;
+          top: 0.125em;
+          right: 0.125em;
+          bottom: 0.125em;
+          left: 0.125em;
+          // background-color: #ffffff;
+        }
+      }
+    }
+  }
+  &__mobile-img {
+    display: none;
+
+    @include sm {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &__startbtn {
+    @include sm {
+      margin-bottom: 57px;
+      margin-left: 24px;
+    }
+  }
+}

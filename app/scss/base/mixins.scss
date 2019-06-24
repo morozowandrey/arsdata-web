@@ -1,0 +1,170 @@
+@mixin caption {
+  font-size: 16px;
+  letter-spacing: 1.24px;
+  line-height: 25px;
+  color: $mainBlue;
+  text-transform: uppercase;
+}
+
+@mixin title {
+  margin-bottom: 16px;
+  color: #fff;
+  font-family: $main-ff-bold;
+  font-size: 48px;
+  line-height: 64px;
+}
+
+@mixin titleSmall {
+  margin-bottom: 8px;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1.24px;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+
+@mixin text {
+  font-size: 16px;
+  line-height: 25px;
+  color: $secondGray;
+}
+
+@mixin paragraphWrapper {
+  margin-bottom: 100px;
+
+  &_small {
+    margin-bottom: 24px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &:last-of-type.policy-content-paragraph_big {
+    margin-bottom: 100px;
+  }
+
+  @include md {
+    margin-bottom: 60px;
+  }
+}
+
+@mixin button-reset {
+  border: none;
+  outline: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@mixin formelementst-reset {
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  outline: none;
+}
+
+@mixin formelementst-custom-style {
+  @include text;
+
+  border-bottom: 1px solid $forthGray;
+}
+
+@mixin flip {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+@mixin blueScrollbar {
+  ::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #edf1fa;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #0052ff;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #edf1fa;
+  }
+}
+
+@mixin textareaScrollbar {
+  ::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #0052ff;
+    opacity: 0.5;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: transparent;
+  }
+}
+
+@mixin whiteScrollbar {
+  ::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #111;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #fff;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #111;
+  }
+}
+
+@mixin noScrollbar {
+  ::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: transparent;
+  }
+}
+
+@mixin animatedTextPart {
+  display: inline-block !important;
+  background-color: $mainGray;
+  background-position-x: -567px;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -ms-background-clip: text;
+  -ms-text-fill-color: transparent;
+
+  background-clip: text;
+  text-fill-color: transparent;
+
+  background-image: url(../../images/text-anim-bg-white.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}

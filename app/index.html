@@ -3,21 +3,443 @@
 
 <head>
   <meta charset="UTF-8">
-  <title></title>
-  <!--build:css css/styles.min.css-->
-  <link rel="stylesheet" href="css/main.css">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>ARS Data</title>
+
+  <meta name="keywords" content="ARS Data, Data sience, Big data, Embedded, HVAC, Maintenance">
+  <meta name="author" content="EarlyBird">
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="ARS Data website">
+  <meta name="twitter:description" content="ARS Data website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ARS Data">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="ARS Data">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ARS Data">
+  <meta property="og:description" content="ARS Data website">
+
+  <!-- Google Analytics -->
+  <script>
+    window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+    ga('create', 'UA-116482002-1', 'auto');
+    ga("send", "pageview");
+  </script>
+  <script async src='https://www.google-analytics.com/analytics.js'></script>
+  <!-- End Google Analytics -->
+
+  <link rel="manifest" href="manifest.json">
+
+  <!-- build:css css/styles.min.css -->
+  <link rel=" stylesheet" href="css/main.css">
   <!-- <link rel="stylesheet" href="css/var.css"> -->
   <!--endbuild-->
+  <link rel="shortcut icon" type="image/png" href="./images/icon/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="./images/icon/favicon-16x16.png">
 </head>
 
 <body>
-  <a class="este" href="services.html">ARS Data 2</a>
-  
+  <noscript>
+    Website doesn't work when JavaScript disabled. Please enable JavaScript
+  </noscript>
+
+  <img class="main-page-bg fadeIn" src="./images/illustrations/main-bg.svg" alt="">
+
+  <header class="header">
+    <div class="container flex-between">
+      <a href="index.html" class="header__logo">
+        <img src="images/logos/logo-white.svg" alt="ARS Data logo">
+      </a>
+
+      <nav class="navigation" id="navigation">
+        <a aria-label="mobile menu" class="navigation-mobile">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+
+        <div class="navigation-desktop">
+          <img src="images/logos/logo-white.svg" alt="ARS Data logo" class="navigation-desktop__logo">
+          <a class="navigation-desktop__item nav-about_button" href="#about">About us</a>
+          <a class="navigation-desktop__item nav-solutions_button" href="#solutions">Solutions</a>
+          <a class="navigation-desktop__item nav-technology_button" href="#technology">Technology</a>
+          <a class="navigation-desktop__item nav-contact_button" href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="homePage">
+    <section id="home" class="home">
+      <div class="container">
+        <p class="home-text fadeIn">
+          <span class="home-text__part-1">
+            <span class="home-text__part-1_animated home-text__part-1_animated_1">We</span>
+            <span class="home-text__part-1_animated home-text__part-1_animated_2">build</span>
+            <span class="home-text__part-1_animated home-text__part-1_animated_3">solutions</span>
+          </span>
+          <span class="home-text__part-2">
+            <span class="home-text__part-2_animated home-text__part-2_animated_1">for</span>
+            <span class="home-text__part-2_animated home-text__part-2_animated_2">Machine</span>
+            <span class="home-text__part-2_animated home-text__part-2_animated_3">Generated</span>
+          </span>
+          <span class="home-text__part-3">
+            <span class="home-text__part-3_animated home-text__part-3_animated_1">Data &</span>
+            <span class="home-text__part-3_animated home-text__part-3_animated_2">Industrial</span>
+            <span class="home-text__part-3_animated home-text__part-3_animated_3">IoT</span>
+          </span>
+        </p>
+        <a href="./contacts.html" class="home__startbtn blue-link start_project_button fadeIn">
+          <div class="blue-link-arrow__top-part"></div>
+          <div class="blue-link-arrow__bottom-part"></div>
+          Start the project
+        </a>
+        <img class="home__mobile-img" src="images/home-bg-mobile.svg" alt="home mobile tech graphics">
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-background"></div>
+        <div class="about-content">
+          <img class="about__mobile-img" src="images/aboutus-bg-mobile.svg" alt="about-us mobile tech graphics">
+          <p class="about-content-text">
+            Focus on one domain — Machine Generated Data.
+            <span class="about-content-text__part">
+              We provide
+              <span class="about-content-text-animbox about-content-text-animbox_1">
+                <a href="#technology" class="about-content-text__link about-content-text__link_1">Data Science</a>
+              </span>
+              <!-- <span class="coma">,</span> -->
+              <span class="about-content-text-animbox about-content-text-animbox_2">
+                <a href="#technology" class="about-content-text__link about-content-text__link_2">Data Engineering</a>
+              </span>
+              and
+              <span class="about-content-text-animbox about-content-text-animbox_3">
+                <a href="#technology" class="about-content-text__link about-content-text__link_3">Embedded development</a>
+              </span>
+              services to yield value
+              from
+              data:
+              OPEX improvement, uptime, decisions quality.
+            </span>
+          </p>
+          <a href="./about-us.html" class="about-content__link blue-link read_more_button">
+            <div class="blue-link-arrow__top-part"></div>
+            <div class="blue-link-arrow__bottom-part"></div>
+            Read more about us
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="howitworks" class="howitworks">
+      <div class="container">
+        <h2 class="howitworks__caption">How it works</h2>
+        <div class="howitworks-options">
+          <div class="howitworks-options-bullet">
+            <p class="howitworks-options-bullet__caption">talk</p>
+            <a href="#contact" class="howitworks-options-bullet__item">Discuss your ideas or problems</a>
+          </div>
+          <div class="howitworks-options-bullet">
+            <p class="howitworks-options-bullet__caption howitworks-options-bullet__caption_big">
+              <span>Propose</span>
+              <span>Roadmap</span>
+            </p>
+            <a href="#contact" class="howitworks-options-bullet__item">Conduct Requirements and Data analysis</a>
+            <a href="#contact" class="howitworks-options-bullet__item">Articulate tradeoffs</a>
+            <a href="#contact" class="howitworks-options-bullet__item">Set the expectation baselines</a>
+            <a href="#contact" class="howitworks-options-bullet__item">Prepare project plan</a>
+          </div>
+          <div class="howitworks-options-bullet">
+            <p class="howitworks-options-bullet__caption howitworks-options-bullet__caption_big">Deliver Pilot Product
+            </p>
+            <a href="#contact" class="howitworks-options-bullet__item">Stay lean</a>
+            <a href="#contact" class="howitworks-options-bullet__item">Validate hypothesises and concepts with minimal
+              investments</a>
+            <a href="#contact" class="howitworks-options-bullet__item">Analyse the feedback</a>
+          </div>
+          <div class="howitworks-options-bullet">
+            <p class="howitworks-options-bullet__caption">Scale</p>
+            <a href="#contact" class="howitworks-options-bullet__item">Deploy solution to the production environment</a>
+            <a href="#contact" class="howitworks-options-bullet__item">Integrate with exisiting infrastructure</a>
+            <a href="#contact" class="howitworks-options-bullet__item">Improve and optimize</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="solutions" class="solutions">
+      <div class="container">
+        <h2 class="solutions__caption">Solutions</h2>
+        <div id="solutionsGrid" class="solutions-grid">
+
+          <div class="solutions-grid-box solutions-grid-box-1">
+            <a id="predictive_maintenance_button" href="./solutions.html#0" class="solutions-grid-item"
+              (click)="goToSolution(0)">
+              <p class="solutions-grid-item__caption">Predictive Maintenance</p>
+              <p class="solutions-grid-item__text">
+                <span>Predict the future</span>
+                <span>health of equipment</span>
+                <span>or an asset</span>
+              </p>
+              <span class="solutions-grid-item__link blue-link">
+                <div class="blue-link-arrow__top-part"></div>
+                <div class="blue-link-arrow__bottom-part"></div>
+                Read more
+              </span>
+            </a>
+            <a id="condition_monitoring_button" href="./solutions.html#1" class="solutions-grid-item">
+              <p class="solutions-grid-item__caption">Condition Monitoring</p>
+              <p class="solutions-grid-item__text">
+                <span>Get current equipment</span>
+                <span>health</span>
+              </p>
+              <span class="solutions-grid-item__link blue-link">
+                <div class="blue-link-arrow__top-part"></div>
+                <div class="blue-link-arrow__bottom-part"></div>
+                Read more
+              </span>
+            </a>
+            <a id="sensor_data_button" href="./solutions.html#2" class="solutions-grid-item">
+              <p class="solutions-grid-item__caption">Sensor data processing</p>
+              <p class="solutions-grid-item__text">
+                <span>Handle different</span>
+                <span>types of sensor data</span>
+              </p>
+              <span class="solutions-grid-item__link blue-link">
+                <div class="blue-link-arrow__top-part"></div>
+                <div class="blue-link-arrow__bottom-part"></div>
+                Read more
+              </span>
+            </a>
+            <a id="hvac_button" href="./solutions.html#3" class="solutions-grid-item">
+              <p class="solutions-grid-item__caption solutions-grid-item__caption_bigmb">Smart HVAC</p>
+              <p class="solutions-grid-item__text">
+                <span>Minimize energy</span>
+                <span>footprint of the</span>
+                <span>building</span>
+              </p>
+              <span class="solutions-grid-item__link blue-link">
+                <div class="blue-link-arrow__top-part"></div>
+                <div class="blue-link-arrow__bottom-part"></div>
+                Read more
+              </span>
+            </a>
+          </div>
+
+          <div class="solutions-grid-box solutions-grid-box-2">
+            <a id="machine_learning_button" href="./solutions.html#4" class="solutions-grid-item">
+              <p class="solutions-grid-item__caption">
+                <span>Machine</span>
+                <span>learning</span>
+              </p>
+              <p class="solutions-grid-item__text">
+                <span>Detect anomalies</span>
+                <span>and patterns in the</span>
+                <span>raw data</span>
+              </p>
+              <span class="solutions-grid-item__link blue-link">
+                <div class="blue-link-arrow__top-part"></div>
+                <div class="blue-link-arrow__bottom-part"></div>
+                Read more
+              </span>
+            </a>
+            <a id="embedded_development_button" href="./solutions.html#5" class="solutions-grid-item">
+              <p class="solutions-grid-item__caption">Embedded Development</p>
+              <p class="solutions-grid-item__text">
+                <span>Low - level</span>
+                <span>programming for PLCs</span>
+                <span>and other IoT devices</span>
+              </p>
+              <span class="solutions-grid-item__link blue-link">
+                <div class="blue-link-arrow__top-part"></div>
+                <div class="blue-link-arrow__bottom-part"></div>
+                Read more
+              </span>
+            </a>
+            <a id="data_processing_button" href="./solutions.html#6" class="solutions-grid-item">
+              <p class="solutions-grid-item__caption">
+                <span>DATA</span>
+                <span>PROCESSING</span>
+              </p>
+              <p class="solutions-grid-item__text">
+                <span>Scalable solutions to</span>
+                <span>establish data flow</span>
+                <span>from field to the cloud</span>
+              </p>
+              <span class="solutions-grid-item__link blue-link">
+                <div class="blue-link-arrow__top-part"></div>
+                <div class="blue-link-arrow__bottom-part"></div>
+                Read more
+              </span>
+            </a>
+            <a id="visualization_button" href="./solutions.html#7" class="solutions-grid-item">
+              <p class="solutions-grid-item__caption">Visualizations and Dashboards</p>
+              <p class="solutions-grid-item__text">
+                <span>Custom reporting</span>
+                <span>and data exploration</span>
+                <span>tools</span>
+              </p>
+              <span class="solutions-grid-item__link blue-link">
+                <div class="blue-link-arrow__top-part"></div>
+                <div class="blue-link-arrow__bottom-part"></div>
+                Read more
+              </span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="technology" class="technology">
+      <div class="container">
+        <h2 id="technologyCaption" class="technology__caption">Technology stacks</h2>
+        <p class="technology__subcaption">We use proven tools and frameworks to build and run data infrastructure</p>
+        <div id="technologyGrid" class="technology-grid">
+          <a id="embedded_button" href="./technologies.html#0" class="technology-grid-item">
+            <p class="technology-grid-item__caption">Embedded</p>
+            <span class="technology-grid-item__link blue-link">
+              <div class="blue-link-arrow__top-part"></div>
+              <div class="blue-link-arrow__bottom-part"></div>
+              Read more
+            </span>
+          </a>
+          <a id="computation_button" href="./technologies.html#1" class="technology-grid-item">
+            <p class="technology-grid-item__caption">Computation</p>
+            <span class="technology-grid-item__link blue-link">
+              <div class="blue-link-arrow__top-part"></div>
+              <div class="blue-link-arrow__bottom-part"></div>
+              Read more
+            </span>
+          </a>
+          <a id="storage_button" href="./technologies.html#2" class="technology-grid-item">
+            <p class="technology-grid-item__caption">Storage</p>
+            <span class="technology-grid-item__link blue-link">
+              <div class="blue-link-arrow__top-part"></div>
+              <div class="blue-link-arrow__bottom-part"></div>
+              Read more
+            </span>
+          </a>
+          <a id="modeling_button" href="./technologies.html#3" class="technology-grid-item">
+            <p class="technology-grid-item__caption">Modeling</p>
+            <span class="technology-grid-item__link blue-link">
+              <div class="blue-link-arrow__top-part"></div>
+              <div class="blue-link-arrow__bottom-part"></div>
+              Read more
+            </span>
+          </a>
+          <a id="visualization_technologies_button" href="./technologies.html#4" class="technology-grid-item">
+            <p class="technology-grid-item__caption">Visualization</p>
+            <span class="technology-grid-item__link blue-link">
+              <div class="blue-link-arrow__top-part"></div>
+              <div class="blue-link-arrow__bottom-part"></div>
+              Read more
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="contact-background"></div>
+        <div class="contact-content">
+
+          <div class="contact-content-info">
+            <h2 class="contact-content-info__caption">Let's talk</h2>
+            <!-- <p class="contact-content-info__text text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+              eiusmod tempor
+              consectetur</p> -->
+            <p class="contact-content-info__location text">United States 3030<br>
+              N. ROCKY POINT DR. STE 150A</p>
+            <p class="contact-content-info__location text">Ukraine, 15 Borisohlibska Str, Kyiv</p>
+            <address class="contact-content-info__email">
+              <a href="mailto:hello@arsdata.io" class="text">hello@arsdata.io</a>
+            </address>
+          </div>
+
+          <div class="contact-content-form">
+            <h2 class="contact-content-form__caption caption">Got questions? — get
+              in touch</h2>
+            <!-- <h2 class="contact-content-form__caption contact-content-form__caption_mobile caption">Got questions?</h2> -->
+            <p class="contact-content-form__text">Send us your questions and we will get back to you as soon as possible
+            </p>
+
+            <form class="form" id="contact-form" onsubmit="return false;">
+              <div class="form-input-box">
+                <input id="formname" name="n" type="text" class="form-input-box__input" type="text" placeholder="Name"
+                  required>
+                <label for="n" id="formNameLable" class="form-input-box__lable"></label>
+              </div>
+
+              <div class="form-input-box">
+                <input id="formemail" name="e" type="email" class="form-input-box__input" placeholder="Email" required>
+                <label for="e" id="formEmailLable" class="form-input-box__lable"></label>
+              </div>
+
+              <div class="form-textarea-box">
+                <textarea id="formmessage" name="m" id="message-textarea" cols="30" rows="3"
+                  placeholder="Message"></textarea>
+                <button type="submit" name="submit_message" class="form-textarea-box__btn send_button"
+                  id="submit-button" soul="index-form" value="Send" onclick="ArsModule.submitForm(event)">Send</button>
+              </div>
+
+              <div class="form-radio-box">
+                <p>
+                  <input class="form-radio-box__radio" type="checkbox" name="termsAndConditions"
+                    id="termsAndConditions">
+                  <label class="form-radio-box-lable" for="termsAndConditions">By clicking the button above, I agree
+                    with
+                    <a href="./terms-and-conditions.html" target="_blanc" class="form-radio-box-lable__link">Terms of
+                      Service</a> and
+                    <a href="./privacy-policy.html" target="_blanc" class="form-radio-box-lable__link">Privacy
+                      Policy</a>
+                </p>
+                </label>
+              </div>
+
+            </form>
+
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer" class="footer">
+      <div class="container footer-content">
+        <a href="index.html" class="footer-content__logo">
+          <img src="images/logos/logo-blue.svg" alt="ARS Data logo">
+        </a>
+        <p class="footer-content__copyright">© 2019 ARS DATA</p>
+      </div>
+    </footer>
+  </main>
+
+  <div id="cookies-popup" style='display:none' class="cookies-popup flex-between">
+    <p class="cookies-popup-text">
+      We use cookies to improve your experience with our site, including analytics and personalisation.
+      By continuing to use the service, you agree to our use of cookies as described in the
+      <a href="./cookie-policy.html" target="_blanc" class="cookies-popup-text__link">Cookie Policy</a>.
+    </p>
+    <button type="button" class="home__startbtn blue-link"
+      onClick="ArsModule.handleCookiesPopUp('hide')">accept</button>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
+  <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
   <!--build:js js/main.min.js -->
-  <script src="js/lib/a-library.js"></script>
-  <script src="js/lib/another-library.js"></script>
+  <script src='js/lib/glide.min.js'></script>
   <script src="js/main.js"></script>
   <!-- endbuild -->
+
 </body>
 
 </html>

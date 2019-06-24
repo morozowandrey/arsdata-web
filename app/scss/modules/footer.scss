@@ -1,0 +1,22 @@
+.footer {
+  background-color: #fff;
+  padding: 40px 0;
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-right: 24px;
+
+    &__logo {
+      line-height: 8px;
+    }
+
+    &__copyright {
+      opacity: 0.5;
+      color: $secondGray;
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+}

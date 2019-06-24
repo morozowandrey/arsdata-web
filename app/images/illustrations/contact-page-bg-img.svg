@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="747px" height="660px" viewBox="0 0 747 660" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Graphic element</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="662.641975%" y1="-678.686777%" x2="0%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#3A3A3A" offset="0%"></stop>
+            <stop stop-color="#121212" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-88.182208%" y1="252.928673%" x2="67.3342115%" y2="-59.4530912%" id="linearGradient-2">
+            <stop stop-color="#0052FF" offset="0%"></stop>
+            <stop stop-color="#111111" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-132.420639%" y1="-349.837747%" x2="3.72215855%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#3A3A3A" offset="0%"></stop>
+            <stop stop-color="#171717" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-51.8551331%" y1="100%" x2="87.3911853%" y2="176.566282%" id="linearGradient-4">
+            <stop stop-color="#0052FF" stop-opacity="0.976336051" offset="0%"></stop>
+            <stop stop-color="#111111" offset="100%"></stop>
+            <stop stop-color="#111111" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="172.481923%" y1="-293.194832%" x2="3.72215855%" y2="100%" id="linearGradient-5">
+            <stop stop-color="#3A3A3A" offset="0%"></stop>
+            <stop stop-color="#393939" offset="0%"></stop>
+            <stop stop-color="#171717" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-278.354901%" y1="-191.890956%" x2="50%" y2="167.668922%" id="linearGradient-6">
+            <stop stop-color="#3A3A3A" offset="0%"></stop>
+            <stop stop-color="#171717" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-55.6089409%" y1="50%" x2="219.106935%" y2="147.521936%" id="linearGradient-7">
+            <stop stop-color="#111111" offset="0%"></stop>
+            <stop stop-color="#0052FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ARSData_Contact@2x">
+            <g id="Screen" transform="translate(-78.000000, 0.000000)">
+                <g id="Graphic-element">
+                    <g id="3" transform="translate(462.000000, 411.000000)">
+                        <rect id="Rectangle-Copy-18" fill="url(#linearGradient-1)" x="0" y="0" width="100" height="68" rx="3"></rect>
+                        <path d="M192,157 L118.5,157 L118.5,214.5 L117.5,214.5 L117.5,156.5 L118,156.5 L118,156 L192,156 L192,107 L50,107 L49,107 L49,69 L50,69 L50,106 L193,106 L193,107 L193,156 L363,156 L363,157 L193,157 L193,214 L192,214 L192,157 Z" id="Combined-Shape" fill="url(#linearGradient-2)"></path>
+                        <rect id="Rectangle-Copy-21" fill="#DEDEDE" opacity="0.03" x="163" y="214" width="60" height="68" rx="3"></rect>
+                        <rect id="Rectangle-Copy-10" fill="url(#linearGradient-3)" x="103" y="214" width="30" height="68" rx="3"></rect>
+                    </g>
+                    <g id="2" transform="translate(0.000000, 585.000000)">
+                        <path d="M102,39 L102,0 L103,0 L103,39 L361,39 L361,40 L0,40 L0,39 L20,39 L20,0 L21,0 L21,39 L61,39 L61,0 L62,0 L62,39 L102,39 Z" id="Combined-Shape" fill="url(#linearGradient-4)" transform="translate(180.500000, 20.000000) scale(-1, -1) translate(-180.500000, -20.000000) "></path>
+                        <rect id="Rectangle" fill="url(#linearGradient-5)" x="241" y="41" width="170" height="68" rx="3"></rect>
+                        <rect id="Rectangle-Copy-9" fill="url(#linearGradient-6)" transform="translate(300.000000, 75.000000) scale(-1, 1) translate(-300.000000, -75.000000) " x="285" y="41" width="30" height="68" rx="3"></rect>
+                    </g>
+                    <g id="1" transform="translate(438.000000, 0.000000)">
+                        <rect id="Rectangle-Copy-20" fill="#DEDEDE" opacity="0.03" x="112" y="158" width="60" height="68" rx="3"></rect>
+                        <rect id="Rectangle-Copy-9" fill="url(#linearGradient-3)" x="142" y="158" width="30" height="68" rx="3"></rect>
+                        <path d="M154,128 L1,128 L-1.17683641e-14,128 L1.17683641e-14,-9.18485099e-17 L1,9.18485099e-17 L1,127 L155,127 L155,128 L155,158 L154,158 L154,128 Z" id="Combined-Shape" fill="url(#linearGradient-7)"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

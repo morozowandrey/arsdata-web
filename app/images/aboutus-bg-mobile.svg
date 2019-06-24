@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="293px" height="74px" viewBox="0 0 293 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Graphic element</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.1">
+        <g id="ARSData_Homepage_360_2x" transform="translate(-67.000000, -640.000000)" fill="#0052FF">
+            <g id="Second-screen" transform="translate(24.000000, 640.000000)">
+                <g id="Graphic-element" transform="translate(43.000000, 0.000000)">
+                    <rect id="Rectangle" transform="translate(147.000000, 44.500000) scale(1, -1) translate(-147.000000, -44.500000) " x="1" y="44" width="292" height="1"></rect>
+                    <rect id="Rectangle" x="190" y="0" width="1" height="44"></rect>
+                    <rect id="Rectangle-Copy-27" x="0" y="44" width="1" height="30"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

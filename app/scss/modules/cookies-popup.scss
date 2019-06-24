@@ -1,0 +1,50 @@
+.cookies-popup {
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 36px 124px;
+  background-color: $mainBlue;
+
+  @include md {
+    padding: 24px 60px;
+    flex-direction: column;
+  }
+
+  @include sm {
+    padding: 24px;
+  }
+
+  &-text {
+    @include text;
+    color: #fff;
+    max-width: 783px;
+    line-height: 24px;
+    margin-right: 24px;
+
+    @include md {
+      margin-right: 0px;
+      margin-bottom: 24px;
+    }
+
+    &__link {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+
+  .blue-link {
+    color: #fff;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+
+    @include md {
+      margin-bottom: 0px;
+    }
+  }
+  .blue-link::before {
+    background: #fff;
+  }
+}

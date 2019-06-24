@@ -1,0 +1,261 @@
+.about {
+  background-color: #fff;
+  background: linear-gradient(180deg, $mainDark 20%, #fff 20%);
+  padding-bottom: 145px;
+
+  @include md {
+    padding-bottom: 100px;
+  }
+
+  @include sm {
+    padding-bottom: 50px;
+  }
+
+  &-background {
+    width: 3000px;
+    position: absolute;
+    background-color: $lightGray;
+    height: 100%;
+    left: 3000px;
+  }
+
+  &-content {
+    position: relative;
+    padding: 180px 128px 180px 166px;
+
+    @include xxl {
+      padding: 160px 100px 160px 124px;
+    }
+
+    @include lg {
+      padding: 100px 30px 100px 130px;
+    }
+
+    @include md {
+      padding: 105px 30px;
+    }
+
+    @include sm {
+      padding: 0 30px 105px 40px;
+    }
+
+    &-text {
+      display: inline-block;
+      margin-bottom: 64px;
+
+      font-family: $main-ff-bold;
+      font-size: 36px;
+      line-height: 60px;
+      opacity: 0;
+
+      @include lg {
+        font-size: 26px;
+        line-height: 40px;
+      }
+
+      @include sm {
+        padding-top: 106px;
+        font-size: 20px;
+        line-height: 36px;
+      }
+
+      &-animbox {
+        position: relative;
+        // padding: 0 3px;
+        display: inline-block;
+        height: 50px;
+        background-image: url(../../images/text-anim-bg-blue_long.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: -567px;
+
+        &:first-of-type {
+          margin-right: 4px;
+
+          &:after {
+            content: ",";
+            position: absolute;
+            bottom: -10px;
+            right: -9px;
+            color: #000;
+
+            @include lg {
+              bottom: -5px;
+              right: -6px;
+            }
+          }
+        }
+
+        @include lg {
+          height: 36px;
+        }
+        @include sm {
+          display: inline;
+          height: 32px;
+          margin-right: 0;
+          background-position-y: -3px;
+        }
+      }
+
+      &__link {
+        @include animatedTextPart;
+
+        // padding: 0 3px;
+        display: inline-block;
+        height: 50px;
+        background-color: #000;
+        background-position-x: -567px;
+
+        @include lg {
+          height: 36px;
+        }
+
+        @include sm {
+          height: 32px;
+        }
+
+        @include xs {
+          &:first-of-type {
+            height: 31px;
+          }
+        }
+        // @include xs {
+        //   &:last-of-type {
+        //     height: 68px;
+        //   }
+        // }
+      }
+
+      .about-content-text__part {
+        display: block;
+
+        @include xl {
+          display: inline-block;
+        }
+      }
+
+      .coma {
+        margin-left: -6px;
+        color: #fff;
+      }
+    }
+
+    &__link {
+      opacity: 0;
+
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+
+        left: 0;
+        top: 12px;
+        height: 1px;
+        width: 20px;
+        background: $mainBlue;
+      }
+    }
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+
+    // &:after {
+    //   content: "";
+    //   display: block;
+    //   position: absolute;
+    //   right: -99%;
+    //   top: 0;
+    //   height: 100%;
+    //   width: 100%;
+    //   background-color: $lightGray;
+    // }
+  }
+
+  &__mobile-img {
+    display: none;
+
+    @include sm {
+      // width: 100%;
+      // display: block;
+    }
+  }
+}
+
+.about-page {
+  padding-top: 158px;
+  padding-bottom: 170px;
+
+  @include md {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+
+  @include sm {
+    padding-bottom: 40px;
+  }
+
+  .container {
+    align-items: end;
+
+    @include md {
+      flex-direction: column;
+    }
+  }
+
+  &-content {
+    opacity: 0;
+    
+    &-title {
+      @include title;
+      min-width: 368px;
+      margin-right: 64px;
+
+      @include sm {
+        font-size: 30px;
+        line-height: 40px;
+      }
+
+      &__part {
+        display: inline-block;
+
+        @include castom-lg {
+          display: block;
+        }
+      }
+      @include castom-lg {
+        min-width: 210px;
+      }
+    }
+
+    &__text {
+      @include text;
+      max-width: 497px;
+      margin-bottom: 24px;
+
+      span {
+        display: block;
+      }
+    }
+
+    &__text:last-of-type {
+      margin-bottom: 64px;
+    }
+
+    &_1 {
+    }
+
+    &_2 {
+      padding-right: 128px;
+
+      @include lg {
+        padding-right: 80px;
+      }
+
+      @include md {
+        padding-right: 24px;
+      }
+    }
+  }
+}

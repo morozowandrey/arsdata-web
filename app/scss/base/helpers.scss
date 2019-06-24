@@ -1,0 +1,67 @@
+.wrapper {
+  max-width: 1366px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.caption {
+  font-size: 16px;
+  letter-spacing: 1.24px;
+  line-height: 25px;
+  color: $mainBlue;
+  text-transform: uppercase;
+}
+
+.text {
+  font-size: 16px;
+  line-height: 25px;
+  color: $secondGray;
+}
+
+.success {
+  color: green;
+}
+
+.error {
+  color: $mainRed;
+}
+
+.hidden {
+  display: none;
+}
+
+// CONTAINER
+
+.container {
+  padding-left: 119px;
+  // max-width: 1366px;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @include xl {
+  }
+  @include lg {
+    padding-left: 80px;
+  }
+  @include md {
+    padding-left: 40px;
+  }
+  @include sm {
+    padding-left: 24px;
+  }
+  @include xs {
+    
+  }
+}

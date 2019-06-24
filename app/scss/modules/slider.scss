@@ -1,0 +1,173 @@
+.slider {
+  padding-top: 140px;
+  padding-bottom: 118px;
+
+  @include lg {
+    padding-top: 64px;
+    margin-bottom: 64px;
+  }
+
+  @include sm {
+    padding-bottom: 0px;
+    margin-bottom: 48px;
+  }
+
+  .slide-content {
+    color: #fff;
+
+    @include lg {
+      margin-bottom: 54px;
+    }
+
+    &__title {
+      @include title;
+
+      @include sm {
+        font-size: 30px;
+        line-height: 40px;
+      }
+    }
+
+    &-text {
+      @include text;
+      max-width: 498px;
+
+      &__part {
+        display: block;
+
+        @include sm {
+          display: inline;
+        }
+      }
+    }
+    &__img {
+      border-radius: 3px;
+
+      &_small {
+        margin-bottom: 40px;
+      }
+    }
+
+    &-1 {
+      max-width: 457px;
+      margin-right: 169px;
+      @include lg {
+        margin-right: 69px;
+      }
+      @include sm {
+        margin-right: 0;
+      }
+    }
+
+    &-2 {
+      padding-right: 128px;
+      min-height: 313px;
+      min-width: 498px;
+      max-width: 618px;
+
+      @include lg {
+        padding-right: 80px;
+        margin-bottom: 48px;
+      }
+      @include sm {
+        min-height: auto;
+        min-width: auto;
+        padding-right: 0;
+        padding-right: 24px;
+      }
+    }
+  }
+
+  /* CUSTOM THEME */
+  .glide__slides {
+    margin: 0;
+  }
+
+  .glide-navigation {
+    @include lg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: -80px;
+    }
+    @include sm {
+      margin-left: 0px;
+    }
+  }
+
+  .glide__arrows {
+    @include sm {
+      display: none;
+    }
+  }
+
+  .glide__slide {
+    display: flex;
+    justify-content: space-between;
+    min-height: 330px;
+
+    @include lg {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include sm {
+      padding-right: 0px;
+    }
+  }
+
+  .glide-slides-numbers {
+    height: 1px;
+    width: 263px;
+    margin-left: 13%;
+    position: relative;
+    margin-top: -1px;
+    background-color: #4e4e4e;
+    @include lg {
+      margin-left: 150px;
+    }
+    @include sm {
+      margin-left: 0;
+      width: 100%;
+      margin-right: 24px;
+    }
+  }
+  .glide-slides-numbers__first,
+  .glide-slides-numbers__last {
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    top: -7px;
+
+    line-height: 80px;
+    font-size: 50px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #0052ff;
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  .glide-slides-numbers__first {
+    left: -30px;
+  }
+  .glide-slides-numbers__last {
+    color: $secondGray;
+    right: -30px;
+  }
+
+  .glide-slides-numbers-line {
+    overflow: hidden;
+  }
+
+  .glide-slides-numbers-line__fill {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #0052ff;
+    transform: translateX(-100%);
+  }
+  /* EO CUSTOM THEME */
+}

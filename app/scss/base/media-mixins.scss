@@ -1,14 +1,88 @@
-$tablet-width: 768px;
-$desktop-width: 1024px;
+// Breakpoints
+$xs: 360px;
+$sm: 576px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1366px;
+$xxl: 1440px;
 
-@mixin tablet {
-  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+@mixin xs {
+  @media (max-width: #{$xs}) {
     @content;
   }
 }
 
-@mixin desktop {
-  @media (min-width: #{$desktop-width}) {
+@mixin sm {
+  @media (max-width: #{$sm}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: #{$md}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: #{$lg}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (max-width: #{$xl}) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media (max-width: #{$xxl}) {
+    @content;
+  }
+}
+
+// Castom
+
+$desktop-height: 768px;
+$tablet-width: 768px;
+$big-tablet-width: 900px;
+$small-desktop-width: 1024px;
+$castom-lg: 1200px;
+$wide-desktop-width: 1366px;
+
+@mixin castom-lg {
+  @media (max-width: #{$castom-lg}) {
+    @content;
+  }
+}
+
+@mixin bigTablet {
+  @media (max-width: #{$big-tablet-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet-width}) and (max-width: #{$small-desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin bigTablet {
+  @media (max-width: #{$big-tablet-width}) {
+    @content;
+  }
+}
+
+@mixin smallDesktop {
+  @media (max-width: #{$small-desktop-width}) {
+    @content;
+  }
+}
+
+@mixin wideDesktop {
+  @media (min-width: #{$wide-desktop-width}) and (min-height: #{$desktop-height}) {
     @content;
   }
 }

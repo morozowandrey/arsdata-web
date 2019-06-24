@@ -1,0 +1,114 @@
+.howitworks {
+  @include noScrollbar;
+  padding-bottom: 100px;
+  background-color: #fff;
+
+  @include sm {
+    @include blueScrollbar;
+  }
+
+  .container {
+    padding-right: 24px;
+  }
+
+  &__caption {
+    opacity: 0;
+    margin-bottom: 53px;
+    font-family: $main-ff-bold;
+    font-size: 48px;
+    line-height: 72px;
+
+    @include sm {
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+
+  &-options {
+    opacity: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 48px;
+
+    padding-right: 120px;
+
+    &-bullet {
+      flex: 0 0 auto;
+      max-width: 200px;
+      margin-right: 40px;
+      padding-top: 10px;
+
+      &:nth-child(1) .howitworks-options-bullet__caption:after {
+        content: "01";
+      }
+      &:nth-child(2) .howitworks-options-bullet__caption:after {
+        content: "02";
+      }
+      &:nth-child(3) .howitworks-options-bullet__caption:after {
+        content: "03";
+      }
+      &:nth-child(4) .howitworks-options-bullet__caption:after {
+        content: "04";
+      }
+
+      &__caption {
+        position: relative;
+        margin-bottom: 47px;
+        padding-left: 27px;
+        font-size: 16px;
+        letter-spacing: 1.24px;
+        line-height: 25px;
+        text-transform: uppercase;
+        color: $mainBlue;
+
+        &_big {
+          margin-bottom: 22px;
+        }
+
+        span {
+          display: block;
+        }
+
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 0;
+          top: -20px;
+          height: 2px;
+
+          opacity: 0.1;
+          color: $mainBlue;
+          font-family: $main-ff-bold;
+          font-size: 36px;
+          line-height: 55px;
+        }
+      }
+
+      &__item {
+        padding: 25px 0;
+        border-top: 1px solid $whiteGray;
+        font-size: 16px;
+        line-height: 24px;
+        color: $secondGray;
+        display: block;
+
+        &:hover {
+          padding-bottom: 24px;
+          border-top: 1px solid $mainBlue;
+          border-bottom: 1px solid $mainBlue;
+          color: $mainBlue;
+          cursor: pointer;
+          display: block;
+        }
+
+        &:hover + p {
+          border-top: 1px solid $mainBlue;
+          display: block;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="9px" viewBox="0 0 12 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow-right</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Desktop-Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ARSData_Homepage_v1@2x" transform="translate(-1230.000000, -3908.000000)" fill="#0052FF">
+            <g id="Sixht-screen" transform="translate(124.000000, 3572.000000)">
+                <g id="Contact-form" transform="translate(556.000000, 80.000000)">
+                    <g id="Field-Message" transform="translate(0.000000, 209.000000)">
+                        <g id="Button" transform="translate(497.000000, 40.000000)">
+                            <g id="arrow-right" transform="translate(53.000000, 7.000000)">
+                                <path d="M10.2928932,5 L0.5,5 C0.22385763,5 0,4.7761424 0,4.5 C0,4.2238576 0.22385763,4 0.5,4 L10.2928932,4 L7.1464466,0.85355339 C6.9511845,0.65829124 6.9511845,0.34170876 7.1464466,0.14644661 C7.3417088,-0.04881554 7.6582912,-0.04881554 7.8535534,0.14644661 L11.8535534,4.1464466 C12.0488155,4.3417088 12.0488155,4.6582912 11.8535534,4.8535534 L7.8535534,8.8535534 C7.6582912,9.0488155 7.3417088,9.0488155 7.1464466,8.8535534 C6.9511845,8.6582912 6.9511845,8.3417088 7.1464466,8.1464466 L10.2928932,5 Z" id="Path"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

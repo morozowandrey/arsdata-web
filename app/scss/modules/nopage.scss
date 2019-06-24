@@ -1,0 +1,48 @@
+.nopage {
+  height: calc(100vh - 79px);
+
+  @include md {
+    padding-right: 24px;
+  }
+
+  .container {
+    height: 100%;
+    flex-direction: column;
+    align-items: end;
+  }
+
+  &-bg {
+    position: absolute;
+    z-index: -10;
+    right: 0;
+    bottom: 0;
+  }
+
+  &-title {
+    @include title;
+    margin-bottom: 8px;
+    padding-right: 40px;
+
+    @include md {
+      font-size: 30px;
+      line-height: 46px;
+    }
+  }
+  &-text {
+    @include text;
+    margin-bottom: 64px;
+
+    @include sm {
+      span {
+        display: block;
+      }
+    }
+  }
+
+  .home__startbtn {
+    @include sm {
+      margin-bottom: 0px;
+      margin-left: 0px;
+    }
+  }
+}

@@ -1,0 +1,70 @@
+.blue-link {
+  max-width: 300px;
+  display: block;
+  position: relative;
+  padding-left: 36px;
+
+  color: $mainBlue;
+  font-size: 16px;
+  letter-spacing: 1.14px;
+  line-height: 25px;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  transition: all 0.5s;
+
+  &:hover {
+    cursor: pointer;
+    transform: translateX(10px);
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+
+    left: 0;
+    top: 12px;
+    height: 1px;
+    width: 20px;
+    background: $mainBlue;
+    transition: all 0.5s;
+  }
+
+  &:hover:before {
+    transition: all 0.5s;
+    // transform: translateX(10px);
+  }
+}
+
+.blue-link:hover .blue-link-arrow__top-part,
+.blue-link:hover .blue-link-arrow__bottom-part {
+  opacity: 1;
+  // transform: translateX(10px) rotate(50deg);
+}
+.blue-link:hover .blue-link-arrow__bottom-part {
+  // transform: translateX(10px) rotate(-50deg);
+}
+
+.blue-link-arrow__top-part,
+.blue-link-arrow__bottom-part {
+  opacity: 0;
+  display: block;
+  position: absolute;
+  left: 11px;
+  top: 8px;
+  height: 1px;
+  width: 10.5px;
+  background: #0052ff;
+  transition: all 0.5s;
+  transform: rotate(50deg);
+}
+
+.solutions-grid-item__link .blue-link-arrow__top-part,
+.solutions-grid-item__link .blue-link-arrow__bottom-part {
+  background: #fff;
+}
+.blue-link-arrow__bottom-part {
+  top: 16px;
+  transform: rotate(-50deg);
+}

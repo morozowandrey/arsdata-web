@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>ARS Data</title>
+
+  <meta name="keywords" content="ARS Data, Data sience, Big data, Embedded, HVAC, Maintenance">
+  <meta name="author" content="EarlyBird">
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="ARS Data website">
+  <meta name="twitter:description" content="ARS Data website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ARS Data">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="ARS Data">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ARS Data">
+  <meta property="og:description" content="ARS Data website">
+
+  <!-- Google Analytics -->
+  <script>
+    window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+    ga('create', 'UA-116482002-1', 'auto');
+    ga("send", "pageview");
+  </script>
+  <script async src='https://www.google-analytics.com/analytics.js'></script>
+  <!-- End Google Analytics -->
+
+  <link rel="manifest" href="manifest.json">
+
+  <!--build:css css/styles.min.css-->
+  <link rel="stylesheet" href="css/main.css">
+  <!--endbuild-->
+  <link rel="shortcut icon" type="image/png" href="./images/icon/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="./images/icon/favicon-16x16.png">
+</head>
+
+<body>
+  <noscript>
+    Website doesn't work when JavaScript disabled. Please enable JavaScript
+  </noscript>
+
+  <!-- <img class="contact-page-bg" src="./images/illustrations/contact-page-bg-img.svg" alt=""> -->
+
+  <header class="header">
+    <div class="container flex-between">
+      <a href="index.html" class="header__logo">
+        <img src="images/logos/logo-white.svg" alt="ARS Data logo">
+      </a>
+
+      <nav class="navigation" id="navigation">
+        <a aria-label="mobile menu" class="navigation-mobile">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+
+        <div class="navigation-desktop">
+          <img src="images/logos/logo-white.svg" alt="ARS Data logo" class="navigation-desktop__logo">
+          <a class="navigation-desktop__item" href="./about-us.html">About us</a>
+          <a class="navigation-desktop__item" href="./solutions.html">Solutions</a>
+          <a class="navigation-desktop__item" href="./technologies.html">Technology</a>
+          <a class="navigation-desktop__item" href="./contacts.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contactsPage">
+
+    <section id="contactPage" class="contact-page">
+      <div class="container flex-between">
+        <div class="contact-page-content contact-page-content_1">
+          <h2 class="contact-page-content-title">
+            <span class="contact-page-content-title__part">Start </span>
+            <span class="contact-page-content-title__part">the project</span>
+          </h2>
+          <p class="contact-page-content-text">
+            Don’t like forms? Send us an
+            <a href="mailto:hello@arsdata.io" class="form-radio-box-lable__link">email</a>.
+          </p>
+        </div>
+        <div class="contact-page-content contact-page-content_2">
+
+          <form class="form" id="contact-form" onsubmit="return false;">
+
+            <div class="form-input-box">
+              <input id="formname" name="n" type="text" class="form-input-box__input" type="text" placeholder="Name"
+                required>
+              <label for="n" id="formNameLable" class="form-input-box__lable"></label>
+            </div>
+
+            <div class="form-input-box">
+              <input id="formemail" name="e" type="email" class="form-input-box__input" placeholder="Email" required>
+              <label for="e" id="formEmailLable" class="form-input-box__lable"></label>
+            </div>
+
+
+            <div class="form-textarea-box">
+              <textarea id="formmessage" name="m" id="message-textarea" cols="30" rows="3"
+                placeholder="Message"></textarea>
+              <div class="flex-between">
+                <button type="submit" name="submit_message" class="home__startbtn blue-link contact-page-submit-button"
+                  id="submit-button" soul="contacts-form" onclick="ArsModule.submitForm(event)">
+                  <div class="blue-link-arrow__top-part"></div>
+                  <div class="blue-link-arrow__bottom-part"></div>
+                  Send message
+                </button>
+                <span class="home__startbtn blue-link form-success-text send_message_button">Send message</span>
+                <span class="home__startbtn blue-link form-error-text">Your message wasn’t sent</span>
+              </div>
+            </div>
+            <div class="form-radio-box">
+              <p>
+                <input class="form-radio-box__radio" type="checkbox" name="termsAndConditions" id="termsAndConditions">
+                <label class="form-radio-box-lable" for="termsAndConditions">By clicking the button above, I agree
+                  with
+                  <a href="./terms-and-conditions.html" target="_blanc" class="form-radio-box-lable__link">Terms of
+                    Service</a> and
+                  <a href="./privacy-policy.html" target="_blanc" class="form-radio-box-lable__link">Privacy Policy</a>
+              </p>
+              </label>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="cookies-popup" style='display:none' class="cookies-popup flex-between">
+    <p class="cookies-popup-text">
+      We use cookies to improve your experience with our site, including analytics and personalisation.
+      By continuing to use the service, you agree to our use of cookies as described in the
+      <a href="./cookie-policy.html" target="_blanc" class="cookies-popup-text__link">Cookie Policy</a>.
+    </p>
+    <button type="button" class="home__startbtn blue-link"
+      onClick="ArsModule.handleCookiesPopUp('hide')">accept</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
+  <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
+  <!--build:js js/main.min.js -->
+  <script src='js/lib/glide.min.js'></script>
+  <script src="js/main.js"></script>
+  <!-- endbuild -->
+</body>
+
+</html>

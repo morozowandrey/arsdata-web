@@ -1,0 +1,16 @@
+{
+  "name": "ARS Data website",
+  "short_name": "ARS Data",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#000",
+  "description": "ARS Data website",
+  "icons": [
+    {
+      "src": "images/icon/favicon-16x16.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    }
+  ]
+}

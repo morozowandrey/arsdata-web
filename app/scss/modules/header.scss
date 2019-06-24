@@ -1,6 +1,223 @@
-.este {
-    color: red;
-    font-size: 25px;
-    font-family: $main-ff;
-    padding: 50px;
+.header {
+  width: 100%;
+  padding: 38px 0 0;
+
+  will-change: transform;
+  transition: background 0.3s, -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
+  transition: transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1), background 0.3s;
+  transition: transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1), background 0.3s,
+    -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+
+  .container {
+    align-items: end;
+  }
+
+  @include md {
+    padding-top: 30px;
+  }
+
+  &__logo {
+    line-height: 8px;
+
+    @include lg {
+      margin-top: -10px;
+    }
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 128px;
+    text-transform: uppercase;
+
+    @include lg {
+      display: block;
+      padding-right: 80px;
+    }
+    @include md {
+      padding-right: 40px;
+    }
+    @include lg {
+      padding-right: 25px;
+      text-transform: none;
+    }
+
+    &-desktop {
+      min-width: 492px;
+      max-height: none;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      overflow: hidden;
+      // transition: all 0.3s ease-out;
+
+      @include lg {
+        min-width: auto;
+        max-height: 0;
+        display: none;
+      }
+
+      &__logo {
+        display: none;
+
+        @include lg {
+          display: block;
+          position: absolute;
+          top: 38px;
+        }
+      }
+
+      &.collapse {
+        max-height: 100vh;
+        height: 100vh;
+        width: 100%;
+        padding-left: 80px;
+
+        position: fixed;
+        left: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: center;
+
+        background-color: $mainDark;
+
+        @include sm {
+          top: 0px;
+          min-height: 100vh;
+          justify-content: center;
+          padding-left: 24px;
+        }
+
+        @include xs {
+          padding-top: 65px;
+        }
+
+      }
+      &.collapse .navigation-desktop__item {
+        @include title;
+        color: #fff;
+
+        @include sm {
+          font-size: 30px;
+          line-height: 46px;
+        }
+      }
+
+      &__item {
+        display: inline-block;
+        position: relative;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        color: #909090;
+        font-size: 14px;
+        letter-spacing: 1px;
+        line-height: 21px;
+        transition: color 0.5s ease;
+
+        @include xs {
+          font-size: 30px;
+          line-height: 46px;
+        }
+
+        &:hover {
+          color: #fff;
+          cursor: pointer;
+        }
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 1px;
+          width: 0;
+          transition: width 0s ease, background 0.5s ease;
+        }
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          height: 1px;
+          width: 0;
+          background: $mainBlue;
+          transition: width 0.5s ease;
+        }
+        &:hover:before {
+          width: 20px;
+          background: $mainBlue;
+          transition: width 0.5s ease;
+        }
+        &:hover:after {
+          width: 80%;
+          background: transparent;
+          transition: all 0s ease;
+        }
+      }
+    }
+
+    &-mobile {
+      display: none;
+      border-radius: 5px;
+      background-color: transparent;
+      float: right;
+      height: 18px;
+      width: 24px;
+      cursor: pointer;
+
+      &.open span {
+        margin-bottom: 5px;
+      }
+      &.open span:first-child {
+        transform: rotate(45deg) translate(4.4px, 4.4px);
+      }
+      &.open span:nth-child(2) {
+        width: 0%;
+        opacity: 0;
+      }
+      &.open span:last-child {
+        transform: rotate(-45deg) translate(4px, -4px);
+      }
+      @include lg {
+        position: relative;
+        z-index: 5;
+        display: block;
+      }
+      span {
+        position: relative;
+        display: block;
+        height: 1px;
+        width: 100%;
+        margin-bottom: 7px;
+        background-color: #fff;
+        transition: all 0.25s;
+      }
+    }
+  }
+}
+
+.signature {
+  position: fixed;
+  font-weight: 100;
+  bottom: 10px;
+  color: #fff;
+  left: 0;
+  letter-spacing: 4px;
+  font-size: 10px;
+  width: 100vw;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.hide-nav {
+  transform: translateY(-120%) !important;
+  -webkit-transform: translateY(-120%) !important;
 }

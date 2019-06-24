@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="9px" viewBox="0 0 21 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Arrow</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ARSData_Homepage_v1@2x" transform="translate(-163.000000, -3367.000000)" fill="#0052FF">
+            <g id="Fifth-screen" transform="translate(0.000000, 2912.000000)">
+                <g id="Cards" transform="translate(123.000000, 281.000000)">
+                    <g id="Card-1-Hover">
+                        <g id="Button" transform="translate(40.000000, 167.000000)">
+                            <g id="Arrow" transform="translate(0.000000, 7.000000)">
+                                <rect id="Rectangle-Copy" x="0" y="4" width="20" height="1"></rect>
+                                <path d="M19.2928932,5 L9.5,5 C9.22385763,5 9,4.7761424 9,4.5 C9,4.2238576 9.22385763,4 9.5,4 L19.2928932,4 L16.1464466,0.853553393 C15.9511845,0.658291243 15.9511845,0.341708763 16.1464466,0.146446613 C16.3417088,-0.0488155375 16.6582912,-0.0488155375 16.8535534,0.146446613 L20.8535534,4.1464466 C21.0488155,4.3417088 21.0488155,4.6582912 20.8535534,4.8535534 L16.8535534,8.8535534 C16.6582912,9.0488155 16.3417088,9.0488155 16.1464466,8.8535534 C15.9511845,8.6582912 15.9511845,8.3417088 16.1464466,8.1464466 L19.2928932,5 Z" id="Path"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,7 +1,17 @@
 @font-face {
-    font-family: 'Nexa-Bold';
-    src: url('../src/fonts/Nexa-Bold.otf');
-    
-    font-style: normal;
+    font-family: 'poppins-regular';
+    src: url('../fonts/poppins/poppins-light.ttf') format('truetype');
     font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppins-bold';
+    src: url('../fonts/poppins/poppins-bold-webfont.eot');
+    src: url('../fonts/poppins/poppins-bold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/poppins/poppins-bold-webfont.woff2') format('woff2'),
+        url('../fonts/poppins/poppins-bold-webfont.woff') format('woff'),
+        url('../fonts/poppins/poppins-bold.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
