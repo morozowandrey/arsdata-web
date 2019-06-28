@@ -91,18 +91,23 @@
             <div class="form-input-box">
               <input id="formname" name="n" type="text" class="form-input-box__input" type="text" placeholder="Name"
                 required>
+              <span class="form-input-box__border"></span>
               <label for="n" id="formNameLable" class="form-input-box__lable"></label>
             </div>
 
             <div class="form-input-box">
               <input id="formemail" name="e" type="email" class="form-input-box__input" placeholder="Email" required>
+              <span class="form-input-box__border"></span>
               <label for="e" id="formEmailLable" class="form-input-box__lable"></label>
             </div>
 
 
             <div class="form-textarea-box">
-              <textarea id="formmessage" name="m" id="message-textarea" cols="30" rows="3"
-                placeholder="Message"></textarea>
+              <div class="form-textarea-box">
+                <textarea id="formmessage" name="m" id="message-textarea" cols="30" rows="3"
+                  placeholder="Message"></textarea>
+                <span class="form-textarea-box__border"></span>
+              </div>
               <div class="flex-between">
                 <button type="submit" name="submit_message" class="home__startbtn blue-link contact-page-submit-button"
                   id="submit-button" soul="contacts-form" onclick="ArsModule.submitForm(event)">

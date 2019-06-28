@@ -59,7 +59,7 @@
 
 @keyframes bgSlideInWide {
   from {
-    left: 3000px;
+    left: 4000px;
   }
 
   to {
@@ -286,6 +286,24 @@
     opacity: 0;
     -webkit-transform: translate3d(0, 30%, 0);
     transform: translate3d(0, 30%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUpSlider {
+  animation: fadeInUp 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100px, 0);
+    transform: translate3d(0, 100px, 0);
   }
 
   to {

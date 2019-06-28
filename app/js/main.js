@@ -348,6 +348,40 @@ $(document).ready(function () {
     ArsModule.handleCookiesPopUp('show');
   }, 0);
 
+  if (document.getElementById('cookiePage') || document.getElementById('termsPage') || document.getElementById('policyPage')) {
+    //Scroll back to top
+
+    var progressPath = document.querySelector('.progress-wrap path');
+    var pathLength = progressPath.getTotalLength();
+    progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+    progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+    progressPath.style.strokeDashoffset = pathLength;
+    progressPath.getBoundingClientRect();
+    progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
+    var updateProgress = function () {
+      var scroll = $(window).scrollTop();
+      var height = $(document).height() - $(window).height();
+      var progress = pathLength - (scroll * pathLength / height);
+      progressPath.style.strokeDashoffset = progress;
+    }
+    updateProgress();
+    $(window).scroll(updateProgress);
+    var offset = 50;
+    var duration = 550;
+    jQuery(window).on('scroll', function () {
+      if (jQuery(this).scrollTop() > offset) {
+        jQuery('.progress-wrap').addClass('active-progress');
+      } else {
+        jQuery('.progress-wrap').removeClass('active-progress');
+      }
+    });
+    jQuery('.progress-wrap').on('click', function (event) {
+      event.preventDefault();
+      jQuery('html, body').animate({ scrollTop: 0 }, duration);
+      return false;
+    })
+  }
+
 });
 
 //----------------EVENTS----------------//
@@ -517,78 +551,131 @@ $(document).ready(function (event) {
     aboutUsContactIo.observe(document.getElementById('contact'));
   }
 
-  if (document.getElementById('policyPage')) {
-    const contactPageIo = new IntersectionObserver(entries => {
+  if (document.getElementById('techPage')) {
+    const techPageIo = new IntersectionObserver(entries => {
       for (const entry of entries) {
 
-        if (entry.target.id == 'contactPage' && entry.isIntersecting) {
-          $('.contact-page-content').addClass('fadeInUpFixed');
+        if (entry.target.id == 'techPage' && entry.isIntersecting) {
+          $('.slider').addClass('fadeInUpSlider');
         }
 
       }
     }, { threshold: 0.3 });
 
-    contactPageIo.observe(document.getElementById('contactPage'));
-  }
-
-  if (document.getElementById('cookiePage')) {
-    const contactPageIo = new IntersectionObserver(entries => {
+    const techPageContactIo = new IntersectionObserver(entries => {
       for (const entry of entries) {
 
-        if (entry.target.id == 'contactPage' && entry.isIntersecting) {
-          $('.contact-page-content').addClass('fadeInUpFixed');
+        if (entry.target.id == 'contact' && entry.isIntersecting) {
+          $('.contact-content-info, .contact-content-form').addClass('contactFadeIn');
+          if (windowWidth == "md" || windowWidth == "sm" || windowWidth == "xs") {
+            $('.contact-background').addClass("bgSlideInMobile");
+          } else {
+            $('.contact-background').addClass("bgSlideInWide");
+          }
         }
 
       }
     }, { threshold: 0.3 });
 
-    contactPageIo.observe(document.getElementById('contactPage'));
+    techPageIo.observe(document.getElementById('techPage'));
+    techPageContactIo.observe(document.getElementById('contact'));
   }
 
   if (document.getElementById('solutionsPage')) {
-    const contactPageIo = new IntersectionObserver(entries => {
+    const solutionsPageIo = new IntersectionObserver(entries => {
       for (const entry of entries) {
 
-        if (entry.target.id == 'contactPage' && entry.isIntersecting) {
-          $('.contact-page-content').addClass('fadeInUpFixed');
+        if (entry.target.id == 'solutionsPage' && entry.isIntersecting) {
+          $('.slider').addClass('fadeInUpSlider');
         }
 
       }
     }, { threshold: 0.3 });
 
-    contactPageIo.observe(document.getElementById('contactPage'));
-  }
-
-  if (document.getElementById('techPage')) {
-    const contactPageIo = new IntersectionObserver(entries => {
+    const solutionsPageContactIo = new IntersectionObserver(entries => {
       for (const entry of entries) {
 
-        if (entry.target.id == 'contactPage' && entry.isIntersecting) {
-          $('.contact-page-content').addClass('fadeInUpFixed');
+        if (entry.target.id == 'contact' && entry.isIntersecting) {
+          $('.contact-content-info, .contact-content-form').addClass('contactFadeIn');
+          if (windowWidth == "md" || windowWidth == "sm" || windowWidth == "xs") {
+            $('.contact-background').addClass("bgSlideInMobile");
+          } else {
+            $('.contact-background').addClass("bgSlideInWide");
+          }
         }
 
       }
     }, { threshold: 0.3 });
 
-    contactPageIo.observe(document.getElementById('contactPage'));
+    solutionsPageIo.observe(document.getElementById('solutionsPage'));
+    solutionsPageContactIo.observe(document.getElementById('contact'));
   }
 
   if (document.getElementById('termsPage')) {
-    const contactPageIo = new IntersectionObserver(entries => {
+    const termsPageIo = new IntersectionObserver(entries => {
       for (const entry of entries) {
 
-        if (entry.target.id == 'contactPage' && entry.isIntersecting) {
+        if (entry.target.id == 'termsPage' && entry.isIntersecting) {
+          
+        }
+
+      }
+    }, { threshold: 0.3 });
+
+    termsPageIo.observe(document.getElementById('termsPage'));
+  }
+
+  if (document.getElementById('policyPage')) {
+    const policyPageIo = new IntersectionObserver(entries => {
+      for (const entry of entries) {
+
+        if (entry.target.id == 'policyPage' && entry.isIntersecting) {
+          
+        }
+
+      }
+    }, { threshold: 0.3 });
+
+    policyPageIo.observe(document.getElementById('policyPage'));
+  }
+
+  if (document.getElementById('cookiePage')) {
+    const cookiePageIo = new IntersectionObserver(entries => {
+      for (const entry of entries) {
+
+        if (entry.target.id == 'cookiePage' && entry.isIntersecting) {
           $('.contact-page-content').addClass('fadeInUpFixed');
         }
 
       }
     }, { threshold: 0.3 });
 
-    contactPageIo.observe(document.getElementById('contactPage'));
+    cookiePageIo.observe(document.getElementById('cookiePage'));
+  }
+
+  if (document.getElementById('pageNotFound')) {
+    const cookiePageIo = new IntersectionObserver(entries => {
+      for (const entry of entries) {
+
+        if (entry.target.id == 'pageNotFound' && entry.isIntersecting) {
+          $('.nopage').addClass('fadeInUp');
+        }
+
+      }
+    }, { threshold: 0.3 });
+
+    cookiePageIo.observe(document.getElementById('pageNotFound'));
   }
 
 
 });
+
+// $(document).on('mousemove', function (e) {
+//   $('#cursor').css({
+//     left: e.pageX-15,
+//     top: e.pageY-15
+//   });
+// });
 
 
 // GOOGLE ANALITICS

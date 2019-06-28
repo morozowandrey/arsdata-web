@@ -8,10 +8,13 @@
 @import 'base/base-styles';
 @import 'base/fonts';
 @import 'base/animations.scss';
+@import 'modules/progress-scroll-circle';
 @import 'modules/buttons';
+
 @import 'modules/slider';
 @import 'modules/nopage';
 @import 'modules/cookies-popup';
+
 @import 'modules/cookie-policy';
 @import 'modules/privacy-policy';
 @import 'modules/terms-and-conditions';

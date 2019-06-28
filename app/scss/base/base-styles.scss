@@ -8,6 +8,7 @@ html {
   line-height: 22px;
   height: 100%;
 }
+
 body {
   margin: 0;
   display: flex;
@@ -53,4 +54,11 @@ main {
   @include sm {
     display: none;
   }
+}
+
+#cursor {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: orange;
 }

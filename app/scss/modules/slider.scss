@@ -1,6 +1,7 @@
 .slider {
   padding-top: 140px;
   padding-bottom: 118px;
+  opacity: 0;
 
   @include lg {
     padding-top: 64px;

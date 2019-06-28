@@ -1,21 +1,11 @@
 .contact {
   background-color: #fff;
   background: linear-gradient(180deg, $mainDark 20%, #fff 20%);
+  position: relative;
 
   .container {
     position: relative;
     width: 100%;
-
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      right: -99%;
-      top: 0;
-      height: 100%;
-      width: 100%;
-      background-color: $lightGray;
-    }
   }
 
   &-background {
@@ -30,8 +20,6 @@
     display: flex;
     justify-content: space-between;
     padding: 125px 125px 85px;
-
-    background-color: $lightGray; 
 
     @include lg {
       padding: 86px 60px 85px;
@@ -161,9 +149,22 @@
             margin-bottom: 24px;
             color: $mainDark;
 
-            &:focus {
-              border-bottom: 1px solid $mainBlue;
+            &:focus ~ .form-input-box__border {
+              transform-origin: bottom left;
+              transform: scaleX(1);
             }
+          }
+
+          &__border {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color: $mainBlue;
+            transform-origin: bottom right;
+            transform: scaleX(0);
+            transition: transform 0.5s ease;
           }
 
           &__lable {
@@ -189,9 +190,22 @@
             width: 100%;
             color: $mainDark;
 
-            &:focus {
-              border-bottom: 1px solid $mainBlue;
+            &:focus ~ .form-textarea-box__border {
+              transform-origin: bottom left;
+              transform: scaleX(1);
             }
+          }
+
+          &__border {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color: $mainBlue;
+            transform-origin: bottom right;
+            transform: scaleX(0);
+            transition: transform 0.5s ease;
           }
 
           &__btn {
@@ -337,12 +351,6 @@
   margin-bottom: 0;
 }
 
-
-
-
-
-
-
 // PAGE STILES
 .contact-page {
   padding-top: 170px;
@@ -376,7 +384,7 @@
 
   &-content {
     opacity: 0;
-    
+
     &-title {
       @include title;
       min-width: 401px;
@@ -467,9 +475,22 @@
           transition: background-color 5000s ease-in-out 0s;
         }
 
-        &:focus {
-          border-bottom: 1px solid $mainBlue;
+        &:focus ~ .form-input-box__border {
+          transform-origin: bottom left;
+          transform: scaleX(1);
         }
+      }
+
+      &__border {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: $mainBlue;
+        transform-origin: bottom right;
+        transform: scaleX(0);
+        transition: transform 0.5s ease;
       }
 
       &__lable {
@@ -517,8 +538,9 @@
         width: 100%;
         color: #fff;
 
-        &:focus {
-          border-bottom: 1px solid $mainBlue;
+        &:focus ~ .form-textarea-box__border {
+          transform-origin: bottom left;
+          transform: scaleX(1);
         }
 
         @include sm {
@@ -547,6 +569,18 @@
           width: 20px;
           background: $mainBlue;
         }
+      }
+
+      &__border {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: $mainBlue;
+        transform-origin: bottom right;
+        transform: scaleX(0);
+        transition: transform 0.5s ease;
       }
     }
 
@@ -593,11 +627,10 @@
   }
 }
 
-
 #aboutUsPage {
   .contact {
     position: relative;
-    
+
     &-content {
       background-color: transparent;
       &-info,

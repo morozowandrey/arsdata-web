@@ -1,4 +1,5 @@
 .nopage {
+  opacity: 0;
   height: calc(100vh - 79px);
 
   @include md {
