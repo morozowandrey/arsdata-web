@@ -3,16 +3,26 @@
   bottom: 0;
   z-index: 100;
   width: 100%;
-  padding: 36px 124px;
   background-color: $mainBlue;
 
-  @include md {
-    padding: 24px 60px;
-    flex-direction: column;
+  .container {
+    @include sm {
+      padding: 24px;
+    }
   }
 
-  @include sm {
-    padding: 24px;
+  &-content {
+    padding: 36px 128px 36px 0;
+
+    @include lg {
+      padding: 36px 40px 36px 0;
+      flex-direction: column;
+      align-items: baseline;
+    }
+
+    @include sm {
+      padding: 0;
+    }
   }
 
   &-text {
@@ -20,9 +30,9 @@
     color: #fff;
     max-width: 783px;
     line-height: 24px;
-    margin-right: 24px;
+    margin-right: 40px;
 
-    @include md {
+    @include lg {
       margin-right: 0px;
       margin-bottom: 24px;
     }
@@ -41,7 +51,7 @@
     outline: none;
 
     @include md {
-      margin-bottom: 0px;
+      margin: 0;
     }
   }
   .blue-link::before {

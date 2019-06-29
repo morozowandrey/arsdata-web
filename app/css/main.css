@@ -942,6 +942,14 @@ body.light .progress-wrap svg.progress-circle path {
   opacity: 0;
   /* CUSTOM THEME */
   /* EO CUSTOM THEME */ }
+  @media (max-width: 1680px) {
+    .slider {
+      padding-top: 165px;
+      padding-bottom: 160px; } }
+  @media (max-width: 1440px) {
+    .slider {
+      padding-top: 140px;
+      padding-bottom: 118px; } }
   @media (max-width: 1024px) {
     .slider {
       padding-top: 64px;
@@ -1117,15 +1125,20 @@ body.light .progress-wrap svg.progress-circle path {
   bottom: 0;
   z-index: 100;
   width: 100%;
-  padding: 36px 124px;
   background-color: #0052FF; }
-  @media (max-width: 768px) {
-    .cookies-popup {
-      padding: 24px 60px;
-      flex-direction: column; } }
   @media (max-width: 576px) {
-    .cookies-popup {
+    .cookies-popup .container {
       padding: 24px; } }
+  .cookies-popup-content {
+    padding: 36px 128px 36px 0; }
+    @media (max-width: 1024px) {
+      .cookies-popup-content {
+        padding: 36px 40px 36px 0;
+        flex-direction: column;
+        align-items: baseline; } }
+    @media (max-width: 576px) {
+      .cookies-popup-content {
+        padding: 0; } }
   .cookies-popup-text {
     font-size: 16px;
     line-height: 25px;
@@ -1133,8 +1146,8 @@ body.light .progress-wrap svg.progress-circle path {
     color: #fff;
     max-width: 783px;
     line-height: 24px;
-    margin-right: 24px; }
-    @media (max-width: 768px) {
+    margin-right: 40px; }
+    @media (max-width: 1024px) {
       .cookies-popup-text {
         margin-right: 0px;
         margin-bottom: 24px; } }
@@ -1149,7 +1162,7 @@ body.light .progress-wrap svg.progress-circle path {
     outline: none; }
     @media (max-width: 768px) {
       .cookies-popup .blue-link {
-        margin-bottom: 0px; } }
+        margin: 0; } }
   .cookies-popup .blue-link::before {
     background: #fff; }
 
@@ -1453,7 +1466,7 @@ body.light .progress-wrap svg.progress-circle path {
     position: relative;
     max-width: 570px;
     display: inline-block;
-    margin-top: 150px;
+    margin-top: 165px;
     margin-bottom: 64px;
     color: #696969;
     font-family: "Poppins-Bold", sans-serif;

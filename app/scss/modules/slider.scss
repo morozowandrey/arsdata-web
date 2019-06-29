@@ -3,6 +3,16 @@
   padding-bottom: 118px;
   opacity: 0;
 
+  @include macpro {
+    padding-top: 165px;
+    padding-bottom: 160px;
+  }
+
+  @include xxl {
+    padding-top: 140px;
+    padding-bottom: 118px;
+  }
+
   @include lg {
     padding-top: 64px;
     margin-bottom: 64px;

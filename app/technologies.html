@@ -195,7 +195,7 @@
               <div class="form-input-box">
                 <input id="formname" name="n" type="text" class="form-input-box__input" type="text" placeholder="Name"
                   required>
-                  <span class="form-input-box__border"></span>
+                <span class="form-input-box__border"></span>
                 <label for="n" id="formNameLable" class="form-input-box__lable"></label>
               </div>
 
@@ -208,7 +208,7 @@
               <div class="form-textarea-box">
                 <textarea id="formmessage" name="m" id="message-textarea" cols="30" rows="3"
                   placeholder="Message"></textarea>
-                  <span class="form-textarea-box__border"></span>
+                <span class="form-textarea-box__border"></span>
                 <button type="submit" name="submit_message" class="form-textarea-box__btn send_button"
                   id="submit-button" soul="index-form" value="Send" onclick="ArsModule.submitForm(event)">Send</button>
               </div>
@@ -247,14 +247,20 @@
     </footer>
   </main>
 
-  <div id="cookies-popup" style='display:none' class="cookies-popup flex-between">
-    <p class="cookies-popup-text">
-      We use cookies to improve your experience with our site, including analytics and personalisation.
-      By continuing to use the service, you agree to our use of cookies as described in the
-      <a href="./cookie-policy.html" target="_blanc" class="cookies-popup-text__link">Cookie Policy</a>.
-    </p>
-    <button type="button" class="home__startbtn blue-link"
-      onClick="ArsModule.handleCookiesPopUp('hide')">accept</button>
+  <div id="cookies-popup" style='display:none' class="cookies-popup">
+    <div class="container">
+
+      <div class="cookies-popup-content flex-between">
+        <p class="cookies-popup-text">
+          We use cookies to improve your experience with our site, including analytics and personalisation.
+          By continuing to use the service, you agree to our use of cookies as described in the
+          <a href="./cookie-policy.html" target="_blanc" class="cookies-popup-text__link">Cookie Policy</a>.
+        </p>
+        <button type="button" class="home__startbtn blue-link"
+          onClick="ArsModule.handleCookiesPopUp('hide')">accept</button>
+      </div>
+
+    </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>

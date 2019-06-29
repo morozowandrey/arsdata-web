@@ -180,14 +180,20 @@
 
   </main>
 
-  <div id="cookies-popup" style='display:none' class="cookies-popup flex-between">
-    <p class="cookies-popup-text">
-      We use cookies to improve your experience with our site, including analytics and personalisation.
-      By continuing to use the service, you agree to our use of cookies as described in the
-      <a href="./cookie-policy.html" target="_blanc" class="cookies-popup-text__link">Cookie Policy</a>.
-    </p>
-    <button type="button" class="home__startbtn blue-link"
-      onClick="ArsModule.handleCookiesPopUp('hide')">accept</button>
+  <div id="cookies-popup" style='display:none' class="cookies-popup">
+    <div class="container">
+
+      <div class="cookies-popup-content flex-between">
+        <p class="cookies-popup-text">
+          We use cookies to improve your experience with our site, including analytics and personalisation.
+          By continuing to use the service, you agree to our use of cookies as described in the
+          <a href="./cookie-policy.html" target="_blanc" class="cookies-popup-text__link">Cookie Policy</a>.
+        </p>
+        <button type="button" class="home__startbtn blue-link"
+          onClick="ArsModule.handleCookiesPopUp('hide')">accept</button>
+      </div>
+
+    </div>
   </div>
 
   <div class="progress-wrap">
