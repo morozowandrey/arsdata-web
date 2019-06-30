@@ -15,11 +15,13 @@ const ArsModule = (function () {
   }
 
   function privateStartSliderAnimations() {
+    // $('.glide__slide').addClass('glideFadeAnim');
     $('.glide-slides-numbers-line__fill').addClass('sliderAnim');
     $('.slide-text').addClass('sliderTextAnim');
   }
-
+  
   function privateStopSlidersAnimations() {
+    // $('.glide__slide').removeClass('glideFadeAnim');
     $('.glide-slides-numbers-line__fill').removeClass('sliderAnim');
     $('.slide-text').removeClass('sliderTextAnim');
   }
@@ -50,6 +52,7 @@ const ArsModule = (function () {
 
   let pivateGlide = new Glide('.glide', {
     type: 'carousel',
+    // type: 'fade',
     startAt: 0,
     perView: 1,
     gap: 0,
@@ -72,7 +75,7 @@ const ArsModule = (function () {
     firstNumNode.html(firstSlideNum);
     privateStartSliderAnimations();
   });
-
+  
   pivateGlide.on('run.after', function (event) {
     privateStopSlidersAnimations();
 
