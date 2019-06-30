@@ -47,8 +47,8 @@ main {
 
 .main-page-bg {
   position: absolute;
-  z-index: -10;
-  height: 586px;
+  z-index: 0;
+  top: 12px;
   right: 0;
 
   @include sm {

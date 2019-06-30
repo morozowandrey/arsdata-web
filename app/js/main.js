@@ -443,7 +443,8 @@ $(document).ready(function (event) {
 
         // HOWITWORKS ANIMATIONS
         if (entry.target.id == 'howitworks' && entry.isIntersecting) {
-          $('.howitworks__caption, .howitworks-options').addClass('fadeInUp');
+          $('.howitworks__caption').addClass('fadeInUp');
+          $('.howitworks-options').addClass('fadeInUpDelay');
         }
 
       }
@@ -465,8 +466,8 @@ $(document).ready(function (event) {
 
         // SOLUTIONS ANIMATIONS
         if (entry.target.id == 'solutionsGrid' && entry.isIntersecting) {
-          $('.solutions-grid-item__text, .solutions-grid-item__caption').addClass('fadeIn');
-          $('.solutions-grid').addClass('fadeInUp');
+          $('.solutions-grid-item__caption').addClass('fadeIn');
+          $('.solutions-grid').addClass('fadeInUpDelay');
         }
 
       }
@@ -477,7 +478,8 @@ $(document).ready(function (event) {
 
         // TECHNOLOGIES ANIMATIONS
         if (entry.target.id == 'technology' && entry.isIntersecting) {
-          $('.technology__caption, .technology__subcaption, .technology-grid').addClass('fadeInUp');
+          $('.technology__caption, .technology__subcaption').addClass('fadeInUp');
+          $('.technology-grid').addClass('fadeInUpDelay');
         }
 
       }

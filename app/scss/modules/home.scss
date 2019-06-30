@@ -94,27 +94,15 @@
     &__part-2 {
       &_animated {
         @include animatedTextPart;
-
-        -webkit-animation: anim 5s linear;
-        -moz-animation: anim 5s linear;
-        -ms-animation: anim 5s linear;
-        animation: anim 3s linear;
-        animation-delay: 2.5s;
-
+        animation: anim 1s linear 0.5s forwards;
+        
         &_1 {
-          animation-delay: 2s;
         }
         &_2 {
-          animation-delay: 2.1s;
-          animation-duration: 2s;
-          animation-name: home-text-animation-main;
-          animation-fill-mode: forwards;
+          animation: home-text-animation-main 1s linear 0.5s forwards;
         }
         &_3 {
-          animation-delay: 2.6s;
-          animation-duration: 2s;
-          animation-name: home-text-animation-main;
-          animation-fill-mode: forwards;
+          animation: home-text-animation-main 1s linear 0.9s forwards;
         }
 
         &:before {
@@ -128,11 +116,7 @@
           left: 0;
           background-size: cover;
 
-          -webkit-animation: anim 5s linear;
-          -moz-animation: anim 5s linear;
-          -ms-animation: anim 5s linear;
-          animation: anim 5s linear;
-          animation-delay: 1s;
+          // animation: anim 5s linear 1s forwards;
         }
 
         &:after {
@@ -152,27 +136,16 @@
     &__part-3 {
       &_animated {
         @include animatedTextPart;
-
-        -webkit-animation: anim 2s linear;
-        -moz-animation: anim 2s linear;
-        -ms-animation: anim 2s linear;
-        animation: anim 2s linear;
-        animation-delay: 1s;
-
+        animation: home-text-animation-main 1s linear 1s forwards;
+        
         &_1 {
-          animation-delay: 3.4s;
-          animation-name: home-text-animation-main;
-          animation-fill-mode: forwards;
+          animation: home-text-animation-main 1s linear 1.3s forwards;
         }
         &_2 {
-          animation-delay: 4s;
-          animation-name: home-text-animation-main;
-          animation-fill-mode: forwards;
+          animation: home-text-animation-main 1s linear 1.6s forwards;
         }
         &_3 {
-          animation-delay: 4.8s;
-          animation-name: home-text-animation-main;
-          animation-fill-mode: forwards;
+          animation: home-text-animation-main 1s linear 2s forwards;
         }
 
         &:before {

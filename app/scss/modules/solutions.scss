@@ -135,6 +135,7 @@ $listItemMargin: 10px;
     &-item {
       height: 295px;
       min-width: 329px;
+      max-width: 329px;
       padding: 90px 70px 0;
       margin: 0.5px;
       background-color: $lightGray;
@@ -181,7 +182,6 @@ $listItemMargin: 10px;
       }
 
       &__text {
-        opacity: 0;
         font-size: 16px;
         line-height: 24px;
         color: $secondGray;

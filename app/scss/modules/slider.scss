@@ -182,3 +182,23 @@
   }
   /* EO CUSTOM THEME */
 }
+
+.glide__slides {
+  transform: translate3d(0, 0, 0) !important;
+  // width: 100vw !important;
+  height: 400px;
+}
+.glide__slide {
+  opacity: 0;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease-in;
+  height: 400px;
+}
+
+.glide__slide.glide__slide--active {
+  opacity: 1;
+  z-index: 1;
+}

@@ -468,8 +468,8 @@ main {
 
 .main-page-bg {
   position: absolute;
-  z-index: -10;
-  height: 586px;
+  z-index: 0;
+  top: 12px;
   right: 0; }
   @media (max-width: 576px) {
     .main-page-bg {
@@ -590,11 +590,7 @@ main {
     opacity: 1; } }
 
 .aboutUsTextSlideIn_1 {
-  -webkit-animation: aboutUsTextSlideIn_1 2s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
-  -moz-animation: aboutUsTextSlideIn_1 2s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
-  -ms-animation: aboutUsTextSlideIn_1 2s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
-  animation: aboutUsTextSlideIn_1 2s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
-  animation-delay: 1.45s; }
+  animation: aboutUsTextSlideIn_1 2s cubic-bezier(0.215, 0.61, 0.355, 1) 1.45s forwards; }
 
 @keyframes aboutUsTextSlideIn_1 {
   0% {
@@ -603,11 +599,7 @@ main {
     background-position-x: 0px; } }
 
 .aboutUsBgSlideIn_1 {
-  -webkit-animation: aboutUsBgSlideIn_1 2s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
-  -moz-animation: aboutUsBgSlideIn_1 2s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
-  -ms-animation: aboutUsBgSlideIn_1 2s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
-  animation: aboutUsBgSlideIn_1 2s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
-  animation-delay: 1.5s; }
+  animation: aboutUsBgSlideIn_1 2s cubic-bezier(0.215, 0.61, 0.355, 1) 1.5s forwards; }
 
 @keyframes aboutUsBgSlideIn_1 {
   0% {
@@ -616,11 +608,7 @@ main {
     background-position-x: 0px; } }
 
 .aboutUsTextSlideIn_2 {
-  -webkit-animation: aboutUsTextSlideIn_2 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
-  -moz-animation: aboutUsTextSlideIn_2 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
-  -ms-animation: aboutUsTextSlideIn_2 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
-  animation: aboutUsTextSlideIn_2 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
-  animation-delay: 1.95s; }
+  animation: aboutUsTextSlideIn_2 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) 1.85s forwards; }
 
 @keyframes aboutUsTextSlideIn_2 {
   0% {
@@ -629,11 +617,7 @@ main {
     background-position-x: 0px; } }
 
 .aboutUsBgSlideIn_2 {
-  -webkit-animation: aboutUsBgSlideIn_2 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
-  -moz-animation: aboutUsBgSlideIn_2 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
-  -ms-animation: aboutUsBgSlideIn_2 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
-  animation: aboutUsBgSlideIn_2 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
-  animation-delay: 2s; }
+  animation: aboutUsBgSlideIn_2 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) 1.92s forwards; }
 
 @keyframes aboutUsBgSlideIn_2 {
   0% {
@@ -642,11 +626,7 @@ main {
     background-position-x: 0px; } }
 
 .aboutUsTextSlideIn_3 {
-  -webkit-animation: aboutUsTextSlideIn_3 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
-  -moz-animation: aboutUsTextSlideIn_3 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
-  -ms-animation: aboutUsTextSlideIn_3 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
-  animation: aboutUsTextSlideIn_3 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
-  animation-delay: 2.49s; }
+  animation: aboutUsTextSlideIn_3 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) 2.3s forwards; }
 
 @keyframes aboutUsTextSlideIn_3 {
   0% {
@@ -655,11 +635,7 @@ main {
     background-position-x: 0px; } }
 
 .aboutUsBgSlideIn_3 {
-  -webkit-animation: aboutUsBgSlideIn_3 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
-  -moz-animation: aboutUsBgSlideIn_3 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
-  -ms-animation: aboutUsBgSlideIn_3 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
-  animation: aboutUsBgSlideIn_3 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
-  animation-delay: 2.5s; }
+  animation: aboutUsBgSlideIn_3 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) 2.34s forwards; }
 
 @keyframes aboutUsBgSlideIn_3 {
   0% {
@@ -680,6 +656,19 @@ main {
 .fromLeftOut,
 .fromRightOut {
   opacity: 0 !important; }
+
+.fadeInUpDelay {
+  animation: fadeInUpDelay 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s forwards; }
+
+@keyframes fadeInUpDelay {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 30%, 0);
+    transform: translate3d(0, 30%, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
 
 .fadeInUp {
   animation: fadeInUp 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards; }
@@ -1079,6 +1068,23 @@ body.light .progress-wrap svg.progress-circle path {
     height: 1px;
     background-color: #0052ff;
     transform: translateX(-100%); }
+
+.glide__slides {
+  transform: translate3d(0, 0, 0) !important;
+  height: 400px; }
+
+.glide__slide {
+  opacity: 0;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease-in;
+  height: 400px; }
+
+.glide__slide.glide__slide--active {
+  opacity: 1;
+  z-index: 1; }
 
 .nopage {
   opacity: 0;
@@ -1546,23 +1552,11 @@ body.light .progress-wrap svg.progress-circle path {
       background-image: url(../../images/text-anim-bg-white.png);
       background-size: cover;
       background-repeat: no-repeat;
-      -webkit-animation: anim 5s linear;
-      -moz-animation: anim 5s linear;
-      -ms-animation: anim 5s linear;
-      animation: anim 3s linear;
-      animation-delay: 2.5s; }
-      .home-text__part-2_animated_1 {
-        animation-delay: 2s; }
+      animation: anim 1s linear 0.5s forwards; }
       .home-text__part-2_animated_2 {
-        animation-delay: 2.1s;
-        animation-duration: 2s;
-        animation-name: home-text-animation-main;
-        animation-fill-mode: forwards; }
+        animation: home-text-animation-main 1s linear 0.5s forwards; }
       .home-text__part-2_animated_3 {
-        animation-delay: 2.6s;
-        animation-duration: 2s;
-        animation-name: home-text-animation-main;
-        animation-fill-mode: forwards; }
+        animation: home-text-animation-main 1s linear 0.9s forwards; }
       .home-text__part-2_animated:before {
         position: absolute;
         content: "";
@@ -1571,12 +1565,7 @@ body.light .progress-wrap svg.progress-circle path {
         right: 0;
         bottom: 0;
         left: 0;
-        background-size: cover;
-        -webkit-animation: anim 5s linear;
-        -moz-animation: anim 5s linear;
-        -ms-animation: anim 5s linear;
-        animation: anim 5s linear;
-        animation-delay: 1s; }
+        background-size: cover; }
       .home-text__part-2_animated:after {
         position: absolute;
         content: "";
@@ -1600,23 +1589,13 @@ body.light .progress-wrap svg.progress-circle path {
       background-image: url(../../images/text-anim-bg-white.png);
       background-size: cover;
       background-repeat: no-repeat;
-      -webkit-animation: anim 2s linear;
-      -moz-animation: anim 2s linear;
-      -ms-animation: anim 2s linear;
-      animation: anim 2s linear;
-      animation-delay: 1s; }
+      animation: home-text-animation-main 1s linear 1s forwards; }
       .home-text__part-3_animated_1 {
-        animation-delay: 3.4s;
-        animation-name: home-text-animation-main;
-        animation-fill-mode: forwards; }
+        animation: home-text-animation-main 1s linear 1.3s forwards; }
       .home-text__part-3_animated_2 {
-        animation-delay: 4s;
-        animation-name: home-text-animation-main;
-        animation-fill-mode: forwards; }
+        animation: home-text-animation-main 1s linear 1.6s forwards; }
       .home-text__part-3_animated_3 {
-        animation-delay: 4.8s;
-        animation-name: home-text-animation-main;
-        animation-fill-mode: forwards; }
+        animation: home-text-animation-main 1s linear 2s forwards; }
       .home-text__part-3_animated:before {
         position: absolute;
         content: "";
@@ -1669,7 +1648,7 @@ body.light .progress-wrap svg.progress-circle path {
   .about-content {
     position: relative;
     padding: 180px 128px 180px 166px; }
-    @media (max-width: 1440px) {
+    @media (max-width: 1366px) {
       .about-content {
         padding: 160px 100px 160px 124px; } }
     @media (max-width: 1024px) {
@@ -2041,6 +2020,7 @@ body.light .progress-wrap svg.progress-circle path {
     .solutions-grid-item {
       height: 295px;
       min-width: 329px;
+      max-width: 329px;
       padding: 90px 70px 0;
       margin: 0.5px;
       background-color: #DEDEDE;
@@ -2077,7 +2057,6 @@ body.light .progress-wrap svg.progress-circle path {
             .solutions-grid-item__caption:before {
               top: 9px; } }
       .solutions-grid-item__text {
-        opacity: 0;
         font-size: 16px;
         line-height: 24px;
         color: #8B8B8B; }
