@@ -1069,23 +1069,6 @@ body.light .progress-wrap svg.progress-circle path {
     background-color: #0052ff;
     transform: translateX(-100%); }
 
-.glide__slides {
-  transform: translate3d(0, 0, 0) !important;
-  height: 400px; }
-
-.glide__slide {
-  opacity: 0;
-  z-index: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: opacity 0.5s ease-in;
-  height: 400px; }
-
-.glide__slide.glide__slide--active {
-  opacity: 1;
-  z-index: 1; }
-
 .nopage {
   opacity: 0;
   height: calc(100vh - 79px); }
