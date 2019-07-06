@@ -71,7 +71,7 @@
 }
 .progress-wrap::after {
   position: absolute;
-  content: url(../../images/icon/progress-arrow-up.svg);
+  content: url(../images/icon/progress-arrow-up.svg);
   color: $forthGray;
   left: 14px;
   top: 14px;
@@ -89,7 +89,7 @@
 .progress-wrap::before {
   position: absolute;
   opacity: 0;
-  content: url(../../images/icon/progress-arrow-up_hover.svg);
+  content: url(../images/icon/progress-arrow-up_hover.svg);
   left: 14px;
   top: 14px;
   height: 46px;
